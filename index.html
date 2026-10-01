@@ -305,16 +305,6 @@ img, svg {
     min-height: 42px !important;
     border-radius: 10px !important;
     font-size: 13px !important;
-    background: #26364a !important;
-    color: #d9f8ff !important;
-    border: 1px solid #00b8d4 !important;
-    box-shadow: 0 2px 8px rgba(0,184,212,.12) !important;
-    transition: background .2s, border-color .2s, transform .15s !important;
-}
-#modal-content .team-back-btn:hover,
-#modal-content .team-back-btn:active {
-    background: #30465e !important;
-    border-color: #00e5ff !important;
 }
 
 /* 아주 작은 폰 */
@@ -340,78 +330,6 @@ img, svg {
 }
 </style>
 
-<style id="mobile-nav-font-fix">
-/* ===== 모바일 네비게이션: 세로로 찌그러지지 않는 가로 탭 ===== */
-.whitespace-nowrap { white-space: nowrap !important; }
-.nav-label {
-  display: block;
-  white-space: nowrap !important;
-  word-break: keep-all !important;
-  writing-mode: horizontal-tb !important;
-  line-height: 1.2;
-  text-align: center;
-}
-@media (max-width: 1023px) {
-  aside { width: 100% !important; min-width: 0 !important; }
-  aside > div {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    align-items: stretch !important;
-    gap: 8px !important;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-    width: 100% !important;
-    padding: 10px !important;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-  aside > div::-webkit-scrollbar { display: none; }
-  aside > div > button {
-    flex: 0 0 92px !important;
-    width: 92px !important;
-    min-width: 92px !important;
-    max-width: 92px !important;
-    height: 68px !important;
-    min-height: 68px !important;
-    max-height: 68px !important;
-    padding: 7px 5px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 4px !important;
-    text-align: center !important;
-    white-space: nowrap !important;
-    writing-mode: horizontal-tb !important;
-    word-break: keep-all !important;
-    overflow: hidden !important;
-    border-radius: 11px !important;
-  }
-  aside > div > button .fa-solid {
-    width: auto !important;
-    min-width: 0 !important;
-    font-size: 20px !important;
-    line-height: 1 !important;
-    flex: 0 0 auto !important;
-  }
-  aside > div > button .nav-label {
-    width: 100% !important;
-    font-size: 12px !important;
-    font-weight: 800 !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-  }
-}
-@media (max-width: 380px) {
-  aside > div > button {
-    flex-basis: 84px !important;
-    width: 84px !important;
-    min-width: 84px !important;
-    max-width: 84px !important;
-  }
-}
-</style>
 </head>
 <body class="min-h-screen flex flex-col antialiased bg-val-dark select-none">
 
@@ -1238,7 +1156,7 @@ img, svg {
                 ovr: p.ovr,
                 salary: p.salary,
                 isStarter: true,
-                stats: { matches: 0, kills: 0, deaths: 0, assists: 0, acsSum: 0, mvpCount: 0 }
+                stats: { matches: 0, kills: 0, deaths: 0, assists: 0, acsSum: 0, adrSum: 0, kastSum: 0, mvpCount: 0 }
             }));
 
             let freeAgents = [];
@@ -1252,7 +1170,7 @@ img, svg {
                     agent: roleObj.agents[Math.floor(Math.random() * roleObj.agents.length)],
                     ovr: 74 + Math.floor(Math.random() * 16),
                     salary: 32000 + Math.floor(Math.random() * 25000),
-                    stats: { matches: 0, kills: 0, deaths: 0, assists: 0, acsSum: 0, mvpCount: 0 }
+                    stats: { matches: 0, kills: 0, deaths: 0, assists: 0, acsSum: 0, adrSum: 0, kastSum: 0, mvpCount: 0 }
                 });
             }
 
@@ -1260,7 +1178,7 @@ img, svg {
             const youthPool = ["Nova", "Rin", "Milo", "Kite", "Vex", "Ari", "Nox", "Lumi"];
             for (let i = 0; i < 4; i++) {
                 const roleObj = ROLES[Math.floor(Math.random() * 5)];
-                youth.push({ id: 'y_' + Math.random().toString(36).substr(2, 9), name: youthPool[i] + Math.floor(10 + Math.random() * 90), role: roleObj.id, agent: roleObj.agents[Math.floor(Math.random() * roleObj.agents.length)], ovr: 60 + Math.floor(Math.random() * 10), potential: 82 + Math.floor(Math.random() * 17), age: 16 + Math.floor(Math.random() * 3), training: 0, salary: 18000 + Math.floor(Math.random() * 12000), stats: { matches: 0, kills: 0, deaths: 0, assists: 0, acsSum: 0, mvpCount: 0 } });
+                youth.push({ id: 'y_' + Math.random().toString(36).substr(2, 9), name: youthPool[i] + Math.floor(10 + Math.random() * 90), role: roleObj.id, agent: roleObj.agents[Math.floor(Math.random() * roleObj.agents.length)], ovr: 60 + Math.floor(Math.random() * 10), potential: 82 + Math.floor(Math.random() * 17), age: 16 + Math.floor(Math.random() * 3), training: 0, salary: 18000 + Math.floor(Math.random() * 12000), stats: { matches: 0, kills: 0, deaths: 0, assists: 0, acsSum: 0, adrSum: 0, kastSum: 0, mvpCount: 0 } });
             }
 
             state = {
@@ -1382,7 +1300,7 @@ img, svg {
             const isActive = currentPage === pageId;
             const baseClass = "px-3.5 py-2.5 rounded-lg text-sm font-bold text-left transition-all flex items-center gap-2.5 whitespace-nowrap";
             const activeClass = isActive ? "bg-val-red text-white shadow-md glow-red" : "text-val-muted hover:bg-val-border hover:text-white";
-            return `<button class="${baseClass} ${activeClass}" onclick="navigate('${pageId}')"><i class="fa-solid ${iconClass} w-4"></i><span class="nav-label">${label}</span></button>`;
+            return `<button class="${baseClass} ${activeClass}" onclick="navigate('${pageId}')"><i class="fa-solid ${iconClass} w-4"></i> ${label}</button>`;
         }
 
         function navigate(pageId) {
@@ -1800,7 +1718,7 @@ img, svg {
             if (!state) return;
             if (!Array.isArray(state.youth)) state.youth = [];
             const pool = ["Nova","Rin","Milo","Kite","Vex","Ari","Nox","Lumi","Kiro","Zeno","Mira","Juno","Sena","Rex"];
-            for (let i=0;i<count;i++) { const r=ROLES[Math.floor(Math.random()*5)]; state.youth.push({id:'y_'+Math.random().toString(36).substr(2,9),name:pool[Math.floor(Math.random()*pool.length)]+Math.floor(10+Math.random()*90),role:r.id,agent:r.agents[Math.floor(Math.random()*r.agents.length)],ovr:58+Math.floor(Math.random()*11),potential:78+Math.floor(Math.random()*22),age:16+Math.floor(Math.random()*3),training:0,salary:16000+Math.floor(Math.random()*12000),stats:{matches:0,kills:0,deaths:0,assists:0,acsSum:0,mvpCount:0}}); }
+            for (let i=0;i<count;i++) { const r=ROLES[Math.floor(Math.random()*5)]; state.youth.push({id:'y_'+Math.random().toString(36).substr(2,9),name:pool[Math.floor(Math.random()*pool.length)]+Math.floor(10+Math.random()*90),role:r.id,agent:r.agents[Math.floor(Math.random()*r.agents.length)],ovr:58+Math.floor(Math.random()*11),potential:78+Math.floor(Math.random()*22),age:16+Math.floor(Math.random()*3),training:0,salary:16000+Math.floor(Math.random()*12000),stats:{matches:0,kills:0,deaths:0,assists:0,acsSum:0,adrSum:0,kastSum:0,mvpCount:0}}); }
         }
         function trainYouth(index) {
             const y=state?.youth?.[index]; if(!y) return; const cost=7000+state.youthLevel*2500;
@@ -1862,6 +1780,8 @@ img, svg {
                         <td class="py-3 px-4 text-center font-black text-val-accent">${avgAcs}</td>
                         <td class="py-3 px-4 text-center font-bold text-gray-200">${p.stats.kills} / ${p.stats.deaths} / ${p.stats.assists}</td>
                         <td class="py-3 px-4 text-center font-bold ${kd >= 1.2 ? 'text-green-400' : kd < 0.9 ? 'text-val-red' : 'text-white'}">${kd}</td>
+                        <td class="py-3 px-4 text-center font-semibold text-gray-200">${matches > 0 ? Math.round((p.stats.adrSum || 0) / matches) : 0}</td>
+                        <td class="py-3 px-4 text-center font-semibold text-gray-200">${matches > 0 ? Math.round((p.stats.kastSum || 0) / matches) : 0}%</td>
                         <td class="py-3 px-4 text-center font-bold text-yellow-400">${p.stats.mvpCount > 0 ? '⭐ ' + p.stats.mvpCount : '-'}</td>
                     </tr>
                 `;
@@ -1887,11 +1807,13 @@ img, svg {
                                     <th class="py-2.5 px-4 text-center">평균 ACS</th>
                                     <th class="py-2.5 px-4 text-center">총 K / D / A</th>
                                     <th class="py-2.5 px-4 text-center">K/D</th>
+                                    <th class="py-2.5 px-4 text-center">ADR</th>
+                                    <th class="py-2.5 px-4 text-center">KAST</th>
                                     <th class="py-2.5 px-4 text-center">MVP</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                ${statRows.length > 0 ? statRows : '<tr><td colspan="8" class="text-center py-6 text-val-muted text-sm">출전 기록이 있는 선수가 없습니다.</td></tr>'}
+                                ${statRows.length > 0 ? statRows : '<tr><td colspan="10" class="text-center py-6 text-val-muted text-sm">출전 기록이 있는 선수가 없습니다.</td></tr>'}
                             </tbody>
                         </table>
                     </div>
@@ -1932,7 +1854,9 @@ img, svg {
                     <td class="py-2.5 px-3 text-val-muted text-xs">${p.agent}</td>
                     <td class="py-2.5 px-3 text-center font-bold text-val-accent">${p.acs}</td>
                     <td class="py-2.5 px-3 text-center font-semibold text-gray-200">${p.kills} / ${p.deaths} / ${p.assists}</td>
-                    <td class="py-2.5 px-3 text-center font-bold ${p.kd >= 1.2 ? 'text-green-400' : 'text-white'}">${p.kd}</td>
+                    <td class="py-2.5 px-3 text-center font-bold ${p.kd >= 1.2 ? 'text-green-400' : p.kd < 0.9 ? 'text-val-red' : 'text-white'}">${p.kd}</td>
+                    <td class="py-2.5 px-3 text-center font-semibold text-gray-200">${p.adr}</td>
+                    <td class="py-2.5 px-3 text-center font-semibold text-gray-200">${p.kast}%</td>
                 </tr>
             `).join("");
 
@@ -1971,6 +1895,8 @@ img, svg {
                                         <th class="py-2.5 px-3 text-center">ACS</th>
                                         <th class="py-2.5 px-3 text-center">K / D / A</th>
                                         <th class="py-2.5 px-3 text-center">K/D</th>
+                                    <th class="py-2.5 px-3 text-center">ADR</th>
+                                    <th class="py-2.5 px-3 text-center">KAST</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -2134,16 +2060,50 @@ img, svg {
             }
 
             const isWin = myMapsWon > oppMapsWon;
+            // VLR 2026 Pacific Stage 2에 가까운 경기당 분포를 사용한다.
+            // KPR 약 0.5~0.9, APR 약 0.15~0.40, ACS 약 140~240, KAST 약 65~75% 범위가 중심이다.
+            const statProfile = {
+                Duelist:    { kpr: 0.76, apr: 0.16, dpr: 0.70, acs: 216, adr: 140, kast: 0.69 },
+                Initiator:  { kpr: 0.65, apr: 0.30, dpr: 0.69, acs: 188, adr: 123, kast: 0.71 },
+                Controller: { kpr: 0.61, apr: 0.33, dpr: 0.69, acs: 181, adr: 119, kast: 0.72 },
+                Sentinel:   { kpr: 0.64, apr: 0.27, dpr: 0.67, acs: 190, adr: 124, kast: 0.73 },
+                Flex:       { kpr: 0.67, apr: 0.28, dpr: 0.69, acs: 196, adr: 127, kast: 0.71 }
+            };
+            const clamp = (v, min, max) => Math.max(min, Math.min(max, v));
+            const noise = (range) => (Math.random() * 2 - 1) * range;
+            const totalRounds = playedMaps.reduce((sum, m) => sum + m.myScore + m.oppScore, 0);
+            const teamResultFactor = isWin ? 1.025 : 0.975;
 
             let matchPlayerStats = [];
             let highestAcs = -1;
             let mvpIndex = 0;
 
             getStartingPlayers().forEach((p, idx) => {
-                const baseKills = Math.floor(12 + (p.ovr - 75) * 0.6 + (Math.random() * 8 - 4));
-                const deaths = Math.max(5, Math.floor(13 + (78 - p.ovr) * 0.3 + (Math.random() * 6 - 3)));
-                const assists = Math.floor(3 + Math.random() * 7);
-                const acs = Math.floor(baseKills * 12 + assists * 6 + (Math.random() * 20 - 10));
+                const profile = statProfile[p.role] || statProfile.Flex;
+                const ratingFactor = clamp(0.90 + (p.ovr - 80) * 0.012 + (state.form - 60) * 0.002 + (state.morale - 70) * 0.0015, 0.82, 1.14);
+                const playerFactor = ratingFactor * teamResultFactor;
+
+                const kpr = clamp(profile.kpr * playerFactor + noise(0.055), 0.42, 0.92);
+                const dpr = clamp(profile.dpr * (2 - playerFactor) + noise(0.045), 0.48, 0.92);
+                const apr = clamp(profile.apr * (0.96 + ratingFactor * 0.04) + noise(0.035), 0.10, 0.45);
+
+                const kills = Math.max(10, Math.round(totalRounds * kpr));
+                const deaths = Math.max(10, Math.round(totalRounds * dpr));
+                const assists = Math.max(3, Math.round(totalRounds * apr));
+
+                // ACS는 K/D만으로 결정하지 않고 역할, OVR, 경기 성과와 함께 계산한다.
+                const acs = Math.round(clamp(
+                    profile.acs + (p.ovr - 80) * 2.0 + (kpr - profile.kpr) * 120 + noise(13),
+                    125, 255
+                ));
+                const adr = Math.round(clamp(
+                    profile.adr + (p.ovr - 80) * 1.25 + (kpr - profile.kpr) * 115 + noise(9),
+                    85, 165
+                ));
+                const kast = Math.round(clamp(
+                    (profile.kast + (ratingFactor - 1) * 0.10 + noise(0.025)) * 100,
+                    58, 82
+                ));
 
                 if (acs > highestAcs) {
                     highestAcs = acs;
@@ -2153,19 +2113,18 @@ img, svg {
                 matchPlayerStats.push({
                     name: p.name,
                     agent: p.agent,
-                    kills: baseKills,
-                    deaths: deaths,
-                    assists: assists,
-                    acs: acs,
-                    kd: deaths > 0 ? (baseKills / deaths).toFixed(2) : baseKills,
+                    kills, deaths, assists, acs, adr, kast,
+                    kd: (kills / deaths).toFixed(2),
                     isMvp: false
                 });
 
                 p.stats.matches++;
-                p.stats.kills += baseKills;
+                p.stats.kills += kills;
                 p.stats.deaths += deaths;
                 p.stats.assists += assists;
                 p.stats.acsSum += acs;
+                p.stats.adrSum = (p.stats.adrSum || 0) + adr;
+                p.stats.kastSum = (p.stats.kastSum || 0) + kast;
             });
 
             matchPlayerStats[mvpIndex].isMvp = true;
@@ -2307,7 +2266,7 @@ img, svg {
                         agent: roleObj.agents[Math.floor(Math.random() * roleObj.agents.length)],
                         ovr: 75 + Math.floor(Math.random() * 16) + Math.floor((state.year - 2026) * 0.5),
                         salary: 35000 + Math.floor(Math.random() * 25000),
-                        stats: { matches: 0, kills: 0, deaths: 0, assists: 0, acsSum: 0, mvpCount: 0 }
+                        stats: { matches: 0, kills: 0, deaths: 0, assists: 0, acsSum: 0, adrSum: 0, kastSum: 0, mvpCount: 0 }
                     });
                 }
                 openModal(`
