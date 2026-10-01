@@ -1055,6 +1055,51 @@ img, svg {
             }
         };
 
+        // 팀/선발 로스터 포지션 자동 교통정리
+        // 기본적으로 5인 선발은 Duelist 1 / Initiator 1 / Controller 1 / Sentinel 1 / Flex 1로 구성합니다.
+        // Flex는 특정 한 역할을 중복해서 쌓지 않도록 하는 5번째 자리입니다.
+        function balanceRosterRoles(roster) {
+            if (!Array.isArray(roster) || roster.length < 5) return roster;
+            const starters = roster.filter(p => p.isStarter !== false).slice(0, 5);
+            if (starters.length < 5) return roster;
+
+            const coreRoles = ["Duelist", "Initiator", "Controller", "Sentinel"];
+            const used = new Set();
+            const assigned = new Map();
+
+            // 1차: 기존 포지션을 최대한 유지
+            for (const role of coreRoles) {
+                const candidate = starters.find(p => !used.has(p) && p.role === role);
+                if (candidate) {
+                    used.add(candidate);
+                    assigned.set(candidate, role);
+                }
+            }
+
+            // 2차: 비어 있는 포지션은 남은 선수 중 기존 포지션을 바꿔 균형을 맞춤
+            for (const role of coreRoles) {
+                if ([...assigned.values()].includes(role)) continue;
+                const candidate = starters.find(p => !used.has(p));
+                if (candidate) {
+                    used.add(candidate);
+                    assigned.set(candidate, role);
+                }
+            }
+
+            // 남은 5번째 선발은 Flex
+            for (const player of starters) {
+                if (!assigned.has(player)) assigned.set(player, "Flex");
+            }
+
+            for (const [player, role] of assigned) player.role = role;
+            return roster;
+        }
+
+        // 게임에 표시되는 모든 기본 팀의 선발 포지션을 한 번 정리합니다.
+        Object.values(VCT_DATA).forEach(region => {
+            [ ...(region.t1 || []), ...(region.t2 || []) ].forEach(team => balanceRosterRoles(team.roster));
+        });
+
         function renderTeamLogo(teamObj, sizeClass = "w-7 h-7 text-xs") {
             let name = typeof teamObj === 'string' ? teamObj : (teamObj?.name || "TEAM");
             let badgeColor = (typeof teamObj === 'object' && teamObj?.color) ? teamObj.color : "bg-val-red text-white";
@@ -1227,7 +1272,7 @@ img, svg {
                 coach: 45,
                 analyst: 40,
                 trainingDone: false,
-                players: players,
+                players: balanceRosterRoles(players),
                 maxRoster: 6,
                 startersRequired: 5,
                 freeAgents: freeAgents,
@@ -1783,7 +1828,7 @@ img, svg {
             const cost=80000*state.youthLevel; if(state.youthLevel>=5){showToast("유스 아카데미가 최대 레벨입니다.");return;} if(state.cash<cost){showToast("아카데미 강화 비용이 부족합니다!");return;} state.cash-=cost; state.youthLevel++; state.logs.push(`🏫 [유스 아카데미] Lv.${state.youthLevel}`); showToast(`유스 아카데미 Lv.${state.youthLevel}!`); renderApp();
         }
         function promoteYouth(index) {
-            const y=state?.youth?.[index]; if(!y)return; if(state.players.length>=6){showToast("1군 로스터가 가득 찼습니다.");return;} if(y.ovr<70){showToast("아직 1군 콜업에는 성장이 더 필요합니다.");return;} state.players.push({...y,id:'p_'+Math.random().toString(36).substr(2,9),isStarter:state.players.length<5,promoted:true}); state.youth.splice(index,1); state.logs.push(`⬆️ [유스 콜업] ${y.name}이(가) 1군에 합류했습니다.`); showToast(`${y.name} 1군 콜업 완료!`); renderApp();
+            const y=state?.youth?.[index]; if(!y)return; if(state.players.length>=6){showToast("1군 로스터가 가득 찼습니다.");return;} if(y.ovr<70){showToast("아직 1군 콜업에는 성장이 더 필요합니다.");return;} state.players.push({...y,id:'p_'+Math.random().toString(36).substr(2,9),isStarter:getStartingPlayers().length<state.startersRequired,promoted:true}); state.youth.splice(index,1); state.logs.push(`⬆️ [유스 콜업] ${y.name}이(가) 1군에 합류했습니다.`); showToast(`${y.name} 1군 콜업 완료!`); renderApp();
         }
         function releaseYouth(index) { const y=state?.youth?.[index]; if(!y)return; state.youth.splice(index,1); state.logs.push(`🚪 [유스 방출] ${y.name}`); showToast(`${y.name} 방출 완료`); renderApp(); }
         function renderYouthView() {
@@ -2358,7 +2403,7 @@ img, svg {
             }
             const p = state.freeAgents[index];
             if (!p) return;
-            p.isStarter = state.players.length < 5;
+            p.isStarter = getStartingPlayers().length < state.startersRequired;
             const fee = Math.round((p.salary || 0) * 0.4);
 
             if (state.cash < fee) {
@@ -2368,6 +2413,7 @@ img, svg {
 
             state.cash -= fee;
             state.players.push(p);
+            balanceRosterRoles(state.players);
             state.freeAgents.splice(index, 1);
             state.transferUsed++;
             state.logs.push(`[영입] ${p.name} (${p.role}, OVR ${p.ovr}) 영입 완료.`);
@@ -2407,26 +2453,33 @@ img, svg {
         }
 
         function releasePlayer(index) {
-            // 교체 영입을 위해 4명까지는 일시적으로 허용합니다.
-            // 5명 로스터에서 방출 -> 새 선수 영입 순서로 정상적인 교체가 가능합니다.
+            // 최소 4명만 유지합니다. 5명에서 한 명을 방출한 뒤
+            // FA 영입/유스 콜업으로 5번째 선수를 다시 채울 수 있습니다.
             if (!state || !Array.isArray(state.players)) return;
             if (index < 0 || index >= state.players.length) return;
-            if (state.players.length <= 5) {
-                showToast("최소 5명은 유지해야 합니다.");
+            if (state.players.length <= 4) {
+                showToast("최소 4명은 유지해야 합니다. 5번째 선수는 FA 영입 또는 유스 콜업으로 채울 수 있습니다.");
                 return;
             }
 
             const p = state.players[index];
             state.players.splice(index, 1);
+            balanceRosterRoles(state.players);
 
             // 방출 선수는 FA 시장으로 이동시켜 다시 영입할 수 있게 합니다.
             if (!Array.isArray(state.freeAgents)) state.freeAgents = [];
             state.freeAgents.unshift(p);
 
+            // 남은 선수 중 선발이 5명을 넘을 수 없도록 정리합니다.
+            let starters = state.players.filter(player => player.isStarter !== false);
+            if (starters.length > state.startersRequired) {
+                starters.slice(state.startersRequired).forEach(player => player.isStarter = false);
+            }
+
             // 잔여 계약 보상금 15%
             state.cash += Math.round((p.salary || 0) * 0.15);
             state.logs.push(`[방출] ${p.name} 선수와의 계약을 해지했습니다. FA 시장으로 이동했습니다.`);
-            showToast(`${p.name} 방출 완료. FA 시장에서 다시 영입할 수 있습니다.`);
+            showToast(`${p.name} 방출 완료. FA 영입 또는 유스 콜업으로 빈자리를 채울 수 있습니다.`);
             renderApp();
         }
 
