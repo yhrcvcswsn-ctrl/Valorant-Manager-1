@@ -188,36 +188,6 @@ img, svg {
     -webkit-overflow-scrolling: touch;
     overscroll-behavior: contain;
 }
-/* ===== 모바일 상단/좌측 메뉴가 글자 단위로 찌그러지는 현상 방지 ===== */
-@media (max-width: 1023px) {
-    /* 메뉴 컨테이너는 가로 스크롤, 각 버튼은 절대 압축하지 않음 */
-    aside > div {
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-        overflow-x: auto !important;
-        overflow-y: hidden !important;
-        scrollbar-width: none;
-    }
-    aside > div::-webkit-scrollbar {
-        display: none;
-    }
-    aside > div > button {
-        flex: 0 0 auto !important;
-        width: auto !important;
-        min-width: max-content !important;
-        max-width: none !important;
-        white-space: nowrap !important;
-        word-break: keep-all !important;
-        overflow-wrap: normal !important;
-        writing-mode: horizontal-tb !important;
-        text-orientation: mixed !important;
-    }
-    aside > div > button i {
-        flex: 0 0 auto !important;
-        width: 1rem !important;
-    }
-}
-
 </style>
 
 
@@ -394,7 +364,7 @@ img, svg {
                 name: "퍼시픽 (Pacific)",
                 t1: [
                     {
-                        name: "Gen.G", power: 86, color: "bg-amber-600 text-white",
+                        name: "Gen.G", power: 94, color: "bg-amber-600 text-white",
                         roster: [
                             { name: "Efina", role: "Initiator", agent: "Fade", ovr: 97, salary: 93350 },
                             { name: "t3xture", role: "Duelist", agent: "Jett", ovr: 95, salary: 92250 },
@@ -404,7 +374,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Paper Rex", power: 93, color: "bg-pink-600 text-white",
+                        name: "Paper Rex", power: 95, color: "bg-pink-600 text-white",
                         roster: [
                             { name: "Jinggg", role: "Duelist", agent: "Raze", ovr: 96, salary: 92800 },
                             { name: "invy", role: "Initiator", agent: "Sova", ovr: 94, salary: 91700 },
@@ -414,7 +384,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "T1", power: 85, color: "bg-red-700 text-white",
+                        name: "T1", power: 91, color: "bg-red-700 text-white",
                         roster: [
                             { name: "stax", role: "Initiator", agent: "Breach", ovr: 94, salary: 91700 },
                             { name: "BuZz", role: "Duelist", agent: "Jett", ovr: 92, salary: 90600 },
@@ -424,7 +394,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "ZETA DIVISION", power: 73, color: "bg-zinc-700 text-white",
+                        name: "ZETA DIVISION", power: 88, color: "bg-zinc-700 text-white",
                         roster: [
                             { name: "eKo", role: "Sentinel", agent: "Killjoy", ovr: 91, salary: 90050 },
                             { name: "SugarZ3ro", role: "Controller", agent: "Astra", ovr: 89, salary: 88950 },
@@ -434,7 +404,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Global Esports", power: 72, color: "bg-emerald-600 text-white",
+                        name: "Global Esports", power: 87, color: "bg-emerald-600 text-white",
                         roster: [
                             { name: "Autumn", role: "Initiator", agent: "Sova", ovr: 90, salary: 89500 },
                             { name: "UdoTan", role: "Initiator", agent: "Sova", ovr: 88, salary: 88400 },
@@ -444,7 +414,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Rex Regum Qeon", power: 84, color: "bg-orange-600 text-white",
+                        name: "Rex Regum Qeon", power: 87, color: "bg-orange-600 text-white",
                         roster: [
                             { name: "crazyguy", role: "Controller", agent: "Omen", ovr: 90, salary: 89500 },
                             { name: "Kushy", role: "Sentinel", agent: "Cypher", ovr: 88, salary: 88400 },
@@ -454,7 +424,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Team Secret", power: 79, color: "bg-cyan-700 text-white",
+                        name: "Team Secret", power: 85, color: "bg-cyan-700 text-white",
                         roster: [
                             { name: "Sylvan", role: "Controller", agent: "Omen", ovr: 88, salary: 88400 },
                             { name: "natz", role: "Sentinel", agent: "Cypher", ovr: 86, salary: 87300 },
@@ -464,7 +434,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "DetonatioN FocusMe", power: 70, color: "bg-blue-500 text-white",
+                        name: "DetonatioN FocusMe", power: 84, color: "bg-blue-500 text-white",
                         roster: [
                             { name: "Meiy", role: "Duelist", agent: "Jett", ovr: 87, salary: 87850 },
                             { name: "Akame", role: "Duelist", agent: "Jett", ovr: 85, salary: 86750 },
@@ -474,7 +444,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "FULL SENSE", power: 77, color: "bg-indigo-600 text-white",
+                        name: "FULL SENSE", power: 84, color: "bg-indigo-600 text-white",
                         roster: [
                             { name: "Crws", role: "Controller", agent: "Omen", ovr: 87, salary: 87850 },
                             { name: "Killua", role: "Initiator", agent: "Sova", ovr: 85, salary: 86750 },
@@ -484,7 +454,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "KIWOOM DRX", power: 88, color: "bg-blue-600 text-white",
+                        name: "KIWOOM DRX", power: 83, color: "bg-blue-600 text-white",
                         roster: [
                             { name: "free1ng", role: "Controller", agent: "Viper", ovr: 86, salary: 87300 },
                             { name: "MaKo", role: "Controller", agent: "Omen", ovr: 84, salary: 86200 },
@@ -494,7 +464,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Nongshim RedForce", power: 84, color: "bg-teal-700 text-white",
+                        name: "Nongshim RedForce", power: 82, color: "bg-teal-700 text-white",
                         roster: [
                             { name: "Rb", role: "Duelist", agent: "Raze", ovr: 85, salary: 86750 },
                             { name: "Dambi", role: "Initiator", agent: "Sova", ovr: 83, salary: 85650 },
@@ -504,7 +474,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "VARREL", power: 71, color: "bg-purple-700 text-white",
+                        name: "VARREL", power: 82, color: "bg-purple-700 text-white",
                         roster: [
                             { name: "C1ndeR", role: "Duelist", agent: "Jett", ovr: 85, salary: 86750 },
                             { name: "Klaus", role: "Initiator", agent: "Sova", ovr: 83, salary: 85650 },
@@ -515,35 +485,35 @@ img, svg {
                     }
                 ],
                 t2: [
-                    { name: "ONSIDE GAMING", power: 78, color: "bg-yellow-600 text-white", roster: [
+                    { name: "ONSIDE GAMING", power: 84, color: "bg-yellow-600 text-white", roster: [
                         { name: "Cloudy", role: "Initiator", agent: "Sova", ovr: 84, salary: 52000 },
                         { name: "Wolverine", role: "Duelist", agent: "Raze", ovr: 84, salary: 52000 },
                         { name: "Awayk", role: "Controller", agent: "Omen", ovr: 83, salary: 51000 },
                         { name: "Ray", role: "Duelist", agent: "Jett", ovr: 86, salary: 54000 },
                         { name: "Xiesta", role: "Sentinel", agent: "Cypher", ovr: 82, salary: 50000 }
                     ] },
-                    { name: "DRX Academy", power: 77, color: "bg-slate-700 text-white", academy: true, roster: [
+                    { name: "DRX Academy", power: 82, color: "bg-slate-700 text-white", academy: true, roster: [
                         { name: "apeX", role: "Duelist", agent: "Jett", ovr: 83, salary: 51000 },
                         { name: "Athan", role: "Duelist", agent: "Raze", ovr: 85, salary: 53000 },
                         { name: "NGen", role: "Controller", agent: "Omen", ovr: 84, salary: 52000 },
                         { name: "Kyra", role: "Sentinel", agent: "Cypher", ovr: 80, salary: 48000 },
                         { name: "XoNs", role: "Initiator", agent: "Sova", ovr: 81, salary: 49000 }
                     ] },
-                    { name: "T1 Academy", power: 75, color: "bg-red-800 text-white", academy: true, roster: [
+                    { name: "T1 Academy", power: 80, color: "bg-red-800 text-white", academy: true, roster: [
                         { name: "Impact", role: "Duelist", agent: "Jett", ovr: 83, salary: 51000 },
                         { name: "wezzy", role: "Duelist", agent: "Raze", ovr: 84, salary: 52000 },
                         { name: "DH", role: "Controller", agent: "Omen", ovr: 77, salary: 45000 },
                         { name: "Gnadel", role: "Sentinel", agent: "Cypher", ovr: 81, salary: 49000 },
                         { name: "DarK", role: "Initiator", agent: "Sova", ovr: 80, salary: 48000 }
                     ] },
-                    { name: "Dplus Esports", power: 74, color: "bg-sky-700 text-white", roster: [
+                    { name: "Dplus Esports", power: 79, color: "bg-sky-700 text-white", roster: [
                         { name: "CabezA", role: "Duelist", agent: "Raze", ovr: 83, salary: 51000 },
                         { name: "JaXe", role: "Initiator", agent: "Sova", ovr: 79, salary: 47000 },
                         { name: "shu", role: "Controller", agent: "Omen", ovr: 78, salary: 46000 },
                         { name: "Kally", role: "Initiator", agent: "Sova", ovr: 81, salary: 49000 },
                         { name: "Ramgi", role: "Sentinel", agent: "Cypher", ovr: 78, salary: 46000 }
                     ] },
-                    { name: "Gen.G Global Academy", power: 73, color: "bg-yellow-700 text-white", academy: true, roster: [
+                    { name: "Gen.G Global Academy", power: 78, color: "bg-yellow-700 text-white", academy: true, roster: [
                         { name: "Raxcal", role: "Duelist", agent: "Jett", ovr: 84, salary: 52000 },
                         { name: "Kleine", role: "Initiator", agent: "Sova", ovr: 76, salary: 44000 },
                         { name: "KiTae", role: "Controller", agent: "Omen", ovr: 78, salary: 46000 },
@@ -551,14 +521,14 @@ img, svg {
                         { name: "Sovereign", role: "Sentinel", agent: "Cypher", ovr: 78, salary: 46000 },
                         { name: "RgoN", role: "Initiator", agent: "Sova", ovr: 77, salary: 45000 }
                     ] },
-                    { name: "ARETE", power: 72, color: "bg-orange-700 text-white", roster: [
+                    { name: "ARETE", power: 77, color: "bg-orange-700 text-white", roster: [
                         { name: "RedLight", role: "Duelist", agent: "Jett", ovr: 81, salary: 49000 },
                         { name: "Rico", role: "Initiator", agent: "Sova", ovr: 78, salary: 46000 },
                         { name: "JaebiN", role: "Controller", agent: "Omen", ovr: 77, salary: 45000 },
                         { name: "ANNYEON", role: "Sentinel", agent: "Cypher", ovr: 76, salary: 44000 },
                         { name: "XIV", role: "Duelist", agent: "Raze", ovr: 80, salary: 48000 }
                     ] },
-                    { name: "X-CAST", power: 70, color: "bg-purple-700 text-white", roster: [
+                    { name: "X-CAST", power: 75, color: "bg-purple-700 text-white", roster: [
                         { name: "Efina", role: "Initiator", agent: "Fade", ovr: 82, salary: 50000 },
                         { name: "INPA", role: "Duelist", agent: "Jett", ovr: 77, salary: 45000 },
                         { name: "rsd", role: "Controller", agent: "Omen", ovr: 76, salary: 44000 },
@@ -566,7 +536,7 @@ img, svg {
                         { name: "Beom", role: "Initiator", agent: "Sova", ovr: 76, salary: 44000 },
                         { name: "YJ", role: "Flex", agent: "KAY/O", ovr: 74, salary: 42000 }
                     ] },
-                    { name: "So:sweet", power: 69, color: "bg-pink-700 text-white", roster: [
+                    { name: "So:sweet", power: 73, color: "bg-pink-700 text-white", roster: [
                         { name: "Xizen", role: "Duelist", agent: "Jett", ovr: 76, salary: 44000 },
                         { name: "Zoltraak", role: "Initiator", agent: "Sova", ovr: 75, salary: 43000 },
                         { name: "Rody", role: "Controller", agent: "Omen", ovr: 74, salary: 42000 },
@@ -580,7 +550,7 @@ img, svg {
                 name: "아메리카스 (Americas)",
                 t1: [
                     {
-                        name: "NRG", power: 84, color: "bg-amber-600 text-white",
+                        name: "NRG", power: 94, color: "bg-amber-600 text-white",
                         roster: [
                             { name: "brawk", role: "Duelist", agent: "Jett", ovr: 97, salary: 93350 },
                             { name: "mada", role: "Duelist", agent: "Raze", ovr: 95, salary: 92250 },
@@ -590,7 +560,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "100 Thieves", power: 82, color: "bg-pink-600 text-white",
+                        name: "100 Thieves", power: 93, color: "bg-pink-600 text-white",
                         roster: [
                             { name: "Asuna", role: "Duelist", agent: "Raze", ovr: 96, salary: 92800 },
                             { name: "bang", role: "Controller", agent: "Omen", ovr: 94, salary: 91700 },
@@ -600,7 +570,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "LEVIATÁN", power: 87, color: "bg-red-700 text-white",
+                        name: "LEVIATÁN", power: 93, color: "bg-red-700 text-white",
                         roster: [
                             { name: "kiNgg", role: "Initiator", agent: "Sova", ovr: 96, salary: 92800 },
                             { name: "blowz", role: "Initiator", agent: "Sova", ovr: 94, salary: 91700 },
@@ -610,7 +580,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "LOUD", power: 80, color: "bg-zinc-700 text-white",
+                        name: "LOUD", power: 91, color: "bg-zinc-700 text-white",
                         roster: [
                             { name: "Darker", role: "Duelist", agent: "Raze", ovr: 94, salary: 91700 },
                             { name: "DaviH", role: "Initiator", agent: "Sova", ovr: 92, salary: 90600 },
@@ -620,7 +590,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "MIBR", power: 77, color: "bg-emerald-600 text-white",
+                        name: "MIBR", power: 90, color: "bg-emerald-600 text-white",
                         roster: [
                             { name: "tex", role: "Initiator", agent: "Sova", ovr: 93, salary: 91150 },
                             { name: "zekken", role: "Duelist", agent: "Raze", ovr: 91, salary: 90050 },
@@ -630,7 +600,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "G2 Esports", power: 91, color: "bg-orange-600 text-white",
+                        name: "G2 Esports", power: 89, color: "bg-orange-600 text-white",
                         roster: [
                             { name: "BABYBAY", role: "Duelist", agent: "Raze", ovr: 92, salary: 90600 },
                             { name: "valyn", role: "Controller", agent: "Omen", ovr: 90, salary: 89500 },
@@ -640,7 +610,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Sentinels", power: 83, color: "bg-cyan-700 text-white",
+                        name: "Sentinels", power: 88, color: "bg-cyan-700 text-white",
                         roster: [
                             { name: "Marved", role: "Controller", agent: "Omen", ovr: 91, salary: 90050 },
                             { name: "johnqt", role: "Controller", agent: "Omen", ovr: 89, salary: 88950 },
@@ -650,7 +620,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Evil Geniuses", power: 72, color: "bg-blue-500 text-white",
+                        name: "Evil Geniuses", power: 84, color: "bg-blue-500 text-white",
                         roster: [
                             { name: "supamen", role: "Controller", agent: "Omen", ovr: 87, salary: 87850 },
                             { name: "Paincakes", role: "Initiator", agent: "Sova", ovr: 85, salary: 86750 },
@@ -660,7 +630,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "ENVY", power: 72, color: "bg-indigo-600 text-white",
+                        name: "ENVY", power: 84, color: "bg-indigo-600 text-white",
                         roster: [
                             { name: "Rossy", role: "Initiator", agent: "Sova", ovr: 87, salary: 87850 },
                             { name: "keznit", role: "Duelist", agent: "Raze", ovr: 85, salary: 86750 },
@@ -670,7 +640,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Cloud9", power: 75, color: "bg-blue-600 text-white",
+                        name: "Cloud9", power: 84, color: "bg-blue-600 text-white",
                         roster: [
                             { name: "Zellsis", role: "Initiator", agent: "KAY/O", ovr: 87, salary: 87850 },
                             { name: "FireBallOps", role: "Initiator", agent: "Sova", ovr: 85, salary: 86750 },
@@ -680,7 +650,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "FURIA", power: 74, color: "bg-teal-700 text-white",
+                        name: "FURIA", power: 83, color: "bg-teal-700 text-white",
                         roster: [
                             { name: "C0M", role: "Initiator", agent: "Sova", ovr: 86, salary: 87300 },
                             { name: "eeiu", role: "Initiator", agent: "Sova", ovr: 84, salary: 86200 },
@@ -690,7 +660,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "KRÜ Esports", power: 77, color: "bg-purple-700 text-white",
+                        name: "KRÜ Esports", power: 82, color: "bg-purple-700 text-white",
                         roster: [
                             { name: "saadhak", role: "Controller", agent: "Omen", ovr: 85, salary: 86750 },
                             { name: "mwzera", role: "Duelist", agent: "Raze", ovr: 83, salary: 85650 },
@@ -702,7 +672,7 @@ img, svg {
                 ],
                 t2: [
                     { 
-                        name: "M80", power: 75, color: "bg-neutral-800 text-val-accent border border-val-accent/40",
+                        name: "M80", power: 84, color: "bg-neutral-800 text-val-accent border border-val-accent/40",
                         roster: [
                             { name: "zander", role: "Controller", agent: "Omen", ovr: 86, salary: 55000 },
                             { name: "koalanoob", role: "Duelist", agent: "Jett", ovr: 85, salary: 53000 },
@@ -711,14 +681,14 @@ img, svg {
                             { name: "bcJ", role: "Initiator", agent: "Sova", ovr: 82, salary: 46000 }
                         ]
                     },
-                    { name: "Evil Geniuses Academy", power: 70, color: "bg-slate-700 text-white", academy: true, roster: [
+                    { name: "Evil Geniuses Academy", power: 77, color: "bg-slate-700 text-white", academy: true, roster: [
                         { name: "Academy_Player_1", role: "Duelist", agent: "Jett", ovr: 78, salary: 36000 },
                         { name: "Academy_Player_2", role: "Initiator", agent: "Sova", ovr: 77, salary: 35000 },
                         { name: "Academy_Player_3", role: "Controller", agent: "Omen", ovr: 76, salary: 34000 },
                         { name: "Academy_Player_4", role: "Sentinel", agent: "Cypher", ovr: 75, salary: 33000 },
                         { name: "Academy_Player_5", role: "Flex", agent: "Omen", ovr: 75, salary: 33000 }
                     ] },
-                    { name: "NRG Academy", power: 70, color: "bg-slate-700 text-white", academy: true, roster: [
+                    { name: "NRG Academy", power: 76, color: "bg-slate-700 text-white", academy: true, roster: [
                         { name: "Academy_Player_1", role: "Duelist", agent: "Jett", ovr: 77, salary: 36000 },
                         { name: "Academy_Player_2", role: "Initiator", agent: "Sova", ovr: 76, salary: 35000 },
                         { name: "Academy_Player_3", role: "Controller", agent: "Omen", ovr: 75, salary: 34000 },
@@ -731,7 +701,7 @@ img, svg {
                 name: "EMEA (유럽·중동)",
                 t1: [
                     {
-                        name: "Karmine Corp", power: 82, color: "bg-amber-600 text-white",
+                        name: "Karmine Corp", power: 91, color: "bg-amber-600 text-white",
                         roster: [
                             { name: "SUYGETSU", role: "Sentinel", agent: "Killjoy", ovr: 94, salary: 91700 },
                             { name: "Avez", role: "Initiator", agent: "Sova", ovr: 92, salary: 90600 },
@@ -741,7 +711,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Team Liquid", power: 84, color: "bg-pink-600 text-white",
+                        name: "Team Liquid", power: 90, color: "bg-pink-600 text-white",
                         roster: [
                             { name: "nAts", role: "Sentinel", agent: "Viper", ovr: 93, salary: 91150 },
                             { name: "purp0", role: "Duelist", agent: "Raze", ovr: 91, salary: 90050 },
@@ -751,7 +721,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "FUT Esports", power: 80, color: "bg-red-700 text-white",
+                        name: "FUT Esports", power: 89, color: "bg-red-700 text-white",
                         roster: [
                             { name: "sociablEE", role: "Duelist", agent: "Raze", ovr: 92, salary: 90600 },
                             { name: "yetujey", role: "Initiator", agent: "Sova", ovr: 90, salary: 89500 },
@@ -761,7 +731,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Team Vitality", power: 81, color: "bg-zinc-700 text-white",
+                        name: "Team Vitality", power: 89, color: "bg-zinc-700 text-white",
                         roster: [
                             { name: "Chronicle", role: "Flex", agent: "Omen", ovr: 92, salary: 90600 },
                             { name: "Derke", role: "Duelist", agent: "Jett", ovr: 90, salary: 89500 },
@@ -771,7 +741,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Team Heretics", power: 84, color: "bg-emerald-600 text-white",
+                        name: "Team Heretics", power: 88, color: "bg-emerald-600 text-white",
                         roster: [
                             { name: "Boo", role: "Controller", agent: "Omen", ovr: 91, salary: 90050 },
                             { name: "RieNs", role: "Initiator", agent: "Sova", ovr: 89, salary: 88950 },
@@ -781,7 +751,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "BBL Esports", power: 78, color: "bg-orange-600 text-white",
+                        name: "BBL Esports", power: 86, color: "bg-orange-600 text-white",
                         roster: [
                             { name: "Rosé", role: "Duelist", agent: "Jett", ovr: 89, salary: 88950 },
                             { name: "Crewen", role: "Initiator", agent: "Sova", ovr: 87, salary: 87850 },
@@ -791,7 +761,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Natus Vincere", power: 75, color: "bg-cyan-700 text-white",
+                        name: "Natus Vincere", power: 84, color: "bg-cyan-700 text-white",
                         roster: [
                             { name: "ExiT", role: "Duelist", agent: "Raze", ovr: 87, salary: 87850 },
                             { name: "CyvOph", role: "Initiator", agent: "Sova", ovr: 85, salary: 86750 },
@@ -801,7 +771,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "FNATIC", power: 85, color: "bg-blue-500 text-white",
+                        name: "FNATIC", power: 84, color: "bg-blue-500 text-white",
                         roster: [
                             { name: "crashies", role: "Initiator", agent: "Sova", ovr: 87, salary: 87850 },
                             { name: "Boaster", role: "Controller", agent: "Omen", ovr: 85, salary: 86750 },
@@ -811,7 +781,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "GIANTX", power: 73, color: "bg-indigo-600 text-white",
+                        name: "GIANTX", power: 82, color: "bg-indigo-600 text-white",
                         roster: [
                             { name: "Jesse", role: "Duelist", agent: "Jett", ovr: 85, salary: 86750 },
                             { name: "neT", role: "Sentinel", agent: "Killjoy", ovr: 83, salary: 85650 },
@@ -821,7 +791,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Gentle Mates", power: 72, color: "bg-blue-600 text-white",
+                        name: "Gentle Mates", power: 82, color: "bg-blue-600 text-white",
                         roster: [
                             { name: "starxo", role: "Initiator", agent: "KAY/O", ovr: 85, salary: 86750 },
                             { name: "H1ber", role: "Duelist", agent: "Jett", ovr: 83, salary: 85650 },
@@ -831,7 +801,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "PCIFIC Esports", power: 69, color: "bg-teal-700 text-white",
+                        name: "PCIFIC Esports", power: 79, color: "bg-teal-700 text-white",
                         roster: [
                             { name: "al0rante", role: "Duelist", agent: "Jett", ovr: 82, salary: 85100 },
                             { name: "qpert", role: "Initiator", agent: "Sova", ovr: 80, salary: 84000 },
@@ -841,7 +811,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Eternal Fire", power: 74, color: "bg-purple-700 text-white",
+                        name: "Eternal Fire", power: 80, color: "bg-purple-700 text-white",
                         roster: [
                             { name: "nekky", role: "Duelist", agent: "Jett", ovr: 83, salary: 85650 },
                             { name: "audaz", role: "Initiator", agent: "Sova", ovr: 81, salary: 84550 },
@@ -853,7 +823,7 @@ img, svg {
                 ],
                 t2: [
                     { 
-                        name: "Eternal Fire", power: 74, color: "bg-orange-800 text-white",
+                        name: "Eternal Fire", power: 84, color: "bg-orange-800 text-white",
                         roster: [
                             { name: "Cacan", role: "Duelist", agent: "Jett", ovr: 84, salary: 50000 },
                             { name: "russ", role: "Initiator", agent: "Sova", ovr: 83, salary: 47000 },
@@ -863,7 +833,7 @@ img, svg {
                         ]
                     },
                     { 
-                        name: "PCIFIC Esports", power: 69, color: "bg-teal-800 text-white",
+                        name: "PCIFIC Esports", power: 83, color: "bg-teal-800 text-white",
                         roster: [
                             { name: "pcif1", role: "Duelist", agent: "Jett", ovr: 83, salary: 48000 },
                             { name: "pcif2", role: "Initiator", agent: "Sova", ovr: 82, salary: 45000 },
@@ -872,28 +842,28 @@ img, svg {
                             { name: "pcif5", role: "Flex", agent: "Sova", ovr: 79, salary: 39000 }
                         ]
                     },
-                    { name: "Team Liquid Academy", power: 70, color: "bg-slate-700 text-white", academy: true, roster: [
+                    { name: "Team Liquid Academy", power: 77, color: "bg-slate-700 text-white", academy: true, roster: [
                         { name: "Academy_Player_1", role: "Duelist", agent: "Jett", ovr: 78, salary: 36000 },
                         { name: "Academy_Player_2", role: "Initiator", agent: "Sova", ovr: 77, salary: 35000 },
                         { name: "Academy_Player_3", role: "Controller", agent: "Omen", ovr: 76, salary: 34000 },
                         { name: "Academy_Player_4", role: "Sentinel", agent: "Cypher", ovr: 75, salary: 33000 },
                         { name: "Academy_Player_5", role: "Flex", agent: "Omen", ovr: 75, salary: 33000 }
                     ] },
-                    { name: "NAVI Junior", power: 69, color: "bg-slate-700 text-white", academy: true, roster: [
+                    { name: "NAVI Junior", power: 76, color: "bg-slate-700 text-white", academy: true, roster: [
                         { name: "Academy_Player_1", role: "Duelist", agent: "Jett", ovr: 77, salary: 36000 },
                         { name: "Academy_Player_2", role: "Initiator", agent: "Sova", ovr: 76, salary: 35000 },
                         { name: "Academy_Player_3", role: "Controller", agent: "Omen", ovr: 75, salary: 34000 },
                         { name: "Academy_Player_4", role: "Sentinel", agent: "Cypher", ovr: 74, salary: 33000 },
                         { name: "Academy_Player_5", role: "Flex", agent: "Omen", ovr: 74, salary: 33000 }
                     ] },
-                    { name: "FUT Academy", power: 68, color: "bg-slate-700 text-white", academy: true, roster: [
+                    { name: "FUT Academy", power: 75, color: "bg-slate-700 text-white", academy: true, roster: [
                         { name: "Academy_Player_1", role: "Duelist", agent: "Jett", ovr: 76, salary: 36000 },
                         { name: "Academy_Player_2", role: "Initiator", agent: "Sova", ovr: 75, salary: 35000 },
                         { name: "Academy_Player_3", role: "Controller", agent: "Omen", ovr: 74, salary: 34000 },
                         { name: "Academy_Player_4", role: "Sentinel", agent: "Cypher", ovr: 73, salary: 33000 },
                         { name: "Academy_Player_5", role: "Flex", agent: "Omen", ovr: 73, salary: 33000 }
                     ] },
-                    { name: "Eternal Fire Passion", power: 67, color: "bg-slate-700 text-white", academy: true, roster: [
+                    { name: "Eternal Fire Passion", power: 74, color: "bg-slate-700 text-white", academy: true, roster: [
                         { name: "Academy_Player_1", role: "Duelist", agent: "Jett", ovr: 75, salary: 36000 },
                         { name: "Academy_Player_2", role: "Initiator", agent: "Sova", ovr: 74, salary: 35000 },
                         { name: "Academy_Player_3", role: "Controller", agent: "Omen", ovr: 73, salary: 34000 },
@@ -906,7 +876,7 @@ img, svg {
                 name: "차이나 (China)",
                 t1: [
                     {
-                        name: "Nova Esports", power: 82, color: "bg-amber-600 text-white",
+                        name: "Nova Esports", power: 92, color: "bg-amber-600 text-white",
                         roster: [
                             { name: "Septem7", role: "Duelist", agent: "Jett", ovr: 95, salary: 92250 },
                             { name: "f4ngeer", role: "Duelist", agent: "Raze", ovr: 93, salary: 91150 },
@@ -916,7 +886,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Xi Lai Gaming", power: 86, color: "bg-pink-600 text-white",
+                        name: "Xi Lai Gaming", power: 91, color: "bg-pink-600 text-white",
                         roster: [
                             { name: "NoMan", role: "Duelist", agent: "Jett", ovr: 94, salary: 91700 },
                             { name: "Rarga", role: "Initiator", agent: "Sova", ovr: 92, salary: 90600 },
@@ -926,7 +896,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Bilibili Gaming", power: 86, color: "bg-red-700 text-white",
+                        name: "Bilibili Gaming", power: 89, color: "bg-red-700 text-white",
                         roster: [
                             { name: "Knight", role: "Duelist", agent: "Jett", ovr: 92, salary: 90600 },
                             { name: "whzy", role: "Initiator", agent: "Sova", ovr: 90, salary: 89500 },
@@ -936,7 +906,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "TYLOO", power: 82, color: "bg-zinc-700 text-white",
+                        name: "TYLOO", power: 88, color: "bg-zinc-700 text-white",
                         roster: [
                             { name: "sword9", role: "Duelist", agent: "Jett", ovr: 91, salary: 90050 },
                             { name: "splash", role: "Initiator", agent: "Sova", ovr: 89, salary: 88950 },
@@ -946,7 +916,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "EDward Gaming", power: 91, color: "bg-emerald-600 text-white",
+                        name: "EDward Gaming", power: 95, color: "bg-emerald-600 text-white",
                         roster: [
                             { name: "nobody", role: "Duelist", agent: "Jett", ovr: 98, salary: 93900 },
                             { name: "ZmjjKK", role: "Duelist", agent: "Jett", ovr: 96, salary: 92800 },
@@ -956,7 +926,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "All Gamers", power: 80, color: "bg-orange-600 text-white",
+                        name: "All Gamers", power: 87, color: "bg-orange-600 text-white",
                         roster: [
                             { name: "Septem7", role: "Duelist", agent: "Jett", ovr: 90, salary: 89500 },
                             { name: "f4ngeer", role: "Duelist", agent: "Raze", ovr: 88, salary: 88400 },
@@ -966,7 +936,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "FunPlus Phoenix", power: 78, color: "bg-cyan-700 text-white",
+                        name: "FunPlus Phoenix", power: 86, color: "bg-cyan-700 text-white",
                         roster: [
                             { name: "AAAAY", role: "Duelist", agent: "Raze", ovr: 89, salary: 88950 },
                             { name: "kovaQ", role: "Initiator", agent: "Sova", ovr: 87, salary: 87850 },
@@ -976,7 +946,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Wolves Esports", power: 81, color: "bg-blue-500 text-white",
+                        name: "Wolves Esports", power: 85, color: "bg-blue-500 text-white",
                         roster: [
                             { name: "Spring", role: "Duelist", agent: "Jett", ovr: 88, salary: 88400 },
                             { name: "yosemite", role: "Initiator", agent: "Sova", ovr: 86, salary: 87300 },
@@ -986,7 +956,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Dragon Ranger Gaming", power: 79, color: "bg-indigo-600 text-white",
+                        name: "Dragon Ranger Gaming", power: 84, color: "bg-indigo-600 text-white",
                         roster: [
                             { name: "Life", role: "Duelist", agent: "Jett", ovr: 87, salary: 87850 },
                             { name: "vo0kashu", role: "Duelist", agent: "Raze", ovr: 85, salary: 86750 },
@@ -996,7 +966,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "JD Gaming", power: 76, color: "bg-blue-600 text-white",
+                        name: "JD Gaming", power: 83, color: "bg-blue-600 text-white",
                         roster: [
                             { name: "jkuro", role: "Duelist", agent: "Jett", ovr: 86, salary: 87300 },
                             { name: "Yuicaw", role: "Initiator", agent: "Sova", ovr: 84, salary: 86200 },
@@ -1006,7 +976,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Trace Esports", power: 77, color: "bg-teal-700 text-white",
+                        name: "Trace Esports", power: 81, color: "bg-teal-700 text-white",
                         roster: [
                             { name: "LuoK1ng", role: "Duelist", agent: "Jett", ovr: 84, salary: 86200 },
                             { name: "deLb", role: "Initiator", agent: "Sova", ovr: 82, salary: 85100 },
@@ -1016,7 +986,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Titan Esports Club", power: 72, color: "bg-purple-700 text-white",
+                        name: "Titan Esports Club", power: 80, color: "bg-purple-700 text-white",
                         roster: [
                             { name: "Haodong", role: "Controller", agent: "Omen", ovr: 83, salary: 85650 },
                             { name: "Spitfires", role: "Initiator", agent: "Sova", ovr: 81, salary: 84550 },
@@ -1028,7 +998,7 @@ img, svg {
                 ],
                 t2: [
                     { 
-                        name: "All Gamers", power: 80, color: "bg-purple-800 text-white",
+                        name: "All Gamers", power: 82, color: "bg-purple-800 text-white",
                         roster: [
                             { name: "spitfire", role: "Duelist", agent: "Jett", ovr: 82, salary: 45000 },
                             { name: "delb", role: "Initiator", agent: "Sova", ovr: 80, salary: 42000 },
@@ -1037,14 +1007,14 @@ img, svg {
                             { name: "sword", role: "Duelist", agent: "Raze", ovr: 77, salary: 37000 }
                         ]
                     },
-                    { name: "VCT CN Academy", power: 69, color: "bg-slate-700 text-white", academy: true, roster: [
+                    { name: "VCT CN Academy", power: 74, color: "bg-slate-700 text-white", academy: true, roster: [
                         { name: "Academy_Player_1", role: "Duelist", agent: "Jett", ovr: 75, salary: 36000 },
                         { name: "Academy_Player_2", role: "Initiator", agent: "Sova", ovr: 74, salary: 35000 },
                         { name: "Academy_Player_3", role: "Controller", agent: "Omen", ovr: 73, salary: 34000 },
                         { name: "Academy_Player_4", role: "Sentinel", agent: "Cypher", ovr: 72, salary: 33000 },
                         { name: "Academy_Player_5", role: "Flex", agent: "Omen", ovr: 72, salary: 33000 }
                     ] },
-                    { name: "VCT CN Youth", power: 67, color: "bg-slate-700 text-white", academy: true, roster: [
+                    { name: "VCT CN Youth", power: 73, color: "bg-slate-700 text-white", academy: true, roster: [
                         { name: "Academy_Player_1", role: "Duelist", agent: "Jett", ovr: 74, salary: 36000 },
                         { name: "Academy_Player_2", role: "Initiator", agent: "Sova", ovr: 73, salary: 35000 },
                         { name: "Academy_Player_3", role: "Controller", agent: "Omen", ovr: 72, salary: 34000 },
@@ -1054,51 +1024,6 @@ img, svg {
                 ]
             }
         };
-
-        // 팀/선발 로스터 포지션 자동 교통정리
-        // 기본적으로 5인 선발은 Duelist 1 / Initiator 1 / Controller 1 / Sentinel 1 / Flex 1로 구성합니다.
-        // Flex는 특정 한 역할을 중복해서 쌓지 않도록 하는 5번째 자리입니다.
-        function balanceRosterRoles(roster) {
-            if (!Array.isArray(roster) || roster.length < 5) return roster;
-            const starters = roster.filter(p => p.isStarter !== false).slice(0, 5);
-            if (starters.length < 5) return roster;
-
-            const coreRoles = ["Duelist", "Initiator", "Controller", "Sentinel"];
-            const used = new Set();
-            const assigned = new Map();
-
-            // 1차: 기존 포지션을 최대한 유지
-            for (const role of coreRoles) {
-                const candidate = starters.find(p => !used.has(p) && p.role === role);
-                if (candidate) {
-                    used.add(candidate);
-                    assigned.set(candidate, role);
-                }
-            }
-
-            // 2차: 비어 있는 포지션은 남은 선수 중 기존 포지션을 바꿔 균형을 맞춤
-            for (const role of coreRoles) {
-                if ([...assigned.values()].includes(role)) continue;
-                const candidate = starters.find(p => !used.has(p));
-                if (candidate) {
-                    used.add(candidate);
-                    assigned.set(candidate, role);
-                }
-            }
-
-            // 남은 5번째 선발은 Flex
-            for (const player of starters) {
-                if (!assigned.has(player)) assigned.set(player, "Flex");
-            }
-
-            for (const [player, role] of assigned) player.role = role;
-            return roster;
-        }
-
-        // 게임에 표시되는 모든 기본 팀의 선발 포지션을 한 번 정리합니다.
-        Object.values(VCT_DATA).forEach(region => {
-            [ ...(region.t1 || []), ...(region.t2 || []) ].forEach(team => balanceRosterRoles(team.roster));
-        });
 
         function renderTeamLogo(teamObj, sizeClass = "w-7 h-7 text-xs") {
             let name = typeof teamObj === 'string' ? teamObj : (teamObj?.name || "TEAM");
@@ -1231,7 +1156,7 @@ img, svg {
                 ovr: p.ovr,
                 salary: p.salary,
                 isStarter: true,
-                stats: { matches: 0, kills: 0, deaths: 0, assists: 0, acsSum: 0, adrSum: 0, kastSum: 0, mvpCount: 0 }
+                stats: { matches: 0, kills: 0, deaths: 0, assists: 0, acsSum: 0, mvpCount: 0 }
             }));
 
             let freeAgents = [];
@@ -1245,7 +1170,7 @@ img, svg {
                     agent: roleObj.agents[Math.floor(Math.random() * roleObj.agents.length)],
                     ovr: 74 + Math.floor(Math.random() * 16),
                     salary: 32000 + Math.floor(Math.random() * 25000),
-                    stats: { matches: 0, kills: 0, deaths: 0, assists: 0, acsSum: 0, adrSum: 0, kastSum: 0, mvpCount: 0 }
+                    stats: { matches: 0, kills: 0, deaths: 0, assists: 0, acsSum: 0, mvpCount: 0 }
                 });
             }
 
@@ -1253,7 +1178,7 @@ img, svg {
             const youthPool = ["Nova", "Rin", "Milo", "Kite", "Vex", "Ari", "Nox", "Lumi"];
             for (let i = 0; i < 4; i++) {
                 const roleObj = ROLES[Math.floor(Math.random() * 5)];
-                youth.push({ id: 'y_' + Math.random().toString(36).substr(2, 9), name: youthPool[i] + Math.floor(10 + Math.random() * 90), role: roleObj.id, agent: roleObj.agents[Math.floor(Math.random() * roleObj.agents.length)], ovr: 60 + Math.floor(Math.random() * 10), potential: 82 + Math.floor(Math.random() * 17), age: 16 + Math.floor(Math.random() * 3), training: 0, salary: 18000 + Math.floor(Math.random() * 12000), stats: { matches: 0, kills: 0, deaths: 0, assists: 0, acsSum: 0, adrSum: 0, kastSum: 0, mvpCount: 0 } });
+                youth.push({ id: 'y_' + Math.random().toString(36).substr(2, 9), name: youthPool[i] + Math.floor(10 + Math.random() * 90), role: roleObj.id, agent: roleObj.agents[Math.floor(Math.random() * roleObj.agents.length)], ovr: 60 + Math.floor(Math.random() * 10), potential: 82 + Math.floor(Math.random() * 17), age: 16 + Math.floor(Math.random() * 3), training: 0, salary: 18000 + Math.floor(Math.random() * 12000), stats: { matches: 0, kills: 0, deaths: 0, assists: 0, acsSum: 0, mvpCount: 0 } });
             }
 
             state = {
@@ -1272,19 +1197,12 @@ img, svg {
                 coach: 45,
                 analyst: 40,
                 trainingDone: false,
-                players: balanceRosterRoles(players),
+                players: players,
                 maxRoster: 6,
                 startersRequired: 5,
                 freeAgents: freeAgents,
                 youth: youth,
                 youthLevel: 1,
-                sponsorUsed: 0,
-                sponsorMax: 2,
-                sponsorSigned: { 1: false, 2: false },
-                youthScoutUsed: 0,
-                youthScoutMax: 3,
-                transferUsed: 0,
-                transferMax: 4,
                 t1Teams: t1Teams,
                 t2Teams: t2Teams,
                 lastMatchReport: null,
@@ -1563,7 +1481,6 @@ img, svg {
 
         function renderMarketView() {
             const isFull = state.players.length >= 6;
-            const transferLimitReached = state.transferUsed >= state.transferMax;
             const marketRows = state.freeAgents.map((p, index) => {
                 const rConf = getRoleConfig(p.role);
                 const fee = Math.round(p.salary * 0.4);
@@ -1590,8 +1507,8 @@ img, svg {
                             <div class="text-xs text-val-muted">계약금 / 연봉</div>
                             <div class="font-bold text-sm text-gray-200">${formatMoney(fee)} <span class="text-xs font-normal text-val-muted">/ ${formatMoney(p.salary)}</span></div>
                         </div>
-                        <button class="${isFull || !canAfford || transferLimitReached ? 'bg-gray-800 text-gray-500 cursor-not-allowed' : 'bg-val-red hover:bg-val-redHover text-white shadow-md'} px-4 py-2 rounded-lg text-xs font-bold transition" 
-                                onclick="signPlayer(${index})" ${isFull || !canAfford || transferLimitReached ? 'disabled' : ''}>
+                        <button class="${isFull || !canAfford ? 'bg-gray-800 text-gray-500 cursor-not-allowed' : 'bg-val-red hover:bg-val-redHover text-white shadow-md'} px-4 py-2 rounded-lg text-xs font-bold transition" 
+                                onclick="signPlayer(${index})" ${isFull || !canAfford ? 'disabled' : ''}>
                             영입
                         </button>
                     </div>
@@ -1603,7 +1520,7 @@ img, svg {
                 <div class="bg-val-panel border border-val-border rounded-xl p-5">
                     <div class="border-b border-val-border pb-3 mb-4">
                         <h2 class="text-lg font-bold text-white">${state.year} FA 이적 시장</h2>
-                        <p class="text-xs text-val-muted mt-1">선발 5명 + 식스맨 1명까지 최대 6명을 보유할 수 있습니다. 계약금은 연봉의 40%입니다.</p><div class="mt-2 text-xs font-bold ${transferLimitReached ? 'text-red-400' : 'text-val-accent'}">시즌 이적시장 영입 ${state.transferUsed} / ${state.transferMax}회</div>
+                        <p class="text-xs text-val-muted mt-1">선발 5명 + 식스맨 1명까지 최대 6명을 보유할 수 있습니다. 계약금은 연봉의 40%입니다.</p>
                     </div>
                     <div class="flex flex-col gap-3">
                         ${marketRows.length > 0 ? marketRows : '<div class="text-center py-8 text-val-muted text-sm">현재 FA 시장에 선수가 없습니다.</div>'}
@@ -1696,33 +1613,26 @@ img, svg {
                         <div class="border-b border-val-border pb-3 mb-4">
                             <h2 class="text-lg font-bold text-white">스폰서 계약 센터</h2>
                         </div>
-                        <div class="flex justify-between items-center mb-3 bg-val-dark p-3 rounded-lg border border-val-border">
-                            <div>
-                                <div class="text-xs text-val-muted">시즌 스폰서 계약</div>
-                                <div class="text-sm font-black text-white mt-0.5">${state.sponsorUsed} / ${state.sponsorMax}회</div>
-                            </div>
-                            <div class="text-xs font-bold ${state.sponsorUsed >= state.sponsorMax ? 'text-val-red' : 'text-green-400'}">${state.sponsorUsed >= state.sponsorMax ? '이번 시즌 한도 도달' : '계약 가능'}</div>
-                        </div>
                         <div class="flex flex-col gap-3">
                             <div class="bg-val-dark p-4 rounded-xl border border-val-border flex justify-between items-center">
                                 <div>
                                     <div class="font-bold text-white text-sm">지역 게이밍 기어 스폰서</div>
-                                    <div class="text-xs text-val-muted mt-0.5">즉시 자금 유입, 평판 +1 · 시즌 1회</div>
+                                    <div class="text-xs text-val-muted mt-0.5">즉시 자금 유입, 평판 +1</div>
                                 </div>
-                                <button class="${(!state.sponsorSigned[1] && state.sponsorUsed < state.sponsorMax) ? 'bg-green-600/20 hover:bg-green-600/40 text-green-400 border-green-500/50' : 'bg-gray-800 text-gray-500 cursor-not-allowed border-gray-700'} border px-3.5 py-1.5 rounded-lg text-xs font-bold transition" onclick="signSponsor(1)" ${state.sponsorSigned[1] || state.sponsorUsed >= state.sponsorMax ? 'disabled' : ''}>
-                                    ${state.sponsorSigned[1] ? '계약 완료' : '+$70,000'}
+                                <button class="bg-green-600/20 hover:bg-green-600/40 text-green-400 border border-green-500/50 px-3.5 py-1.5 rounded-lg text-xs font-bold transition" onclick="signSponsor(1)">
+                                    +$70,000
                                 </button>
                             </div>
                             <div class="bg-val-dark p-4 rounded-xl border border-val-border flex justify-between items-center">
                                 <div>
                                     <div class="font-bold text-white text-sm">글로벌 메인 테크 스폰서</div>
-                                    <div class="text-xs text-val-muted mt-0.5">조건: 평판 50 이상 (현재 ${state.reputation}) · 시즌 1회</div>
+                                    <div class="text-xs text-val-muted mt-0.5">조건: 평판 50 이상 (현재 ${state.reputation})</div>
                                 </div>
-                                <button class="${(!state.sponsorSigned[2] && state.reputation >= 50 && state.sponsorUsed < state.sponsorMax) ? 'bg-green-600/20 hover:bg-green-600/40 text-green-400 border-green-500/50' : 'bg-gray-800 text-gray-500 cursor-not-allowed border-gray-700'} border px-3.5 py-1.5 rounded-lg text-xs font-bold transition" onclick="signSponsor(2)" ${state.sponsorSigned[2] || state.reputation < 50 || state.sponsorUsed >= state.sponsorMax ? 'disabled' : ''}>
-                                    ${state.sponsorSigned[2] ? '계약 완료' : '+$150,000'}
+                                <button class="${state.reputation >= 50 ? 'bg-green-600/20 hover:bg-green-600/40 text-green-400 border-green-500/50' : 'bg-gray-800 text-gray-500 cursor-not-allowed border-gray-700'} border px-3.5 py-1.5 rounded-lg text-xs font-bold transition" 
+                                        onclick="signSponsor(2)" ${state.reputation < 50 ? 'disabled' : ''}>
+                                    +$150,000
                                 </button>
                             </div>
-                        </div>
                         </div>
                     </div>
 
@@ -1804,20 +1714,11 @@ img, svg {
             `;
         }
 
-        function generateYouthProspects(count = 2, fromScout = false) {
-            if (!state) return false;
+        function generateYouthProspects(count = 2) {
+            if (!state) return;
             if (!Array.isArray(state.youth)) state.youth = [];
-            if (fromScout) {
-                if (state.youthScoutUsed >= state.youthScoutMax) {
-                    showToast(`이번 시즌 유스 스카우트 한도(${state.youthScoutMax}회)를 모두 사용했습니다.`);
-                    return false;
-                }
-                state.youthScoutUsed++;
-            }
             const pool = ["Nova","Rin","Milo","Kite","Vex","Ari","Nox","Lumi","Kiro","Zeno","Mira","Juno","Sena","Rex"];
-            for (let i=0;i<count;i++) { const r=ROLES[Math.floor(Math.random()*5)]; state.youth.push({id:'y_'+Math.random().toString(36).substr(2,9),name:pool[Math.floor(Math.random()*pool.length)]+Math.floor(10+Math.random()*90),role:r.id,agent:r.agents[Math.floor(Math.random()*r.agents.length)],ovr:58+Math.floor(Math.random()*11),potential:78+Math.floor(Math.random()*22),age:16+Math.floor(Math.random()*3),training:0,salary:16000+Math.floor(Math.random()*12000),stats:{matches:0,kills:0,deaths:0,assists:0,acsSum:0,adrSum:0,kastSum:0,mvpCount:0}}); }
-            if (fromScout) state.logs.push(`🌱 [유스 스카우트] 유망주 ${count}명 발굴 (${state.youthScoutUsed}/${state.youthScoutMax})`);
-            return true;
+            for (let i=0;i<count;i++) { const r=ROLES[Math.floor(Math.random()*5)]; state.youth.push({id:'y_'+Math.random().toString(36).substr(2,9),name:pool[Math.floor(Math.random()*pool.length)]+Math.floor(10+Math.random()*90),role:r.id,agent:r.agents[Math.floor(Math.random()*r.agents.length)],ovr:58+Math.floor(Math.random()*11),potential:78+Math.floor(Math.random()*22),age:16+Math.floor(Math.random()*3),training:0,salary:16000+Math.floor(Math.random()*12000),stats:{matches:0,kills:0,deaths:0,assists:0,acsSum:0,mvpCount:0}}); }
         }
         function trainYouth(index) {
             const y=state?.youth?.[index]; if(!y) return; const cost=7000+state.youthLevel*2500;
@@ -1828,13 +1729,13 @@ img, svg {
             const cost=80000*state.youthLevel; if(state.youthLevel>=5){showToast("유스 아카데미가 최대 레벨입니다.");return;} if(state.cash<cost){showToast("아카데미 강화 비용이 부족합니다!");return;} state.cash-=cost; state.youthLevel++; state.logs.push(`🏫 [유스 아카데미] Lv.${state.youthLevel}`); showToast(`유스 아카데미 Lv.${state.youthLevel}!`); renderApp();
         }
         function promoteYouth(index) {
-            const y=state?.youth?.[index]; if(!y)return; if(state.players.length>=6){showToast("1군 로스터가 가득 찼습니다.");return;} if(y.ovr<70){showToast("아직 1군 콜업에는 성장이 더 필요합니다.");return;} state.players.push({...y,id:'p_'+Math.random().toString(36).substr(2,9),isStarter:getStartingPlayers().length<state.startersRequired,promoted:true}); state.youth.splice(index,1); state.logs.push(`⬆️ [유스 콜업] ${y.name}이(가) 1군에 합류했습니다.`); showToast(`${y.name} 1군 콜업 완료!`); renderApp();
+            const y=state?.youth?.[index]; if(!y)return; if(state.players.length>=6){showToast("1군 로스터가 가득 찼습니다.");return;} if(y.ovr<70){showToast("아직 1군 콜업에는 성장이 더 필요합니다.");return;} state.players.push({...y,id:'p_'+Math.random().toString(36).substr(2,9),isStarter:state.players.length<5,promoted:true}); state.youth.splice(index,1); state.logs.push(`⬆️ [유스 콜업] ${y.name}이(가) 1군에 합류했습니다.`); showToast(`${y.name} 1군 콜업 완료!`); renderApp();
         }
         function releaseYouth(index) { const y=state?.youth?.[index]; if(!y)return; state.youth.splice(index,1); state.logs.push(`🚪 [유스 방출] ${y.name}`); showToast(`${y.name} 방출 완료`); renderApp(); }
         function renderYouthView() {
             if(!state.youth) state.youth=[];
             const cards=state.youth.map((y,i)=>{const r=getRoleConfig(y.role);const pct=Math.min(100,Math.round(y.ovr/y.potential*100));return `<div class="bg-val-dark border border-val-border rounded-xl p-4"><div class="flex justify-between"><div><div class="text-lg font-black text-white">${y.name}</div><div class="text-xs ${r.color} font-bold">${r.icon} ${y.role} · ${y.agent} · ${y.age}세</div></div><div class="text-right"><div class="text-2xl font-black text-val-accent">${y.ovr}</div><div class="text-[10px] text-val-muted">OVR / 잠재력 ${y.potential}</div></div></div><div class="h-1.5 bg-val-panel rounded mt-3"><div class="h-full bg-val-accent rounded" style="width:${pct}%"></div></div><div class="grid grid-cols-3 gap-2 mt-4"><button onclick="trainYouth(${i})" class="bg-val-panel hover:bg-val-border text-white font-bold py-2 rounded-lg text-xs">훈련</button><button onclick="promoteYouth(${i})" class="bg-val-red hover:bg-val-redHover text-white font-bold py-2 rounded-lg text-xs">1군 콜업</button><button onclick="releaseYouth(${i})" class="bg-val-panel hover:bg-val-border text-val-muted font-bold py-2 rounded-lg text-xs">방출</button></div></div>`}).join('');
-            return `<div class="flex flex-col gap-5"><div class="bg-val-panel border border-val-border rounded-xl p-5"><div class="flex flex-col md:flex-row md:justify-between md:items-center gap-3"><div><h2 class="text-xl font-black text-white">🌱 유스 아카데미</h2><p class="text-xs text-val-muted mt-1">유망주를 발굴하고 성장시켜 1군의 차세대 선수로 키워보세요.</p></div><div class="flex gap-2"><button onclick="if(generateYouthProspects(2,true)){renderApp();showToast('새 유망주 2명이 입단했습니다.')}" class="bg-val-red text-white font-bold px-4 py-2 rounded-lg text-xs">유망주 스카우트</button><button onclick="upgradeYouthAcademy()" class="bg-val-panel border border-val-border text-white font-bold px-4 py-2 rounded-lg text-xs">아카데미 강화</button></div></div><div class="grid grid-cols-3 gap-3 mt-4"><div class="bg-val-dark rounded-lg p-3"><div class="text-[10px] text-val-muted">유스 인원</div><div class="text-xl font-black text-white">${state.youth.length}</div><div class="text-[10px] font-bold ${state.youthScoutUsed >= state.youthScoutMax ? 'text-red-400' : 'text-val-accent'}">스카우트 ${state.youthScoutUsed}/${state.youthScoutMax}회</div></div><div class="bg-val-dark rounded-lg p-3"><div class="text-[10px] text-val-muted">아카데미 레벨</div><div class="text-xl font-black text-val-accent">Lv.${state.youthLevel}</div></div><div class="bg-val-dark rounded-lg p-3"><div class="text-[10px] text-val-muted">스카우트/훈련 자금</div><div class="text-xl font-black text-white">${formatMoney(state.cash)}</div></div></div></div><div class="grid md:grid-cols-2 gap-4">${cards||`<div class="md:col-span-2 bg-val-panel border border-val-border rounded-xl p-8 text-center text-val-muted">현재 유스 선수가 없습니다. 유망주를 스카우트하세요.</div>`}</div></div>`;
+            return `<div class="flex flex-col gap-5"><div class="bg-val-panel border border-val-border rounded-xl p-5"><div class="flex flex-col md:flex-row md:justify-between md:items-center gap-3"><div><h2 class="text-xl font-black text-white">🌱 유스 아카데미</h2><p class="text-xs text-val-muted mt-1">유망주를 발굴하고 성장시켜 1군의 차세대 선수로 키워보세요.</p></div><div class="flex gap-2"><button onclick="generateYouthProspects(2);renderApp();showToast('새 유망주 2명이 입단했습니다.')" class="bg-val-red text-white font-bold px-4 py-2 rounded-lg text-xs">유망주 스카우트</button><button onclick="upgradeYouthAcademy()" class="bg-val-panel border border-val-border text-white font-bold px-4 py-2 rounded-lg text-xs">아카데미 강화</button></div></div><div class="grid grid-cols-3 gap-3 mt-4"><div class="bg-val-dark rounded-lg p-3"><div class="text-[10px] text-val-muted">유스 인원</div><div class="text-xl font-black text-white">${state.youth.length}</div></div><div class="bg-val-dark rounded-lg p-3"><div class="text-[10px] text-val-muted">아카데미 레벨</div><div class="text-xl font-black text-val-accent">Lv.${state.youthLevel}</div></div><div class="bg-val-dark rounded-lg p-3"><div class="text-[10px] text-val-muted">스카우트/훈련 자금</div><div class="text-xl font-black text-white">${formatMoney(state.cash)}</div></div></div></div><div class="grid md:grid-cols-2 gap-4">${cards||`<div class="md:col-span-2 bg-val-panel border border-val-border rounded-xl p-8 text-center text-val-muted">현재 유스 선수가 없습니다. 유망주를 스카우트하세요.</div>`}</div></div>`;
         }
 
         function renderPageContent() {
@@ -1879,8 +1780,6 @@ img, svg {
                         <td class="py-3 px-4 text-center font-black text-val-accent">${avgAcs}</td>
                         <td class="py-3 px-4 text-center font-bold text-gray-200">${p.stats.kills} / ${p.stats.deaths} / ${p.stats.assists}</td>
                         <td class="py-3 px-4 text-center font-bold ${kd >= 1.2 ? 'text-green-400' : kd < 0.9 ? 'text-val-red' : 'text-white'}">${kd}</td>
-                        <td class="py-3 px-4 text-center font-semibold text-gray-200">${matches > 0 ? Math.round((p.stats.adrSum || 0) / matches) : 0}</td>
-                        <td class="py-3 px-4 text-center font-semibold text-gray-200">${matches > 0 ? Math.round((p.stats.kastSum || 0) / matches) : 0}%</td>
                         <td class="py-3 px-4 text-center font-bold text-yellow-400">${p.stats.mvpCount > 0 ? '⭐ ' + p.stats.mvpCount : '-'}</td>
                     </tr>
                 `;
@@ -1906,13 +1805,11 @@ img, svg {
                                     <th class="py-2.5 px-4 text-center">평균 ACS</th>
                                     <th class="py-2.5 px-4 text-center">총 K / D / A</th>
                                     <th class="py-2.5 px-4 text-center">K/D</th>
-                                    <th class="py-2.5 px-4 text-center">ADR</th>
-                                    <th class="py-2.5 px-4 text-center">KAST</th>
                                     <th class="py-2.5 px-4 text-center">MVP</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                ${statRows.length > 0 ? statRows : '<tr><td colspan="10" class="text-center py-6 text-val-muted text-sm">출전 기록이 있는 선수가 없습니다.</td></tr>'}
+                                ${statRows.length > 0 ? statRows : '<tr><td colspan="8" class="text-center py-6 text-val-muted text-sm">출전 기록이 있는 선수가 없습니다.</td></tr>'}
                             </tbody>
                         </table>
                     </div>
@@ -1953,9 +1850,7 @@ img, svg {
                     <td class="py-2.5 px-3 text-val-muted text-xs">${p.agent}</td>
                     <td class="py-2.5 px-3 text-center font-bold text-val-accent">${p.acs}</td>
                     <td class="py-2.5 px-3 text-center font-semibold text-gray-200">${p.kills} / ${p.deaths} / ${p.assists}</td>
-                    <td class="py-2.5 px-3 text-center font-bold ${p.kd >= 1.2 ? 'text-green-400' : p.kd < 0.9 ? 'text-val-red' : 'text-white'}">${p.kd}</td>
-                    <td class="py-2.5 px-3 text-center font-semibold text-gray-200">${p.adr}</td>
-                    <td class="py-2.5 px-3 text-center font-semibold text-gray-200">${p.kast}%</td>
+                    <td class="py-2.5 px-3 text-center font-bold ${p.kd >= 1.2 ? 'text-green-400' : 'text-white'}">${p.kd}</td>
                 </tr>
             `).join("");
 
@@ -1994,8 +1889,6 @@ img, svg {
                                         <th class="py-2.5 px-3 text-center">ACS</th>
                                         <th class="py-2.5 px-3 text-center">K / D / A</th>
                                         <th class="py-2.5 px-3 text-center">K/D</th>
-                                    <th class="py-2.5 px-3 text-center">ADR</th>
-                                    <th class="py-2.5 px-3 text-center">KAST</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -2084,7 +1977,13 @@ img, svg {
             openModal(modalHTML);
         }
 
-        function playMatch() {
+        const ELITE_TEAM_BUFF = { "Paper Rex": 0.045, "T1": 0.03 };
+function getTeamStrength(team, basePower) {
+  const buff = ELITE_TEAM_BUFF[team?.name] || 0;
+  return basePower * (1 + buff);
+}
+
+function playMatch() {
             if (getStartingPlayers().length < 5) {
                 showToast("선발 5명이 필요합니다. 로스터에서 식스맨을 교체해 주세요.");
                 navigate('market');
@@ -2159,50 +2058,16 @@ img, svg {
             }
 
             const isWin = myMapsWon > oppMapsWon;
-            // VLR 2026 Pacific Stage 2에 가까운 경기당 분포를 사용한다.
-            // KPR 약 0.5~0.9, APR 약 0.15~0.40, ACS 약 140~240, KAST 약 65~75% 범위가 중심이다.
-            const statProfile = {
-                Duelist:    { kpr: 0.76, apr: 0.16, dpr: 0.70, acs: 216, adr: 140, kast: 0.69 },
-                Initiator:  { kpr: 0.65, apr: 0.30, dpr: 0.69, acs: 188, adr: 123, kast: 0.71 },
-                Controller: { kpr: 0.61, apr: 0.33, dpr: 0.69, acs: 181, adr: 119, kast: 0.72 },
-                Sentinel:   { kpr: 0.64, apr: 0.27, dpr: 0.67, acs: 190, adr: 124, kast: 0.73 },
-                Flex:       { kpr: 0.67, apr: 0.28, dpr: 0.69, acs: 196, adr: 127, kast: 0.71 }
-            };
-            const clamp = (v, min, max) => Math.max(min, Math.min(max, v));
-            const noise = (range) => (Math.random() * 2 - 1) * range;
-            const totalRounds = playedMaps.reduce((sum, m) => sum + m.myScore + m.oppScore, 0);
-            const teamResultFactor = isWin ? 1.025 : 0.975;
 
             let matchPlayerStats = [];
             let highestAcs = -1;
             let mvpIndex = 0;
 
             getStartingPlayers().forEach((p, idx) => {
-                const profile = statProfile[p.role] || statProfile.Flex;
-                const ratingFactor = clamp(0.90 + (p.ovr - 80) * 0.012 + (state.form - 60) * 0.002 + (state.morale - 70) * 0.0015, 0.82, 1.14);
-                const playerFactor = ratingFactor * teamResultFactor;
-
-                const kpr = clamp(profile.kpr * playerFactor + noise(0.055), 0.42, 0.92);
-                const dpr = clamp(profile.dpr * (2 - playerFactor) + noise(0.045), 0.48, 0.92);
-                const apr = clamp(profile.apr * (0.96 + ratingFactor * 0.04) + noise(0.035), 0.10, 0.45);
-
-                const kills = Math.max(10, Math.round(totalRounds * kpr));
-                const deaths = Math.max(10, Math.round(totalRounds * dpr));
-                const assists = Math.max(3, Math.round(totalRounds * apr));
-
-                // ACS는 K/D만으로 결정하지 않고 역할, OVR, 경기 성과와 함께 계산한다.
-                const acs = Math.round(clamp(
-                    profile.acs + (p.ovr - 80) * 2.0 + (kpr - profile.kpr) * 120 + noise(13),
-                    125, 255
-                ));
-                const adr = Math.round(clamp(
-                    profile.adr + (p.ovr - 80) * 1.25 + (kpr - profile.kpr) * 115 + noise(9),
-                    85, 165
-                ));
-                const kast = Math.round(clamp(
-                    (profile.kast + (ratingFactor - 1) * 0.10 + noise(0.025)) * 100,
-                    58, 82
-                ));
+                const baseKills = Math.floor(12 + (p.ovr - 75) * 0.6 + (Math.random() * 8 - 4));
+                const deaths = Math.max(5, Math.floor(13 + (78 - p.ovr) * 0.3 + (Math.random() * 6 - 3)));
+                const assists = Math.floor(3 + Math.random() * 7);
+                const acs = Math.floor(baseKills * 12 + assists * 6 + (Math.random() * 20 - 10));
 
                 if (acs > highestAcs) {
                     highestAcs = acs;
@@ -2212,18 +2077,19 @@ img, svg {
                 matchPlayerStats.push({
                     name: p.name,
                     agent: p.agent,
-                    kills, deaths, assists, acs, adr, kast,
-                    kd: (kills / deaths).toFixed(2),
+                    kills: baseKills,
+                    deaths: deaths,
+                    assists: assists,
+                    acs: acs,
+                    kd: deaths > 0 ? (baseKills / deaths).toFixed(2) : baseKills,
                     isMvp: false
                 });
 
                 p.stats.matches++;
-                p.stats.kills += kills;
+                p.stats.kills += baseKills;
                 p.stats.deaths += deaths;
                 p.stats.assists += assists;
                 p.stats.acsSum += acs;
-                p.stats.adrSum = (p.stats.adrSum || 0) + adr;
-                p.stats.kastSum = (p.stats.kastSum || 0) + kast;
             });
 
             matchPlayerStats[mvpIndex].isMvp = true;
@@ -2286,10 +2152,6 @@ img, svg {
                     state.year++;
                     state.week = 1;
                     state.trainingDone = false;
-                    state.sponsorUsed = 0;
-                    state.sponsorSigned = { 1: false, 2: false };
-                    state.youthScoutUsed = 0;
-                    state.transferUsed = 0;
                     state.t1Teams.forEach(t => { t.w = 0; t.l = 0; t.power += 1; });
                     state.t2Teams.forEach(t => { t.w = 0; t.l = 0; t.power += 1; });
                     generateYouthProspects(2);
@@ -2369,7 +2231,7 @@ img, svg {
                         agent: roleObj.agents[Math.floor(Math.random() * roleObj.agents.length)],
                         ovr: 75 + Math.floor(Math.random() * 16) + Math.floor((state.year - 2026) * 0.5),
                         salary: 35000 + Math.floor(Math.random() * 25000),
-                        stats: { matches: 0, kills: 0, deaths: 0, assists: 0, acsSum: 0, adrSum: 0, kastSum: 0, mvpCount: 0 }
+                        stats: { matches: 0, kills: 0, deaths: 0, assists: 0, acsSum: 0, mvpCount: 0 }
                     });
                 }
                 openModal(`
@@ -2389,10 +2251,6 @@ img, svg {
 
         function signPlayer(index) {
             if (!state || !Array.isArray(state.players) || !Array.isArray(state.freeAgents)) return;
-            if (state.transferUsed >= state.transferMax) {
-                showToast(`이번 시즌 이적시장 영입 한도(${state.transferMax}회)를 모두 사용했습니다.`);
-                return;
-            }
             if (state.players.length >= 6) {
                 showToast("로스터가 가득 찼습니다. 먼저 선수를 방출하세요.");
                 return;
@@ -2403,7 +2261,7 @@ img, svg {
             }
             const p = state.freeAgents[index];
             if (!p) return;
-            p.isStarter = getStartingPlayers().length < state.startersRequired;
+            p.isStarter = state.players.length < 5;
             const fee = Math.round((p.salary || 0) * 0.4);
 
             if (state.cash < fee) {
@@ -2413,9 +2271,7 @@ img, svg {
 
             state.cash -= fee;
             state.players.push(p);
-            balanceRosterRoles(state.players);
             state.freeAgents.splice(index, 1);
-            state.transferUsed++;
             state.logs.push(`[영입] ${p.name} (${p.role}, OVR ${p.ovr}) 영입 완료.`);
             showToast(`${p.name} 영입 성공!`);
             renderApp();
@@ -2453,33 +2309,26 @@ img, svg {
         }
 
         function releasePlayer(index) {
-            // 최소 4명만 유지합니다. 5명에서 한 명을 방출한 뒤
-            // FA 영입/유스 콜업으로 5번째 선수를 다시 채울 수 있습니다.
+            // 교체 영입을 위해 4명까지는 일시적으로 허용합니다.
+            // 5명 로스터에서 방출 -> 새 선수 영입 순서로 정상적인 교체가 가능합니다.
             if (!state || !Array.isArray(state.players)) return;
             if (index < 0 || index >= state.players.length) return;
-            if (state.players.length <= 4) {
-                showToast("최소 4명은 유지해야 합니다. 5번째 선수는 FA 영입 또는 유스 콜업으로 채울 수 있습니다.");
+            if (state.players.length <= 5) {
+                showToast("최소 5명은 유지해야 합니다.");
                 return;
             }
 
             const p = state.players[index];
             state.players.splice(index, 1);
-            balanceRosterRoles(state.players);
 
             // 방출 선수는 FA 시장으로 이동시켜 다시 영입할 수 있게 합니다.
             if (!Array.isArray(state.freeAgents)) state.freeAgents = [];
             state.freeAgents.unshift(p);
 
-            // 남은 선수 중 선발이 5명을 넘을 수 없도록 정리합니다.
-            let starters = state.players.filter(player => player.isStarter !== false);
-            if (starters.length > state.startersRequired) {
-                starters.slice(state.startersRequired).forEach(player => player.isStarter = false);
-            }
-
             // 잔여 계약 보상금 15%
             state.cash += Math.round((p.salary || 0) * 0.15);
             state.logs.push(`[방출] ${p.name} 선수와의 계약을 해지했습니다. FA 시장으로 이동했습니다.`);
-            showToast(`${p.name} 방출 완료. FA 영입 또는 유스 콜업으로 빈자리를 채울 수 있습니다.`);
+            showToast(`${p.name} 방출 완료. FA 시장에서 다시 영입할 수 있습니다.`);
             renderApp();
         }
 
@@ -2520,26 +2369,11 @@ img, svg {
         }
 
         function signSponsor(type) {
-            if (!state || ![1, 2].includes(type)) return;
-            if (state.sponsorUsed >= state.sponsorMax) {
-                showToast(`이번 시즌 스폰서 계약 한도(${state.sponsorMax}회)를 모두 사용했습니다.`);
-                return;
-            }
-            if (state.sponsorSigned[type]) {
-                showToast("이미 계약한 스폰서입니다.");
-                return;
-            }
-            if (type === 2 && state.reputation < 50) {
-                showToast("글로벌 스폰서는 평판 50 이상이 필요합니다.");
-                return;
-            }
             const amount = type === 1 ? 70000 : 150000;
             state.cash += amount;
-            state.sponsorUsed++;
-            state.sponsorSigned[type] = true;
             state.reputation = Math.min(100, state.reputation + (type === 2 ? 3 : 1));
-            state.logs.push(`[스폰서] ${type === 2 ? '글로벌 테크' : '지역 게이밍'} 스폰서 계약 완료 (+${formatMoney(amount)}) [${state.sponsorUsed}/${state.sponsorMax}]`);
-            showToast(`스폰서 계약 완료! (${state.sponsorUsed}/${state.sponsorMax})`);
+            state.logs.push(`[스폰서] ${type === 2 ? '글로벌 테크' : '지역 게이밍'} 스폰서 계약 완료 (+${formatMoney(amount)})`);
+            showToast("스폰서 계약 완료!");
             renderApp();
         }
 
