@@ -330,6 +330,31 @@ img, svg {
 }
 </style>
 
+<style id="mobile-nav-font-fix">
+/* ===== 모바일 메뉴 글자 세로 깨짐 방지 ===== */
+.whitespace-nowrap { white-space: nowrap !important; }
+@media (max-width: 1023px) {
+  aside { width: 100% !important; min-width: 0 !important; }
+  aside > div {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    width: 100% !important;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  aside > div::-webkit-scrollbar { display: none; }
+  aside > div > button {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    min-width: max-content !important;
+    white-space: nowrap !important;
+    writing-mode: horizontal-tb !important;
+    word-break: keep-all !important;
+  }
+}
+</style>
 </head>
 <body class="min-h-screen flex flex-col antialiased bg-val-dark select-none">
 
