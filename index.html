@@ -307,6 +307,8 @@ img, svg {
     color: #8f9aaa !important;
     font-size: 10px !important;
 }
+.sixth-player { border-color: #6b7280 !important; opacity: .9; }
+#modal-content .player-sixth { flex: 0 0 auto; font-size: 8px; font-weight: 900; color: #fbbf24; margin-left: auto; }
 
 /* 부임 버튼 */
 #modal-content .team-card-mobile .take-team-btn {
@@ -492,17 +494,18 @@ img, svg {
                             { name: "BuZz", role: "Duelist", agent: "Jett", ovr: 88, salary: 64300 },
                             { name: "Munchkin", role: "Controller", agent: "Omen", ovr: 87, salary: 63200 },
                             { name: "Meteor", role: "Sentinel", agent: "Cypher", ovr: 86, salary: 62100 },
-                            { name: "iZu", role: "Duelist", agent: "Jett", ovr: 85, salary: 61000 }
+                            { name: "iZu", role: "Flex", agent: "Jett", ovr: 85, salary: 61000 },
+                            { name: "DH", role: "Controller", agent: "Omen", ovr: 77, salary: 52200, isSixth: true }
                         ]
                     },
                     {
                         name: "ZETA DIVISION", abbr: "ZETA", logoDomain: "zetadivision.com", power: 78, color: "bg-zinc-700 text-white",
                         roster: [
-                            { name: "eKo", role: "Sentinel", agent: "Killjoy", ovr: 91, salary: 90050 },
+                            { name: "eKo", role: "Duelist", agent: "Killjoy", ovr: 91, salary: 90050 },
                             { name: "SugarZ3ro", role: "Controller", agent: "Astra", ovr: 89, salary: 88950 },
-                            { name: "SyouTa", role: "Sentinel", agent: "Cypher", ovr: 88, salary: 88400 },
-                            { name: "Xdll", role: "Sentinel", agent: "Cypher", ovr: 87, salary: 87850 },
-                            { name: "Absol", role: "Sentinel", agent: "Killjoy", ovr: 86, salary: 87300 }
+                            { name: "SyouTa", role: "Flex", agent: "Cypher", ovr: 88, salary: 88400 },
+                            { name: "Xdll", role: "Initiator", agent: "Cypher", ovr: 87, salary: 87850 },
+                            { name: "Absol", role: "Flex", agent: "Killjoy", ovr: 86, salary: 87300 }
                         ]
                     },
                     {
@@ -558,11 +561,12 @@ img, svg {
                     {
                         name: "KIWOOM DRX", abbr: "KRX", logoDomain: "drx.gg", power: 79, color: "bg-blue-600 text-white",
                         roster: [
-                            { name: "free1ng", role: "Controller", agent: "Viper", ovr: 79, salary: 87300 },
+                            { name: "free1ng", role: "Flex", agent: "Viper", ovr: 79, salary: 87300 },
                             { name: "MaKo", role: "Controller", agent: "Omen", ovr: 78, salary: 86200 },
                             { name: "BeYN", role: "Initiator", agent: "Sova", ovr: 77, salary: 85650 },
                             { name: "HYUNMIN", role: "Duelist", agent: "Neon", ovr: 76, salary: 85100 },
-                            { name: "Flicker", role: "Sentinel", agent: "Killjoy", ovr: 75, salary: 84550 }
+                            { name: "yong", role: "Flex", agent: "Jett", ovr: 75, salary: 84550 },
+                            { name: "Flicker", role: "Duelist", agent: "Killjoy", ovr: 75, salary: 84550, isSixth: true }
                         ]
                     },
                     {
@@ -1146,23 +1150,19 @@ img, svg {
         function renderTeamLogo(teamObj, sizeClass = "w-7 h-7 text-xs") {
             const obj = typeof teamObj === 'string' ? {name: teamObj} : (teamObj || {name:"TEAM"});
             const name = obj.name || "TEAM";
-            const badgeColor = obj.color || "bg-val-red text-white";
             const abbr = obj.abbr || TEAM_ABBR[name] || name.substring(0,3).toUpperCase();
-            const domain = obj.logoDomain || null;
-            const fallback = `<div class="${sizeClass} ${badgeColor} team-logo-badge shadow flex-shrink-0" title="${name}">${abbr}</div>`;
-            if (!domain) return fallback;
-            const url = `https://logo.clearbit.com/${domain}?size=128`;
-            return `<div class="${sizeClass} team-logo-img-wrap shadow flex-shrink-0" title="${name}"><span class="team-logo-fallback">${abbr}</span><img src="${url}" alt="${name} logo" class="team-logo-img" onerror="this.remove()"></div>`;
+            const badgeColor = obj.color || "bg-val-red text-white";
+            return `<div class="${sizeClass} ${badgeColor} team-logo-badge shadow flex-shrink-0" title="${name}">${abbr}</div>`;
         }
 
         const MAP_POOL = ["Ascent", "Bind", "Haven", "Split", "Icebox", "Breeze", "Lotus", "Sunset", "Abyss"];
         
         const ROLES = [
-            { id: "Duelist", name: "타격대", icon: "⚔️", color: "text-red-400", agents: ["Jett", "Raze", "Reyna", "Yoru", "Neon", "Iso"] },
-            { id: "Initiator", name: "척후대", icon: "👁️️", color: "text-yellow-400", agents: ["Sova", "Fade", "Breach", "KAY/O", "Skye", "Gekko"] },
-            { id: "Controller", name: "전략가", icon: "☁️", color: "text-purple-400", agents: ["Omen", "Viper", "Brimstone", "Astra", "Clove"] },
-            { id: "Sentinel", name: "감시자", icon: "🛡", color: "text-blue-400", agents: ["Cypher", "Killjoy", "Sage", "Chamber", "Deadlock"] },
-            { id: "Flex", name: "플렉스", icon: "🔄", color: "text-green-400", agents: ["Jett", "Omen", "Sova", "Cypher", "KAY/O"] }
+            { id: "Duelist", name: "Duelist", icon: "⚔️", color: "text-red-400", agents: ["Jett", "Raze", "Reyna", "Yoru", "Neon", "Iso"] },
+            { id: "Initiator", name: "Initiator", icon: "👁️️", color: "text-yellow-400", agents: ["Sova", "Fade", "Breach", "KAY/O", "Skye", "Gekko"] },
+            { id: "Controller", name: "Controller", icon: "☁️", color: "text-purple-400", agents: ["Omen", "Viper", "Brimstone", "Astra", "Clove"] },
+            { id: "Sentinel", name: "Sentinel", icon: "🛡", color: "text-blue-400", agents: ["Cypher", "Killjoy", "Sage", "Chamber", "Deadlock"] },
+            { id: "Flex", name: "Flex", icon: "🔄", color: "text-green-400", agents: ["Jett", "Omen", "Sova", "Cypher", "KAY/O"] }
         ];
 
         const INITIAL_NAMES = ["stax", "buzz", "t3xture", "Meteor", "Karon", "Foxy9", "f0rsakeN", "something", "mindfreak", "d4v41", "kaajak", "Chronicle", "Alfajer", "Boaster", "Hiro", "aspas", "N4RRATE", "zekken", "johnqt", "bang", "ZmjjKK", "nobody", "Smoggy", "CHICHOO", "S1Mon", "Riens", "Wo0t", "Primmie", "OXY", "zander"];
@@ -1393,7 +1393,7 @@ img, svg {
                 agent: p.agent,
                 ovr: p.ovr,
                 salary: p.salary,
-                isStarter: true,
+                isStarter: !(p.isSixth || idx >= 5),
                 stats: { matches: 0, kills: 0, deaths: 0, assists: 0, acsSum: 0, mvpCount: 0 }
             }));
 
@@ -2229,12 +2229,15 @@ img, svg {
             const teams = tier === 1 ? reg.t1 : reg.t2;
 
             const teamCards = teams.map((team, idx) => {
-                const rosterPreview = team.roster.map(p =>
-                    `<div class="roster-player">
+                const rosterPreview = team.roster.map((p, pidx) => {
+                    const isSixth = p.isSixth || pidx >= 5;
+                    const roleKo = { Duelist: "엔트리", Initiator: "이니시에이터", Controller: "컨트롤러", Sentinel: "센티널", Flex: "플렉스" }[p.role] || p.role;
+                    return `<div class="roster-player ${isSixth ? 'sixth-player' : ''}">
                         <span class="player-name">${p.name}</span>
-                        <span class="player-role">${p.role}</span>
-                    </div>`
-                ).join("");
+                        <span class="player-role">${roleKo}</span>
+                        ${isSixth ? '<span class="player-sixth">6TH</span>' : ''}
+                    </div>`;
+                }).join("");
                 return `
                 <div class="team-card-mobile flex flex-col justify-between">
                     <div class="flex items-center gap-3 min-w-0">
