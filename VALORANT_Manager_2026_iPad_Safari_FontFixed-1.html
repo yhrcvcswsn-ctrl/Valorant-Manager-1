@@ -1,0 +1,2110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALORANT Manager — 감독의 길 (2026 VCT & 국제대회 · VLR Agent Data · 최신 로스터)</title>
+    <style>
+        body {
+            background-color: #0f1923;
+            color: #ece8e1;
+            font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Segoe UI', Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #0f1923; }
+        ::-webkit-scrollbar-thumb { background: #2a3545; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #ff4655; }
+
+        .glow-red { box-shadow: 0 0 15px rgba(255, 70, 85, 0.35); }
+        .glow-cyan { box-shadow: 0 0 15px rgba(0, 240, 255, 0.25); }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in { animation: fadeIn 0.25s ease-out forwards; }
+
+        .modal-backdrop {
+            background-color: rgba(15, 25, 35, 0.85);
+            backdrop-filter: blur(4px);
+        }
+
+        .team-logo-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            border-radius: 6px;
+            letter-spacing: -0.05em;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+        }
+    </style>
+
+<style>
+:root{--red:#ff4655;--redHover:#e03e4b;--dark:#0f1923;--panel:#171e27;--card:#1f2733;--border:#2a3545;--muted:#8b95a5;--accent:#00e5ff}
+*{box-sizing:border-box}html,body{margin:0;padding:0;min-height:100%;font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Segoe UI",Arial,sans-serif;background:var(--dark);color:#fff}button{font:inherit}button:disabled{opacity:.5} .hidden{display:none!important}.fixed{position:fixed}.inset-0{top:0;right:0;bottom:0;left:0}.sticky{position:sticky}.top-0{top:0}.z-30{z-index:30}.z-50{z-index:50}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.flex-col{flex-direction:column}.flex-grow{flex-grow:1}.flex-shrink-0{flex-shrink:0}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.justify-end{justify-content:flex-end}.text-center{text-align:center}.text-left{text-align:left}.w-full{width:100%}.h-full{height:100%}.max-w-7xl{max-width:80rem}.max-w-4xl{max-width:56rem}.max-w-2xl{max-width:42rem}.mx-auto{margin-left:auto;margin-right:auto}.mt-1{margin-top:.25rem}.mt-2{margin-top:.5rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.mt-8{margin-top:2rem}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mb-8{margin-bottom:2rem}.p-1\.5{padding:.375rem}.p-3{padding:.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.gap-1\.5{gap:.375rem}.gap-2{gap:.5rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.rounded{border-radius:.25rem}.rounded-lg{border-radius:.5rem}.rounded-xl{border-radius:.75rem}.rounded-full{border-radius:9999px}.border{border-width:1px;border-style:solid}.border-b{border-bottom-width:1px;border-bottom-style:solid}.border-val-border{border-color:var(--border)}.border-val-red{border-color:var(--red)}.border-white\/20{border-color:rgba(255,255,255,.2)}.bg-val-dark{background:var(--dark)}.bg-val-panel{background:var(--panel)}.bg-val-card{background:var(--card)}.bg-val-red{background:var(--red)}.text-white{color:#fff}.text-val-red{color:var(--red)}.text-val-muted{color:var(--muted)}.text-val-accent{color:var(--accent)}.font-bold{font-weight:700}.font-black{font-weight:900}.font-semibold{font-weight:600}.text-xs{font-size:.75rem;line-height:1rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-5xl{font-size:3rem;line-height:1}.leading-none{line-height:1}.tracking-wide{letter-spacing:.025em}.tracking-wider{letter-spacing:.05em}.uppercase{text-transform:uppercase}.cursor-pointer{cursor:pointer}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.min-w-0{min-width:0}.shadow-lg{box-shadow:0 10px 15px -3px rgba(0,0,0,.25)}.shadow-2xl{box-shadow:0 25px 50px -12px rgba(0,0,0,.4)}.transition{transition:all .2s}.transition-all{transition:all .2s}.modal-backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(4px)}.bg-amber-600{background:#d97706}.bg-green-600{background:#16a34a}.bg-blue-600{background:#2563eb}.bg-purple-600{background:#9333ea}.bg-red-600{background:#dc2626}.bg-gray-800{background:#1f2937}.text-gray-300{color:#d1d5db}.text-gray-400{color:#9ca3af}.text-gray-500{color:#6b7280}.text-green-400{color:#4ade80}.text-red-400{color:#f87171}.text-yellow-400{color:#facc15}.border-yellow-500\/30{border-color:rgba(234,179,8,.3)}.border-green-500\/30{border-color:rgba(34,197,94,.3)}.border-red-500\/30{border-color:rgba(239,68,68,.3)}.border-blue-500\/30{border-color:rgba(59,130,246,.3)}.border-purple-500\/30{border-color:rgba(168,85,247,.3)}.hover\\:bg-val-red:hover,.hover\\:bg-val-redHover:hover{background:var(--red)}.hover\\:text-white:hover{color:#fff}.hover\\:border-val-red:hover{border-color:var(--red)}.grid{grid-template-columns:1fr}.animate-fade-in{animation:fade .2s ease}.modal-backdrop{display:flex}@keyframes fade{from{opacity:0}to{opacity:1}}
+@media(min-width:640px){.sm\\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\\:block{display:block!important}.sm\\:hidden{display:none!important}}
+@media(min-width:768px){.md\\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\\:flex-row{flex-direction:row}.md\\:items-center{align-items:center}.md\\:justify-between{justify-content:space-between}.md\\:p-6{padding:1.5rem}.md\\:text-base{font-size:1rem;line-height:1.5}.md\\:text-5xl{font-size:3rem;line-height:1}}
+@media(min-width:1024px){.lg\\:w-60{width:15rem}.lg\\:flex-row{flex-direction:row}.lg\\:flex-col{flex-direction:column}.lg\\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.lg\\:overflow-visible{overflow:visible}}
+</style>
+
+<style id="ipad-font-icon-fix">
+/* iPad/iOS offline-safe icon fallback: no Font Awesome webfont required. */
+.fa-solid{font-family:-apple-system,BlinkMacSystemFont,"Apple Color Emoji","Segoe UI Emoji",sans-serif;font-style:normal;display:inline-block;text-align:center;line-height:1;}
+.fa-solid::before{display:inline-block;}
+.fa-chart-pie::before{content:"📊"}.fa-users::before{content:"👥"}.fa-store::before{content:"🏪"}.fa-crosshair::before{content:"🎯"}.fa-coins::before{content:"🪙"}.fa-trophy::before{content:"🏆"}.fa-chart-line::before{content:"📈"}.fa-file-lines::before{content:"📄"}.fa-seedling::before{content:"🌱"}.fa-wallet::before{content:"💰"}.fa-bolt::before{content:"⚡"}.fa-heart::before{content:"❤️"}.fa-shield::before{content:"🛡️"}.fa-calendar-days::before{content:"📅"}.fa-gamepad::before{content:"🎮"}.fa-newspaper::before{content:"📰"}.fa-brain::before{content:"🧠"}.fa-people-group::before{content:"👥"}.fa-clipboard-question::before{content:"❓"}
+</style>
+</head>
+<body class="min-h-screen flex flex-col antialiased bg-val-dark select-none">
+
+    <header class="bg-[#111722] border-b border-val-border px-4 py-3 sticky top-0 z-30 shadow-lg">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="bg-val-red text-white p-1.5 rounded font-black text-xl leading-none">V</div>
+                <div class="text-xl font-black tracking-wider uppercase">
+                    VALORANT <span class="text-val-red font-teko text-2xl tracking-normal" id="header-year-title">MANAGER 2026-2030</span>
+                </div>
+            </div>
+            <div id="season-info" class="text-sm font-bold bg-val-panel px-3 py-1.5 rounded-lg border border-val-border text-val-muted">
+                시즌을 시작하세요
+            </div>
+        </div>
+    </header>
+
+    <noscript><div style="padding:24px;text-align:center;color:white;background:#171e27;margin:20px;border:1px solid #ff4655;border-radius:12px">이 게임은 JavaScript가 필요합니다. 파일 앱 미리보기 대신 Safari에서 HTML 파일을 열어주세요.</div></noscript><div id="app" class="flex-grow w-full max-w-7xl mx-auto p-4 md:p-6"></div>
+
+    <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-val-red text-white px-6 py-3 rounded-lg font-bold shadow-2xl hidden z-50 transition-all flex items-center gap-2 border border-white/20">
+        ℹ️ <span id="toast-msg"></span>
+    </div>
+
+    <div id="modal-container" class="fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop hidden animate-fade-in">
+        <div id="modal-content" class="bg-val-card border border-val-border rounded-xl max-w-2xl w-full p-6 shadow-2xl relative">
+        </div>
+    </div>
+
+    <script>
+        const VCT_DATA = {
+            pacific: {
+                name: "퍼시픽 (Pacific)",
+                t1: [
+                    {
+                        name: "Gen.G", power: 94, color: "bg-amber-600 text-white",
+                        roster: [
+                            { name: "Efina", role: "Initiator", agent: "Fade", ovr: 97, salary: 93350 },
+                            { name: "t3xture", role: "Duelist", agent: "Jett", ovr: 95, salary: 92250 },
+                            { name: "Ash", role: "Controller", agent: "Omen", ovr: 94, salary: 91700 },
+                            { name: "Karon", role: "Controller", agent: "Omen", ovr: 93, salary: 91150 },
+                            { name: "Raxcal", role: "Duelist", agent: "Raze", ovr: 92, salary: 90600 }
+                        ]
+                    },
+                    {
+                        name: "Paper Rex", power: 93, color: "bg-pink-600 text-white",
+                        roster: [
+                            { name: "Jinggg", role: "Duelist", agent: "Raze", ovr: 96, salary: 92800 },
+                            { name: "invy", role: "Initiator", agent: "Sova", ovr: 94, salary: 91700 },
+                            { name: "f0rsakeN", role: "Flex", agent: "Omen", ovr: 93, salary: 91150 },
+                            { name: "d4v41", role: "Initiator", agent: "Sova", ovr: 92, salary: 90600 },
+                            { name: "something", role: "Duelist", agent: "Jett", ovr: 91, salary: 90050 }
+                        ]
+                    },
+                    {
+                        name: "T1", power: 91, color: "bg-red-700 text-white",
+                        roster: [
+                            { name: "stax", role: "Initiator", agent: "Breach", ovr: 94, salary: 91700 },
+                            { name: "BuZz", role: "Duelist", agent: "Jett", ovr: 92, salary: 90600 },
+                            { name: "Munchkin", role: "Controller", agent: "Omen", ovr: 91, salary: 90050 },
+                            { name: "Meteor", role: "Sentinel", agent: "Cypher", ovr: 90, salary: 89500 },
+                            { name: "iZu", role: "Sentinel", agent: "Killjoy", ovr: 89, salary: 88950 }
+                        ]
+                    },
+                    {
+                        name: "ZETA DIVISION", power: 88, color: "bg-zinc-700 text-white",
+                        roster: [
+                            { name: "eKo", role: "Sentinel", agent: "Killjoy", ovr: 91, salary: 90050 },
+                            { name: "SugarZ3ro", role: "Controller", agent: "Astra", ovr: 89, salary: 88950 },
+                            { name: "SyouTa", role: "Sentinel", agent: "Cypher", ovr: 88, salary: 88400 },
+                            { name: "Xdll", role: "Sentinel", agent: "Cypher", ovr: 87, salary: 87850 },
+                            { name: "Absol", role: "Sentinel", agent: "Killjoy", ovr: 86, salary: 87300 }
+                        ]
+                    },
+                    {
+                        name: "Global Esports", power: 87, color: "bg-emerald-600 text-white",
+                        roster: [
+                            { name: "Autumn", role: "Initiator", agent: "Sova", ovr: 90, salary: 89500 },
+                            { name: "UdoTan", role: "Initiator", agent: "Sova", ovr: 88, salary: 88400 },
+                            { name: "Kr1stal", role: "Sentinel", agent: "Killjoy", ovr: 87, salary: 87850 },
+                            { name: "xavi8k", role: "Initiator", agent: "Sova", ovr: 86, salary: 87300 },
+                            { name: "PatMen", role: "Initiator", agent: "Sova", ovr: 85, salary: 86750 }
+                        ]
+                    },
+                    {
+                        name: "Rex Regum Qeon", power: 87, color: "bg-orange-600 text-white",
+                        roster: [
+                            { name: "crazyguy", role: "Controller", agent: "Omen", ovr: 90, salary: 89500 },
+                            { name: "Kushy", role: "Sentinel", agent: "Cypher", ovr: 88, salary: 88400 },
+                            { name: "xffero", role: "Controller", agent: "Viper", ovr: 87, salary: 87850 },
+                            { name: "Monyet", role: "Controller", agent: "Omen", ovr: 86, salary: 87300 },
+                            { name: "Xan", role: "Duelist", agent: "Jett", ovr: 85, salary: 86750 }
+                        ]
+                    },
+                    {
+                        name: "Team Secret", power: 85, color: "bg-cyan-700 text-white",
+                        roster: [
+                            { name: "Sylvan", role: "Controller", agent: "Omen", ovr: 88, salary: 88400 },
+                            { name: "natz", role: "Sentinel", agent: "Cypher", ovr: 86, salary: 87300 },
+                            { name: "skye", role: "Initiator", agent: "Sova", ovr: 85, salary: 86750 },
+                            { name: "kellyS", role: "Sentinel", agent: "Killjoy", ovr: 84, salary: 86200 },
+                            { name: "STYRON", role: "Duelist", agent: "Raze", ovr: 83, salary: 85650 }
+                        ]
+                    },
+                    {
+                        name: "DetonatioN FocusMe", power: 84, color: "bg-blue-500 text-white",
+                        roster: [
+                            { name: "Meiy", role: "Duelist", agent: "Jett", ovr: 87, salary: 87850 },
+                            { name: "Akame", role: "Duelist", agent: "Jett", ovr: 85, salary: 86750 },
+                            { name: "SSeeS", role: "Controller", agent: "Omen", ovr: 84, salary: 86200 },
+                            { name: "Caedye", role: "Sentinel", agent: "Cypher", ovr: 83, salary: 85650 },
+                            { name: "yatsuka", role: "Duelist", agent: "Raze", ovr: 82, salary: 85100 }
+                        ]
+                    },
+                    {
+                        name: "FULL SENSE", power: 84, color: "bg-indigo-600 text-white",
+                        roster: [
+                            { name: "Crws", role: "Controller", agent: "Omen", ovr: 87, salary: 87850 },
+                            { name: "Killua", role: "Initiator", agent: "Sova", ovr: 85, salary: 86750 },
+                            { name: "JitBoyS", role: "Controller", agent: "Omen", ovr: 84, salary: 86200 },
+                            { name: "primmie", role: "Duelist", agent: "Jett", ovr: 83, salary: 85650 },
+                            { name: "seph1roth", role: "Controller", agent: "Omen", ovr: 82, salary: 85100 }
+                        ]
+                    },
+                    {
+                        name: "KIWOOM DRX", power: 83, color: "bg-blue-600 text-white",
+                        roster: [
+                            { name: "free1ng", role: "Controller", agent: "Viper", ovr: 86, salary: 87300 },
+                            { name: "MaKo", role: "Controller", agent: "Omen", ovr: 84, salary: 86200 },
+                            { name: "BeYN", role: "Initiator", agent: "Sova", ovr: 83, salary: 85650 },
+                            { name: "HYUNMIN", role: "Duelist", agent: "Neon", ovr: 82, salary: 85100 },
+                            { name: "Flicker", role: "Sentinel", agent: "Killjoy", ovr: 81, salary: 84550 }
+                        ]
+                    },
+                    {
+                        name: "Nongshim RedForce", power: 82, color: "bg-teal-700 text-white",
+                        roster: [
+                            { name: "Rb", role: "Duelist", agent: "Raze", ovr: 85, salary: 86750 },
+                            { name: "Dambi", role: "Initiator", agent: "Sova", ovr: 83, salary: 85650 },
+                            { name: "Francis", role: "Controller", agent: "Omen", ovr: 82, salary: 85100 },
+                            { name: "Ivy", role: "Sentinel", agent: "Killjoy", ovr: 81, salary: 84550 },
+                            { name: "Xross", role: "Sentinel", agent: "Cypher", ovr: 80, salary: 84000 }
+                        ]
+                    },
+                    {
+                        name: "VARREL", power: 82, color: "bg-purple-700 text-white",
+                        roster: [
+                            { name: "C1ndeR", role: "Duelist", agent: "Jett", ovr: 85, salary: 86750 },
+                            { name: "Klaus", role: "Initiator", agent: "Sova", ovr: 83, salary: 85650 },
+                            { name: "Foxy9", role: "Duelist", agent: "Jett", ovr: 82, salary: 85100 },
+                            { name: "oonzmlp", role: "Sentinel", agent: "Killjoy", ovr: 81, salary: 84550 },
+                            { name: "Zexy", role: "Controller", agent: "Omen", ovr: 80, salary: 84000 }
+                        ]
+                    }
+                ],
+                t2: [
+                    { name: "ONSIDE GAMING", power: 84, color: "bg-yellow-600 text-white", roster: [
+                        { name: "Cloudy", role: "Initiator", agent: "Sova", ovr: 84, salary: 52000 },
+                        { name: "Wolverine", role: "Duelist", agent: "Raze", ovr: 84, salary: 52000 },
+                        { name: "Awayk", role: "Controller", agent: "Omen", ovr: 83, salary: 51000 },
+                        { name: "Ray", role: "Duelist", agent: "Jett", ovr: 86, salary: 54000 },
+                        { name: "Xiesta", role: "Sentinel", agent: "Cypher", ovr: 82, salary: 50000 }
+                    ] },
+                    { name: "DRX Academy", power: 82, color: "bg-slate-700 text-white", academy: true, roster: [
+                        { name: "apeX", role: "Duelist", agent: "Jett", ovr: 83, salary: 51000 },
+                        { name: "Athan", role: "Duelist", agent: "Raze", ovr: 85, salary: 53000 },
+                        { name: "NGen", role: "Controller", agent: "Omen", ovr: 84, salary: 52000 },
+                        { name: "Kyra", role: "Sentinel", agent: "Cypher", ovr: 80, salary: 48000 },
+                        { name: "XoNs", role: "Initiator", agent: "Sova", ovr: 81, salary: 49000 }
+                    ] },
+                    { name: "T1 Academy", power: 80, color: "bg-red-800 text-white", academy: true, roster: [
+                        { name: "Impact", role: "Duelist", agent: "Jett", ovr: 83, salary: 51000 },
+                        { name: "wezzy", role: "Duelist", agent: "Raze", ovr: 84, salary: 52000 },
+                        { name: "DH", role: "Controller", agent: "Omen", ovr: 77, salary: 45000 },
+                        { name: "Gnadel", role: "Sentinel", agent: "Cypher", ovr: 81, salary: 49000 },
+                        { name: "DarK", role: "Initiator", agent: "Sova", ovr: 80, salary: 48000 }
+                    ] },
+                    { name: "Dplus Esports", power: 79, color: "bg-sky-700 text-white", roster: [
+                        { name: "CabezA", role: "Duelist", agent: "Raze", ovr: 83, salary: 51000 },
+                        { name: "JaXe", role: "Initiator", agent: "Sova", ovr: 79, salary: 47000 },
+                        { name: "shu", role: "Controller", agent: "Omen", ovr: 78, salary: 46000 },
+                        { name: "Kally", role: "Initiator", agent: "Sova", ovr: 81, salary: 49000 },
+                        { name: "Ramgi", role: "Sentinel", agent: "Cypher", ovr: 78, salary: 46000 }
+                    ] },
+                    { name: "Gen.G Global Academy", power: 78, color: "bg-yellow-700 text-white", academy: true, roster: [
+                        { name: "Raxcal", role: "Duelist", agent: "Jett", ovr: 84, salary: 52000 },
+                        { name: "Kleine", role: "Initiator", agent: "Sova", ovr: 76, salary: 44000 },
+                        { name: "KiTae", role: "Controller", agent: "Omen", ovr: 78, salary: 46000 },
+                        { name: "Fric", role: "Duelist", agent: "Raze", ovr: 82, salary: 50000 },
+                        { name: "Sovereign", role: "Sentinel", agent: "Cypher", ovr: 78, salary: 46000 },
+                        { name: "RgoN", role: "Initiator", agent: "Sova", ovr: 77, salary: 45000 }
+                    ] },
+                    { name: "ARETE", power: 77, color: "bg-orange-700 text-white", roster: [
+                        { name: "RedLight", role: "Duelist", agent: "Jett", ovr: 81, salary: 49000 },
+                        { name: "Rico", role: "Initiator", agent: "Sova", ovr: 78, salary: 46000 },
+                        { name: "JaebiN", role: "Controller", agent: "Omen", ovr: 77, salary: 45000 },
+                        { name: "ANNYEON", role: "Sentinel", agent: "Cypher", ovr: 76, salary: 44000 },
+                        { name: "XIV", role: "Duelist", agent: "Raze", ovr: 80, salary: 48000 }
+                    ] },
+                    { name: "X-CAST", power: 75, color: "bg-purple-700 text-white", roster: [
+                        { name: "Efina", role: "Initiator", agent: "Fade", ovr: 82, salary: 50000 },
+                        { name: "INPA", role: "Duelist", agent: "Jett", ovr: 77, salary: 45000 },
+                        { name: "rsd", role: "Controller", agent: "Omen", ovr: 76, salary: 44000 },
+                        { name: "Taegeuk", role: "Sentinel", agent: "Cypher", ovr: 75, salary: 43000 },
+                        { name: "Beom", role: "Initiator", agent: "Sova", ovr: 76, salary: 44000 },
+                        { name: "YJ", role: "Flex", agent: "KAY/O", ovr: 74, salary: 42000 }
+                    ] },
+                    { name: "So:sweet", power: 73, color: "bg-pink-700 text-white", roster: [
+                        { name: "Xizen", role: "Duelist", agent: "Jett", ovr: 76, salary: 44000 },
+                        { name: "Zoltraak", role: "Initiator", agent: "Sova", ovr: 75, salary: 43000 },
+                        { name: "Rody", role: "Controller", agent: "Omen", ovr: 74, salary: 42000 },
+                        { name: "YzaE", role: "Duelist", agent: "Raze", ovr: 75, salary: 43000 },
+                        { name: "Kitsch", role: "Sentinel", agent: "Cypher", ovr: 77, salary: 45000 },
+                        { name: "skuzy", role: "Flex", agent: "KAY/O", ovr: 72, salary: 40000 }
+                    ] }
+                ]
+            },
+            americas: {
+                name: "아메리카스 (Americas)",
+                t1: [
+                    {
+                        name: "NRG", power: 94, color: "bg-amber-600 text-white",
+                        roster: [
+                            { name: "brawk", role: "Duelist", agent: "Jett", ovr: 97, salary: 93350 },
+                            { name: "mada", role: "Duelist", agent: "Raze", ovr: 95, salary: 92250 },
+                            { name: "skuba", role: "Controller", agent: "Omen", ovr: 94, salary: 91700 },
+                            { name: "Ethan", role: "Initiator", agent: "Sova", ovr: 93, salary: 91150 },
+                            { name: "keiko", role: "Duelist", agent: "Raze", ovr: 92, salary: 90600 }
+                        ]
+                    },
+                    {
+                        name: "100 Thieves", power: 93, color: "bg-pink-600 text-white",
+                        roster: [
+                            { name: "Asuna", role: "Duelist", agent: "Raze", ovr: 96, salary: 92800 },
+                            { name: "bang", role: "Controller", agent: "Omen", ovr: 94, salary: 91700 },
+                            { name: "Cryocells", role: "Sentinel", agent: "Chamber", ovr: 93, salary: 91150 },
+                            { name: "vora", role: "Sentinel", agent: "Cypher", ovr: 92, salary: 90600 },
+                            { name: "Timotino", role: "Duelist", agent: "Neon", ovr: 91, salary: 90050 }
+                        ]
+                    },
+                    {
+                        name: "LEVIATÁN", power: 93, color: "bg-red-700 text-white",
+                        roster: [
+                            { name: "kiNgg", role: "Initiator", agent: "Sova", ovr: 96, salary: 92800 },
+                            { name: "blowz", role: "Initiator", agent: "Sova", ovr: 94, salary: 91700 },
+                            { name: "Sato", role: "Duelist", agent: "Jett", ovr: 93, salary: 91150 },
+                            { name: "spike", role: "Sentinel", agent: "Killjoy", ovr: 92, salary: 90600 },
+                            { name: "Neon", role: "Duelist", agent: "Neon", ovr: 91, salary: 90050 }
+                        ]
+                    },
+                    {
+                        name: "LOUD", power: 91, color: "bg-zinc-700 text-white",
+                        roster: [
+                            { name: "Darker", role: "Duelist", agent: "Raze", ovr: 94, salary: 91700 },
+                            { name: "DaviH", role: "Initiator", agent: "Sova", ovr: 92, salary: 90600 },
+                            { name: "lukxo", role: "Duelist", agent: "Raze", ovr: 91, salary: 90050 },
+                            { name: "erde", role: "Sentinel", agent: "Cypher", ovr: 90, salary: 89500 },
+                            { name: "tkzin", role: "Duelist", agent: "Raze", ovr: 89, salary: 88950 }
+                        ]
+                    },
+                    {
+                        name: "MIBR", power: 90, color: "bg-emerald-600 text-white",
+                        roster: [
+                            { name: "tex", role: "Initiator", agent: "Sova", ovr: 93, salary: 91150 },
+                            { name: "zekken", role: "Duelist", agent: "Raze", ovr: 91, salary: 90050 },
+                            { name: "Mazino", role: "Controller", agent: "Omen", ovr: 90, salary: 89500 },
+                            { name: "aspas", role: "Duelist", agent: "Jett", ovr: 89, salary: 88950 },
+                            { name: "Verno", role: "Initiator", agent: "Sova", ovr: 88, salary: 88400 }
+                        ]
+                    },
+                    {
+                        name: "G2 Esports", power: 89, color: "bg-orange-600 text-white",
+                        roster: [
+                            { name: "BABYBAY", role: "Duelist", agent: "Raze", ovr: 92, salary: 90600 },
+                            { name: "valyn", role: "Controller", agent: "Omen", ovr: 90, salary: 89500 },
+                            { name: "jawgemo", role: "Duelist", agent: "Raze", ovr: 89, salary: 88950 },
+                            { name: "leaf", role: "Sentinel", agent: "Cypher", ovr: 88, salary: 88400 },
+                            { name: "trent", role: "Initiator", agent: "Sova", ovr: 87, salary: 87850 }
+                        ]
+                    },
+                    {
+                        name: "Sentinels", power: 88, color: "bg-cyan-700 text-white",
+                        roster: [
+                            { name: "Marved", role: "Controller", agent: "Omen", ovr: 91, salary: 90050 },
+                            { name: "johnqt", role: "Controller", agent: "Omen", ovr: 89, salary: 88950 },
+                            { name: "JonahP", role: "Initiator", agent: "Sova", ovr: 88, salary: 88400 },
+                            { name: "cortezia", role: "Sentinel", agent: "Killjoy", ovr: 87, salary: 87850 },
+                            { name: "Reduxx", role: "Duelist", agent: "Jett", ovr: 86, salary: 87300 }
+                        ]
+                    },
+                    {
+                        name: "Evil Geniuses", power: 84, color: "bg-blue-500 text-white",
+                        roster: [
+                            { name: "supamen", role: "Controller", agent: "Omen", ovr: 87, salary: 87850 },
+                            { name: "Paincakes", role: "Initiator", agent: "Sova", ovr: 85, salary: 86750 },
+                            { name: "dgzin", role: "Duelist", agent: "Jett", ovr: 84, salary: 86200 },
+                            { name: "zerona", role: "Sentinel", agent: "Cypher", ovr: 83, salary: 85650 },
+                            { name: "bao", role: "Controller", agent: "Viper", ovr: 82, salary: 85100 }
+                        ]
+                    },
+                    {
+                        name: "ENVY", power: 84, color: "bg-indigo-600 text-white",
+                        roster: [
+                            { name: "Rossy", role: "Initiator", agent: "Sova", ovr: 87, salary: 87850 },
+                            { name: "keznit", role: "Duelist", agent: "Raze", ovr: 85, salary: 86750 },
+                            { name: "GLYPH", role: "Controller", agent: "Omen", ovr: 84, salary: 86200 },
+                            { name: "Demon1", role: "Duelist", agent: "Jett", ovr: 83, salary: 85650 },
+                            { name: "nightz", role: "Sentinel", agent: "Cypher", ovr: 82, salary: 85100 }
+                        ]
+                    },
+                    {
+                        name: "Cloud9", power: 84, color: "bg-blue-600 text-white",
+                        roster: [
+                            { name: "Zellsis", role: "Initiator", agent: "KAY/O", ovr: 87, salary: 87850 },
+                            { name: "FireBallOps", role: "Initiator", agent: "Sova", ovr: 85, salary: 86750 },
+                            { name: "v1c", role: "Controller", agent: "Omen", ovr: 84, salary: 86200 },
+                            { name: "OXY", role: "Duelist", agent: "Jett", ovr: 83, salary: 85650 },
+                            { name: "Jackk", role: "Sentinel", agent: "Cypher", ovr: 82, salary: 85100 }
+                        ]
+                    },
+                    {
+                        name: "FURIA", power: 83, color: "bg-teal-700 text-white",
+                        roster: [
+                            { name: "C0M", role: "Initiator", agent: "Sova", ovr: 86, salary: 87300 },
+                            { name: "eeiu", role: "Initiator", agent: "Sova", ovr: 84, salary: 86200 },
+                            { name: "koalanoob", role: "Duelist", agent: "Jett", ovr: 83, salary: 85650 },
+                            { name: "artzin", role: "Duelist", agent: "Raze", ovr: 82, salary: 85100 },
+                            { name: "Shyy", role: "Sentinel", agent: "Killjoy", ovr: 81, salary: 84550 }
+                        ]
+                    },
+                    {
+                        name: "KRÜ Esports", power: 82, color: "bg-purple-700 text-white",
+                        roster: [
+                            { name: "saadhak", role: "Controller", agent: "Omen", ovr: 85, salary: 86750 },
+                            { name: "mwzera", role: "Duelist", agent: "Raze", ovr: 83, salary: 85650 },
+                            { name: "Less", role: "Sentinel", agent: "Viper", ovr: 82, salary: 85100 },
+                            { name: "heat", role: "Duelist", agent: "Jett", ovr: 81, salary: 84550 },
+                            { name: "Dantedeu5", role: "Initiator", agent: "Sova", ovr: 80, salary: 84000 }
+                        ]
+                    }
+                ],
+                t2: [
+                    { 
+                        name: "M80", power: 84, color: "bg-neutral-800 text-val-accent border border-val-accent/40",
+                        roster: [
+                            { name: "zander", role: "Controller", agent: "Omen", ovr: 86, salary: 55000 },
+                            { name: "koalanoob", role: "Duelist", agent: "Jett", ovr: 85, salary: 53000 },
+                            { name: "eeiu", role: "Initiator", agent: "Sova", ovr: 83, salary: 48000 },
+                            { name: "Nismo", role: "Initiator", agent: "Sova", ovr: 83, salary: 49000 },
+                            { name: "bcJ", role: "Initiator", agent: "Sova", ovr: 82, salary: 46000 }
+                        ]
+                    },
+                    { name: "Evil Geniuses Academy", power: 77, color: "bg-slate-700 text-white", academy: true, roster: [
+                        { name: "Academy_Player_1", role: "Duelist", agent: "Jett", ovr: 78, salary: 36000 },
+                        { name: "Academy_Player_2", role: "Initiator", agent: "Sova", ovr: 77, salary: 35000 },
+                        { name: "Academy_Player_3", role: "Controller", agent: "Omen", ovr: 76, salary: 34000 },
+                        { name: "Academy_Player_4", role: "Sentinel", agent: "Cypher", ovr: 75, salary: 33000 },
+                        { name: "Academy_Player_5", role: "Flex", agent: "Omen", ovr: 75, salary: 33000 }
+                    ] },
+                    { name: "NRG Academy", power: 76, color: "bg-slate-700 text-white", academy: true, roster: [
+                        { name: "Academy_Player_1", role: "Duelist", agent: "Jett", ovr: 77, salary: 36000 },
+                        { name: "Academy_Player_2", role: "Initiator", agent: "Sova", ovr: 76, salary: 35000 },
+                        { name: "Academy_Player_3", role: "Controller", agent: "Omen", ovr: 75, salary: 34000 },
+                        { name: "Academy_Player_4", role: "Sentinel", agent: "Cypher", ovr: 74, salary: 33000 },
+                        { name: "Academy_Player_5", role: "Flex", agent: "Omen", ovr: 74, salary: 33000 }
+                    ] },
+                ]
+            },
+            emea: {
+                name: "EMEA (유럽·중동)",
+                t1: [
+                    {
+                        name: "Karmine Corp", power: 91, color: "bg-amber-600 text-white",
+                        roster: [
+                            { name: "SUYGETSU", role: "Sentinel", agent: "Killjoy", ovr: 94, salary: 91700 },
+                            { name: "Avez", role: "Initiator", agent: "Sova", ovr: 92, salary: 90600 },
+                            { name: "dos9", role: "Controller", agent: "Omen", ovr: 91, salary: 90050 },
+                            { name: "LewN", role: "Sentinel", agent: "Killjoy", ovr: 90, salary: 89500 },
+                            { name: "N4RRATE", role: "Duelist", agent: "Raze", ovr: 89, salary: 88950 }
+                        ]
+                    },
+                    {
+                        name: "Team Liquid", power: 90, color: "bg-pink-600 text-white",
+                        roster: [
+                            { name: "nAts", role: "Sentinel", agent: "Viper", ovr: 93, salary: 91150 },
+                            { name: "purp0", role: "Duelist", agent: "Raze", ovr: 91, salary: 90050 },
+                            { name: "trexx", role: "Duelist", agent: "Raze", ovr: 90, salary: 89500 },
+                            { name: "Kicks", role: "Sentinel", agent: "Killjoy", ovr: 89, salary: 88950 },
+                            { name: "kamo", role: "Duelist", agent: "Jett", ovr: 88, salary: 88400 }
+                        ]
+                    },
+                    {
+                        name: "FUT Esports", power: 89, color: "bg-red-700 text-white",
+                        roster: [
+                            { name: "sociablEE", role: "Duelist", agent: "Raze", ovr: 92, salary: 90600 },
+                            { name: "yetujey", role: "Initiator", agent: "Sova", ovr: 90, salary: 89500 },
+                            { name: "xeus", role: "Controller", agent: "Omen", ovr: 89, salary: 88950 },
+                            { name: "KROSTALY", role: "Sentinel", agent: "Killjoy", ovr: 88, salary: 88400 },
+                            { name: "s0pp", role: "Duelist", agent: "Raze", ovr: 87, salary: 87850 }
+                        ]
+                    },
+                    {
+                        name: "Team Vitality", power: 89, color: "bg-zinc-700 text-white",
+                        roster: [
+                            { name: "Chronicle", role: "Flex", agent: "Omen", ovr: 92, salary: 90600 },
+                            { name: "Derke", role: "Duelist", agent: "Jett", ovr: 90, salary: 89500 },
+                            { name: "PROFEK", role: "Controller", agent: "Omen", ovr: 89, salary: 88950 },
+                            { name: "Jamppi", role: "Controller", agent: "Viper", ovr: 88, salary: 88400 },
+                            { name: "Sayonara", role: "Initiator", agent: "Sova", ovr: 87, salary: 87850 }
+                        ]
+                    },
+                    {
+                        name: "Team Heretics", power: 88, color: "bg-emerald-600 text-white",
+                        roster: [
+                            { name: "Boo", role: "Controller", agent: "Omen", ovr: 91, salary: 90050 },
+                            { name: "RieNs", role: "Initiator", agent: "Sova", ovr: 89, salary: 88950 },
+                            { name: "Wo0t", role: "Duelist", agent: "Raze", ovr: 88, salary: 88400 },
+                            { name: "koshmaras", role: "Sentinel", agent: "Killjoy", ovr: 87, salary: 87850 },
+                            { name: "benjyfishy", role: "Initiator", agent: "Sova", ovr: 86, salary: 87300 }
+                        ]
+                    },
+                    {
+                        name: "BBL Esports", power: 86, color: "bg-orange-600 text-white",
+                        roster: [
+                            { name: "Rosé", role: "Duelist", agent: "Jett", ovr: 89, salary: 88950 },
+                            { name: "Crewen", role: "Initiator", agent: "Sova", ovr: 87, salary: 87850 },
+                            { name: "Loita", role: "Controller", agent: "Omen", ovr: 86, salary: 87300 },
+                            { name: "Lar0k", role: "Sentinel", agent: "Killjoy", ovr: 85, salary: 86750 },
+                            { name: "lovers rock", role: "Duelist", agent: "Raze", ovr: 84, salary: 86200 }
+                        ]
+                    },
+                    {
+                        name: "Natus Vincere", power: 84, color: "bg-cyan-700 text-white",
+                        roster: [
+                            { name: "ExiT", role: "Duelist", agent: "Raze", ovr: 87, salary: 87850 },
+                            { name: "CyvOph", role: "Initiator", agent: "Sova", ovr: 85, salary: 86750 },
+                            { name: "chloric", role: "Controller", agent: "Omen", ovr: 84, salary: 86200 },
+                            { name: "Ruxic", role: "Sentinel", agent: "Killjoy", ovr: 83, salary: 85650 },
+                            { name: "hiro", role: "Initiator", agent: "Sova", ovr: 82, salary: 85100 }
+                        ]
+                    },
+                    {
+                        name: "FNATIC", power: 84, color: "bg-blue-500 text-white",
+                        roster: [
+                            { name: "crashies", role: "Initiator", agent: "Sova", ovr: 87, salary: 87850 },
+                            { name: "Boaster", role: "Controller", agent: "Omen", ovr: 85, salary: 86750 },
+                            { name: "Cloud", role: "Initiator", agent: "Sova", ovr: 84, salary: 86200 },
+                            { name: "kaajak", role: "Duelist", agent: "Jett", ovr: 83, salary: 85650 },
+                            { name: "Alfajer", role: "Sentinel", agent: "Cypher", ovr: 82, salary: 85100 }
+                        ]
+                    },
+                    {
+                        name: "GIANTX", power: 82, color: "bg-indigo-600 text-white",
+                        roster: [
+                            { name: "Jesse", role: "Duelist", agent: "Jett", ovr: 85, salary: 86750 },
+                            { name: "neT", role: "Sentinel", agent: "Killjoy", ovr: 83, salary: 85650 },
+                            { name: "Flickless", role: "Controller", agent: "Omen", ovr: 82, salary: 85100 },
+                            { name: "ara", role: "Sentinel", agent: "Cypher", ovr: 81, salary: 84550 },
+                            { name: "westside", role: "Initiator", agent: "Sova", ovr: 80, salary: 84000 }
+                        ]
+                    },
+                    {
+                        name: "Gentle Mates", power: 82, color: "bg-blue-600 text-white",
+                        roster: [
+                            { name: "starxo", role: "Initiator", agent: "KAY/O", ovr: 85, salary: 86750 },
+                            { name: "H1ber", role: "Duelist", agent: "Jett", ovr: 83, salary: 85650 },
+                            { name: "marteen", role: "Duelist", agent: "Raze", ovr: 82, salary: 85100 },
+                            { name: "bipo", role: "Sentinel", agent: "Killjoy", ovr: 81, salary: 84550 },
+                            { name: "Minny", role: "Initiator", agent: "Sova", ovr: 80, salary: 84000 }
+                        ]
+                    },
+                    {
+                        name: "PCIFIC Esports", power: 79, color: "bg-teal-700 text-white",
+                        roster: [
+                            { name: "al0rante", role: "Duelist", agent: "Jett", ovr: 82, salary: 85100 },
+                            { name: "qpert", role: "Initiator", agent: "Sova", ovr: 80, salary: 84000 },
+                            { name: "waddle", role: "Controller", agent: "Omen", ovr: 79, salary: 83450 },
+                            { name: "seven", role: "Sentinel", agent: "Killjoy", ovr: 78, salary: 82900 },
+                            { name: "NINJA", role: "Duelist", agent: "Raze", ovr: 77, salary: 82350 }
+                        ]
+                    },
+                    {
+                        name: "Eternal Fire", power: 80, color: "bg-purple-700 text-white",
+                        roster: [
+                            { name: "nekky", role: "Duelist", agent: "Jett", ovr: 83, salary: 85650 },
+                            { name: "audaz", role: "Initiator", agent: "Sova", ovr: 81, salary: 84550 },
+                            { name: "Spear", role: "Controller", agent: "Omen", ovr: 80, salary: 84000 },
+                            { name: "Favian", role: "Sentinel", agent: "Killjoy", ovr: 79, salary: 83450 },
+                            { name: "echo", role: "Initiator", agent: "Sova", ovr: 78, salary: 82900 }
+                        ]
+                    }
+                ],
+                t2: [
+                    { 
+                        name: "Eternal Fire", power: 84, color: "bg-orange-800 text-white",
+                        roster: [
+                            { name: "Cacan", role: "Duelist", agent: "Jett", ovr: 84, salary: 50000 },
+                            { name: "russ", role: "Initiator", agent: "Sova", ovr: 83, salary: 47000 },
+                            { name: "braven", role: "Controller", agent: "Omen", ovr: 82, salary: 44000 },
+                            { name: "STEREO", role: "Sentinel", agent: "Cypher", ovr: 81, salary: 42000 },
+                            { name: "jeyC", role: "Flex", agent: "KAY/O", ovr: 80, salary: 40000 }
+                        ]
+                    },
+                    { 
+                        name: "PCIFIC Esports", power: 83, color: "bg-teal-800 text-white",
+                        roster: [
+                            { name: "pcif1", role: "Duelist", agent: "Jett", ovr: 83, salary: 48000 },
+                            { name: "pcif2", role: "Initiator", agent: "Sova", ovr: 82, salary: 45000 },
+                            { name: "pcif3", role: "Controller", agent: "Omen", ovr: 81, salary: 43000 },
+                            { name: "pcif4", role: "Sentinel", agent: "Cypher", ovr: 80, salary: 41000 },
+                            { name: "pcif5", role: "Flex", agent: "Sova", ovr: 79, salary: 39000 }
+                        ]
+                    },
+                    { name: "Team Liquid Academy", power: 77, color: "bg-slate-700 text-white", academy: true, roster: [
+                        { name: "Academy_Player_1", role: "Duelist", agent: "Jett", ovr: 78, salary: 36000 },
+                        { name: "Academy_Player_2", role: "Initiator", agent: "Sova", ovr: 77, salary: 35000 },
+                        { name: "Academy_Player_3", role: "Controller", agent: "Omen", ovr: 76, salary: 34000 },
+                        { name: "Academy_Player_4", role: "Sentinel", agent: "Cypher", ovr: 75, salary: 33000 },
+                        { name: "Academy_Player_5", role: "Flex", agent: "Omen", ovr: 75, salary: 33000 }
+                    ] },
+                    { name: "NAVI Junior", power: 76, color: "bg-slate-700 text-white", academy: true, roster: [
+                        { name: "Academy_Player_1", role: "Duelist", agent: "Jett", ovr: 77, salary: 36000 },
+                        { name: "Academy_Player_2", role: "Initiator", agent: "Sova", ovr: 76, salary: 35000 },
+                        { name: "Academy_Player_3", role: "Controller", agent: "Omen", ovr: 75, salary: 34000 },
+                        { name: "Academy_Player_4", role: "Sentinel", agent: "Cypher", ovr: 74, salary: 33000 },
+                        { name: "Academy_Player_5", role: "Flex", agent: "Omen", ovr: 74, salary: 33000 }
+                    ] },
+                    { name: "FUT Academy", power: 75, color: "bg-slate-700 text-white", academy: true, roster: [
+                        { name: "Academy_Player_1", role: "Duelist", agent: "Jett", ovr: 76, salary: 36000 },
+                        { name: "Academy_Player_2", role: "Initiator", agent: "Sova", ovr: 75, salary: 35000 },
+                        { name: "Academy_Player_3", role: "Controller", agent: "Omen", ovr: 74, salary: 34000 },
+                        { name: "Academy_Player_4", role: "Sentinel", agent: "Cypher", ovr: 73, salary: 33000 },
+                        { name: "Academy_Player_5", role: "Flex", agent: "Omen", ovr: 73, salary: 33000 }
+                    ] },
+                    { name: "Eternal Fire Passion", power: 74, color: "bg-slate-700 text-white", academy: true, roster: [
+                        { name: "Academy_Player_1", role: "Duelist", agent: "Jett", ovr: 75, salary: 36000 },
+                        { name: "Academy_Player_2", role: "Initiator", agent: "Sova", ovr: 74, salary: 35000 },
+                        { name: "Academy_Player_3", role: "Controller", agent: "Omen", ovr: 73, salary: 34000 },
+                        { name: "Academy_Player_4", role: "Sentinel", agent: "Cypher", ovr: 72, salary: 33000 },
+                        { name: "Academy_Player_5", role: "Flex", agent: "Omen", ovr: 72, salary: 33000 }
+                    ] },
+                ]
+            },
+            china: {
+                name: "차이나 (China)",
+                t1: [
+                    {
+                        name: "Nova Esports", power: 92, color: "bg-amber-600 text-white",
+                        roster: [
+                            { name: "Septem7", role: "Duelist", agent: "Jett", ovr: 95, salary: 92250 },
+                            { name: "f4ngeer", role: "Duelist", agent: "Raze", ovr: 93, salary: 91150 },
+                            { name: "Shr1mp", role: "Controller", agent: "Omen", ovr: 92, salary: 90600 },
+                            { name: "K1ra", role: "Controller", agent: "Omen", ovr: 91, salary: 90050 },
+                            { name: "iamgrq", role: "Sentinel", agent: "Killjoy", ovr: 90, salary: 89500 }
+                        ]
+                    },
+                    {
+                        name: "Xi Lai Gaming", power: 91, color: "bg-pink-600 text-white",
+                        roster: [
+                            { name: "NoMan", role: "Duelist", agent: "Jett", ovr: 94, salary: 91700 },
+                            { name: "Rarga", role: "Initiator", agent: "Sova", ovr: 92, salary: 90600 },
+                            { name: "WsLeo", role: "Controller", agent: "Omen", ovr: 91, salary: 90050 },
+                            { name: "Lysoar", role: "Sentinel", agent: "Killjoy", ovr: 90, salary: 89500 },
+                            { name: "happywei", role: "Flex", agent: "Raze", ovr: 89, salary: 88950 }
+                        ]
+                    },
+                    {
+                        name: "Bilibili Gaming", power: 89, color: "bg-red-700 text-white",
+                        roster: [
+                            { name: "Knight", role: "Duelist", agent: "Jett", ovr: 92, salary: 90600 },
+                            { name: "whzy", role: "Initiator", agent: "Sova", ovr: 90, salary: 89500 },
+                            { name: "biank", role: "Controller", agent: "Omen", ovr: 89, salary: 88950 },
+                            { name: "bud", role: "Sentinel", agent: "Killjoy", ovr: 88, salary: 88400 },
+                            { name: "FT", role: "Flex", agent: "Raze", ovr: 87, salary: 87850 }
+                        ]
+                    },
+                    {
+                        name: "TYLOO", power: 88, color: "bg-zinc-700 text-white",
+                        roster: [
+                            { name: "sword9", role: "Duelist", agent: "Jett", ovr: 91, salary: 90050 },
+                            { name: "splash", role: "Initiator", agent: "Sova", ovr: 89, salary: 88950 },
+                            { name: "Scales", role: "Controller", agent: "Omen", ovr: 88, salary: 88400 },
+                            { name: "slowly", role: "Sentinel", agent: "Killjoy", ovr: 87, salary: 87850 },
+                            { name: "xihe", role: "Flex", agent: "Raze", ovr: 86, salary: 87300 }
+                        ]
+                    },
+                    {
+                        name: "EDward Gaming", power: 95, color: "bg-emerald-600 text-white",
+                        roster: [
+                            { name: "nobody", role: "Duelist", agent: "Jett", ovr: 98, salary: 93900 },
+                            { name: "ZmjjKK", role: "Duelist", agent: "Jett", ovr: 96, salary: 92800 },
+                            { name: "Smoggy", role: "Controller", agent: "Omen", ovr: 95, salary: 92250 },
+                            { name: "CHICHOO", role: "Sentinel", agent: "Cypher", ovr: 94, salary: 91700 },
+                            { name: "Jieni7", role: "Duelist", agent: "Raze", ovr: 93, salary: 91150 }
+                        ]
+                    },
+                    {
+                        name: "All Gamers", power: 87, color: "bg-orange-600 text-white",
+                        roster: [
+                            { name: "Septem7", role: "Duelist", agent: "Jett", ovr: 90, salary: 89500 },
+                            { name: "f4ngeer", role: "Duelist", agent: "Raze", ovr: 88, salary: 88400 },
+                            { name: "K1ra", role: "Controller", agent: "Omen", ovr: 87, salary: 87850 },
+                            { name: "iamgrq", role: "Sentinel", agent: "Killjoy", ovr: 86, salary: 87300 },
+                            { name: "XiaoYan", role: "Initiator", agent: "KAY/O", ovr: 85, salary: 86750 }
+                        ]
+                    },
+                    {
+                        name: "FunPlus Phoenix", power: 86, color: "bg-cyan-700 text-white",
+                        roster: [
+                            { name: "AAAAY", role: "Duelist", agent: "Raze", ovr: 89, salary: 88950 },
+                            { name: "kovaQ", role: "Initiator", agent: "Sova", ovr: 87, salary: 87850 },
+                            { name: "Setro", role: "Controller", agent: "Omen", ovr: 86, salary: 87300 },
+                            { name: "coconut", role: "Sentinel", agent: "Killjoy", ovr: 85, salary: 86750 },
+                            { name: "Xlele", role: "Duelist", agent: "Jett", ovr: 84, salary: 86200 }
+                        ]
+                    },
+                    {
+                        name: "Wolves Esports", power: 85, color: "bg-blue-500 text-white",
+                        roster: [
+                            { name: "Spring", role: "Duelist", agent: "Jett", ovr: 88, salary: 88400 },
+                            { name: "yosemite", role: "Initiator", agent: "Sova", ovr: 86, salary: 87300 },
+                            { name: "Glacier", role: "Controller", agent: "Omen", ovr: 85, salary: 86750 },
+                            { name: "aluba", role: "Sentinel", agent: "Cypher", ovr: 84, salary: 86200 },
+                            { name: "Deryeon", role: "Duelist", agent: "Raze", ovr: 83, salary: 85650 }
+                        ]
+                    },
+                    {
+                        name: "Dragon Ranger Gaming", power: 84, color: "bg-indigo-600 text-white",
+                        roster: [
+                            { name: "Life", role: "Duelist", agent: "Jett", ovr: 87, salary: 87850 },
+                            { name: "vo0kashu", role: "Duelist", agent: "Raze", ovr: 85, salary: 86750 },
+                            { name: "Nicc", role: "Controller", agent: "Omen", ovr: 84, salary: 86200 },
+                            { name: "SpiritZ1", role: "Sentinel", agent: "Killjoy", ovr: 83, salary: 85650 },
+                            { name: "Verse", role: "Duelist", agent: "Raze", ovr: 82, salary: 85100 }
+                        ]
+                    },
+                    {
+                        name: "JD Gaming", power: 83, color: "bg-blue-600 text-white",
+                        roster: [
+                            { name: "jkuro", role: "Duelist", agent: "Jett", ovr: 86, salary: 87300 },
+                            { name: "Yuicaw", role: "Initiator", agent: "Sova", ovr: 84, salary: 86200 },
+                            { name: "coconut", role: "Sentinel", agent: "Killjoy", ovr: 83, salary: 85650 },
+                            { name: "stew", role: "Sentinel", agent: "Cypher", ovr: 82, salary: 85100 },
+                            { name: "zhe", role: "Duelist", agent: "Raze", ovr: 81, salary: 84550 }
+                        ]
+                    },
+                    {
+                        name: "Trace Esports", power: 81, color: "bg-teal-700 text-white",
+                        roster: [
+                            { name: "LuoK1ng", role: "Duelist", agent: "Jett", ovr: 84, salary: 86200 },
+                            { name: "deLb", role: "Initiator", agent: "Sova", ovr: 82, salary: 85100 },
+                            { name: "Viva", role: "Controller", agent: "Omen", ovr: 81, salary: 84550 },
+                            { name: "Kai", role: "Sentinel", agent: "Killjoy", ovr: 80, salary: 84000 },
+                            { name: "Xlele", role: "Duelist", agent: "Jett", ovr: 79, salary: 83450 }
+                        ]
+                    },
+                    {
+                        name: "Titan Esports Club", power: 80, color: "bg-purple-700 text-white",
+                        roster: [
+                            { name: "Haodong", role: "Controller", agent: "Omen", ovr: 83, salary: 85650 },
+                            { name: "Spitfires", role: "Initiator", agent: "Sova", ovr: 81, salary: 84550 },
+                            { name: "lucas", role: "Controller", agent: "Omen", ovr: 80, salary: 84000 },
+                            { name: "Dynamite", role: "Sentinel", agent: "Cypher", ovr: 79, salary: 83450 },
+                            { name: "Coco", role: "Duelist", agent: "Raze", ovr: 78, salary: 82900 }
+                        ]
+                    }
+                ],
+                t2: [
+                    { 
+                        name: "All Gamers", power: 82, color: "bg-purple-800 text-white",
+                        roster: [
+                            { name: "spitfire", role: "Duelist", agent: "Jett", ovr: 82, salary: 45000 },
+                            { name: "delb", role: "Initiator", agent: "Sova", ovr: 80, salary: 42000 },
+                            { name: "Monk", role: "Controller", agent: "Omen", ovr: 79, salary: 40000 },
+                            { name: "b3xture", role: "Sentinel", agent: "Cypher", ovr: 78, salary: 38000 },
+                            { name: "sword", role: "Duelist", agent: "Raze", ovr: 77, salary: 37000 }
+                        ]
+                    },
+                    { name: "VCT CN Academy", power: 74, color: "bg-slate-700 text-white", academy: true, roster: [
+                        { name: "Academy_Player_1", role: "Duelist", agent: "Jett", ovr: 75, salary: 36000 },
+                        { name: "Academy_Player_2", role: "Initiator", agent: "Sova", ovr: 74, salary: 35000 },
+                        { name: "Academy_Player_3", role: "Controller", agent: "Omen", ovr: 73, salary: 34000 },
+                        { name: "Academy_Player_4", role: "Sentinel", agent: "Cypher", ovr: 72, salary: 33000 },
+                        { name: "Academy_Player_5", role: "Flex", agent: "Omen", ovr: 72, salary: 33000 }
+                    ] },
+                    { name: "VCT CN Youth", power: 73, color: "bg-slate-700 text-white", academy: true, roster: [
+                        { name: "Academy_Player_1", role: "Duelist", agent: "Jett", ovr: 74, salary: 36000 },
+                        { name: "Academy_Player_2", role: "Initiator", agent: "Sova", ovr: 73, salary: 35000 },
+                        { name: "Academy_Player_3", role: "Controller", agent: "Omen", ovr: 72, salary: 34000 },
+                        { name: "Academy_Player_4", role: "Sentinel", agent: "Cypher", ovr: 71, salary: 33000 },
+                        { name: "Academy_Player_5", role: "Flex", agent: "Omen", ovr: 71, salary: 33000 }
+                    ] },
+                ]
+            }
+        };
+
+        function renderTeamLogo(teamObj, sizeClass = "w-7 h-7 text-xs") {
+            let name = typeof teamObj === 'string' ? teamObj : (teamObj?.name || "TEAM");
+            let badgeColor = (typeof teamObj === 'object' && teamObj?.color) ? teamObj.color : "bg-val-red text-white";
+            
+            let words = name.replace(/[^a-zA-Z0-9\s]/g, '').trim().split(/\s+/);
+            let initials = "";
+            if (words.length >= 2) {
+                initials = (words[0][0] + words[1][0]).toUpperCase();
+            } else {
+                initials = name.substring(0, 3).toUpperCase();
+            }
+
+            return `<div class="${sizeClass} ${badgeColor} team-logo-badge shadow flex-shrink-0" title="${name}">${initials}</div>`;
+        }
+
+        const MAP_POOL = ["Ascent", "Bind", "Haven", "Split", "Icebox", "Breeze", "Lotus", "Sunset", "Abyss"];
+        
+        const ROLES = [
+            { id: "Duelist", name: "타격대", icon: "⚔️", color: "text-red-400", agents: ["Jett", "Raze", "Reyna", "Yoru", "Neon", "Iso"] },
+            { id: "Initiator", name: "척후대", icon: "👁️️", color: "text-yellow-400", agents: ["Sova", "Fade", "Breach", "KAY/O", "Skye", "Gekko"] },
+            { id: "Controller", name: "전략가", icon: "☁️", color: "text-purple-400", agents: ["Omen", "Viper", "Brimstone", "Astra", "Clove"] },
+            { id: "Sentinel", name: "감시자", icon: "🛡", color: "text-blue-400", agents: ["Cypher", "Killjoy", "Sage", "Chamber", "Deadlock"] },
+            { id: "Flex", name: "플렉스", icon: "🔄", color: "text-green-400", agents: ["Jett", "Omen", "Sova", "Cypher", "KAY/O"] }
+        ];
+
+        const INITIAL_NAMES = ["stax", "buzz", "t3xture", "Meteor", "Karon", "Foxy9", "f0rsakeN", "something", "mindfreak", "d4v41", "kaajak", "Chronicle", "Alfajer", "Boaster", "Hiro", "aspas", "N4RRATE", "zekken", "johnqt", "bang", "ZmjjKK", "nobody", "Smoggy", "CHICHOO", "S1Mon", "Riens", "Wo0t", "Primmie", "OXY", "zander"];
+
+        let state = null;
+        let currentPage = "dashboard";
+
+        let toastTimer = null;
+        function showToast(msg) {
+            const toast = document.getElementById("toast");
+            const toastMsg = document.getElementById("toast-msg");
+            if (!toast || !toastMsg) return;
+            toastMsg.textContent = msg;
+            toast.classList.remove("hidden");
+            if (toastTimer) clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => {
+                toast.classList.add("hidden");
+            }, 2500);
+        }
+
+        function openModal(contentHtml) {
+            const container = document.getElementById("modal-container");
+            const content = document.getElementById("modal-content");
+            if (!container || !content) return;
+            content.innerHTML = contentHtml;
+            container.classList.remove("hidden");
+        }
+
+        function closeModal() {
+            const container = document.getElementById("modal-container");
+            if (container) container.classList.add("hidden");
+        }
+
+        function renderStartScreen() {
+            return `
+                <div class="max-w-4xl mx-auto py-10 px-4 text-center animate-fade-in">
+                    <div class="mb-8">
+                        <span class="bg-val-red text-white text-xs font-black px-3 py-1 rounded tracking-widest uppercase">VALORANT Esports Manager (2026-2030)</span>
+                        <h1 class="text-4xl md:text-5xl font-black text-white mt-3 tracking-wide uppercase">
+                            VALORANT MANAGER <span class="text-val-red font-teko text-5xl">2026-2030</span>
+                        </h1>
+                        <p class="text-val-muted text-sm md:text-base mt-2 max-w-xl mx-auto">
+                            2030년까지 감독 커리어를 이어가며 킥오프, 마스터즈, 스테이지 1·2, 챔피언스 대장정을 제패하세요!
+                        </p>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+                        <div class="bg-val-panel border border-val-border hover:border-val-red p-5 rounded-xl cursor-pointer transition transform hover:-translate-y-1 flex flex-col justify-between items-center text-center group" onclick="openStartModal('pacific')">
+                            <div class="w-16 h-16 rounded-full bg-val-dark border border-val-border flex items-center justify-center text-3xl mb-3 group-hover:border-val-red">🌏</div>
+                            <h3 class="text-lg font-black text-white">퍼시픽</h3>
+                            <p class="text-xs text-val-muted mt-1">Pacific Division</p>
+                            <span class="mt-4 text-xs font-bold bg-val-card border border-val-border group-hover:bg-val-red group-hover:text-white px-3 py-1.5 rounded-lg transition w-full">리그 선택</span>
+                        </div>
+
+                        <div class="bg-val-panel border border-val-border hover:border-val-red p-5 rounded-xl cursor-pointer transition transform hover:-translate-y-1 flex flex-col justify-between items-center text-center group" onclick="openStartModal('americas')">
+                            <div class="w-16 h-16 rounded-full bg-val-dark border border-val-border flex items-center justify-center text-3xl mb-3 group-hover:border-val-red">🌎</div>
+                            <h3 class="text-lg font-black text-white">아메리카스</h3>
+                            <p class="text-xs text-val-muted mt-1">Americas Division</p>
+                            <span class="mt-4 text-xs font-bold bg-val-card border border-val-border group-hover:bg-val-red group-hover:text-white px-3 py-1.5 rounded-lg transition w-full">리그 선택</span>
+                        </div>
+
+                        <div class="bg-val-panel border border-val-border hover:border-val-red p-5 rounded-xl cursor-pointer transition transform hover:-translate-y-1 flex flex-col justify-between items-center text-center group" onclick="openStartModal('emea')">
+                            <div class="w-16 h-16 rounded-full bg-val-dark border border-val-border flex items-center justify-center text-3xl mb-3 group-hover:border-val-red">🌍</div>
+                            <h3 class="text-lg font-black text-white">EMEA</h3>
+                            <p class="text-xs text-val-muted mt-1">Europe & MEA</p>
+                            <span class="mt-4 text-xs font-bold bg-val-card border border-val-border group-hover:bg-val-red group-hover:text-white px-3 py-1.5 rounded-lg transition w-full">리그 선택</span>
+                        </div>
+
+                        <div class="bg-val-panel border border-val-border hover:border-val-red p-5 rounded-xl cursor-pointer transition transform hover:-translate-y-1 flex flex-col justify-between items-center text-center group" onclick="openStartModal('china')">
+                            <div class="w-16 h-16 rounded-full bg-val-dark border border-val-border flex items-center justify-center text-3xl mb-3 group-hover:border-val-red">🐉</div>
+                            <h3 class="text-lg font-black text-white">차이나</h3>
+                            <p class="text-xs text-val-muted mt-1">China Division</p>
+                            <span class="mt-4 text-xs font-bold bg-val-card border border-val-border group-hover:bg-val-red group-hover:text-white px-3 py-1.5 rounded-lg transition w-full">리그 선택</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        const formatMoney = (n) => "$" + Math.round(n).toLocaleString();
+        const getRoleConfig = (roleId) => ROLES.find(r => r.id === roleId) || ROLES[4];
+
+        function getPhaseName(week) {
+            if (week <= 2) return { name: "킥오프 (Kickoff 토너먼트)", type: "kickoff", desc: "시즌 개막 토너먼트" };
+            if (week <= 9) return { name: "스테이지 1 (Stage 1 정규리그)", type: "stage1", desc: "8팀 단일 라운드 로빈 — 팀당 7경기" };
+            if (week === 10) return { name: "VALORANT Masters 1 (국제대회)", type: "masters1", desc: "Stage 1 상위권 팀이 진출하는 첫 번째 글로벌 마스터즈" };
+            if (week <= 17) return { name: "스테이지 2 (Stage 2 정규리그)", type: "stage2", desc: "8팀 단일 라운드 로빈 — 팀당 7경기" };
+            if (week === 18) return { name: "VALORANT Masters 2 (국제대회)", type: "masters2", desc: "두 번째 글로벌 마스터즈" };
+            if (week === 19) return { name: "VALORANT Champions (최종 챔피언십)", type: "champions", desc: "최종 세계 챔피언십" };
+            if (week === 20) return { name: "오프시즌 (Off-Season 이적시장)", type: "offseason", desc: "차기 시즌 대비 선수 영입 및 로스터 재정비 기간" };
+            return { name: "시즌 종료", type: "end", desc: "시즌 마감" };
+        }
+
+        function initGame(regionKey, tier, teamObj) {
+            const regData = VCT_DATA[regionKey];
+            const isT1 = tier === 1;
+            
+            const t1Teams = regData.t1.map(t => ({ name: t.name, color: t.color, power: t.power, w: 0, l: 0 }));
+            const t2Teams = regData.t2.map(t => ({ name: t.name, color: t.color, power: t.power, academy: !!t.academy, w: 0, l: 0 }));
+
+            let players = teamObj.roster.map((p, idx) => ({
+                id: 'p_' + Math.random().toString(36).substr(2, 9),
+                name: p.name,
+                role: p.role,
+                agent: p.agent,
+                ovr: p.ovr,
+                salary: p.salary,
+                isStarter: true,
+                stats: { matches: 0, kills: 0, deaths: 0, assists: 0, acsSum: 0, mvpCount: 0 }
+            }));
+
+            let freeAgents = [];
+            let namePool = [...INITIAL_NAMES].sort(() => Math.random() - 0.5);
+            for (let i = 0; i < 14; i++) {
+                const roleObj = ROLES[Math.floor(Math.random() * 5)];
+                freeAgents.push({
+                    id: 'fa_' + Math.random().toString(36).substr(2, 9),
+                    name: namePool[i] || `FA_Agent_${i+1}`,
+                    role: roleObj.id,
+                    agent: roleObj.agents[Math.floor(Math.random() * roleObj.agents.length)],
+                    ovr: 74 + Math.floor(Math.random() * 16),
+                    salary: 32000 + Math.floor(Math.random() * 25000),
+                    stats: { matches: 0, kills: 0, deaths: 0, assists: 0, acsSum: 0, mvpCount: 0 }
+                });
+            }
+
+            const youth = [];
+            const youthPool = ["Nova", "Rin", "Milo", "Kite", "Vex", "Ari", "Nox", "Lumi"];
+            for (let i = 0; i < 4; i++) {
+                const roleObj = ROLES[Math.floor(Math.random() * 5)];
+                youth.push({ id: 'y_' + Math.random().toString(36).substr(2, 9), name: youthPool[i] + Math.floor(10 + Math.random() * 90), role: roleObj.id, agent: roleObj.agents[Math.floor(Math.random() * roleObj.agents.length)], ovr: 60 + Math.floor(Math.random() * 10), potential: 82 + Math.floor(Math.random() * 17), age: 16 + Math.floor(Math.random() * 3), training: 0, salary: 18000 + Math.floor(Math.random() * 12000), stats: { matches: 0, kills: 0, deaths: 0, assists: 0, acsSum: 0, mvpCount: 0 } });
+            }
+
+            state = {
+                year: 2026,
+                regionKey: regionKey,
+                regionName: regData.name,
+                tier: tier,
+                myTeamName: teamObj.name,
+                myTeamColor: teamObj.color || "bg-val-red text-white",
+                week: 1,
+                cash: isT1 ? 850000 : 550000,
+                reputation: isT1 ? 60 : 35,
+                fan: isT1 ? 45 : 20,
+                form: 60,
+                morale: 70,
+                coach: 45,
+                analyst: 40,
+                trainingDone: false,
+                players: players,
+                maxRoster: 6,
+                startersRequired: 5,
+                freeAgents: freeAgents,
+                youth: youth,
+                youthLevel: 1,
+                t1Teams: t1Teams,
+                t2Teams: t2Teams,
+                lastMatchReport: null,
+                logs: [`[2026 시즌 개막] ${regData.name} ${tier}부 리그의 ${teamObj.name} 감독으로 부임하셨습니다.`]
+            };
+
+            renderApp();
+        }
+
+        function getStartingPlayers() {
+            if (!state || !Array.isArray(state.players)) return [];
+            const starters = state.players.filter(p => p.isStarter !== false);
+            return starters.slice(0, 5);
+        }
+
+        function calculateTeamPower() {
+            const starters = getStartingPlayers();
+            if (starters.length === 0) return 0;
+            const avgOvr = starters.reduce((sum, p) => sum + p.ovr, 0) / starters.length;
+            return Math.round(avgOvr * 0.75 + (state.form * 0.15) + (state.morale * 0.05) + (state.coach * 0.05));
+        }
+
+        function simulateCpuMatches(userOpponentName = null) {
+            const currentTeams = state.tier === 1 ? state.t1Teams : state.t2Teams;
+            const cpuTeams = currentTeams.filter(t => t.name !== state.myTeamName && t.name !== userOpponentName);
+            const shuffled = [...cpuTeams].sort(() => Math.random() - 0.5);
+
+            for (let i = 0; i < shuffled.length - 1; i += 2) {
+                const teamA = shuffled[i];
+                const teamB = shuffled[i+1];
+
+                const powerA = teamA.power + (Math.random() * 24 - 12);
+                const powerB = teamB.power + (Math.random() * 24 - 12);
+
+                if (powerA >= powerB) {
+                    teamA.w++;
+                    teamB.l++;
+                } else {
+                    teamB.w++;
+                    teamA.l++;
+                }
+            }
+        }
+
+        function checkTop4Qualification() {
+            const currentTeams = state.tier === 1 ? state.t1Teams : state.t2Teams;
+            let sortedTeams = [...currentTeams].filter(t => !t.academy).sort((a, b) => (b.w - a.w) || (b.power - a.power));
+            const myRank = sortedTeams.findIndex(t => t.name === state.myTeamName) + 1;
+            return myRank > 0 && myRank <= 4;
+        }
+
+        function renderApp() {
+            const app = document.getElementById("app");
+            const seasonInfo = document.getElementById("season-info");
+            const yearTitle = document.getElementById("header-year-title");
+
+            if (!state) {
+                app.innerHTML = renderStartScreen();
+                if (seasonInfo) seasonInfo.textContent = "감독 커리어를 시작하세요";
+                if (yearTitle) yearTitle.textContent = "MANAGER 2026-2030";
+                return;
+            }
+
+            const phase = getPhaseName(state.week);
+            const tierBadge = state.tier === 1 ? `<span class="text-val-red font-bold">[1부 VCT]</span>` : `<span class="text-val-accent font-bold">[2부 Challengers]</span>`;
+            if (seasonInfo) seasonInfo.innerHTML = `${state.year}년 ${state.regionName} · ${tierBadge} · <span class="text-val-accent">${phase.name}</span> (${state.week > 20 ? 20 : state.week}주차)`;
+            if (yearTitle) yearTitle.textContent = `MANAGER ${state.year}`;
+
+            app.innerHTML = `
+                <div class="flex flex-col lg:flex-row gap-6">
+                    <aside class="lg:w-60 flex-shrink-0">
+                        <div class="bg-val-panel border border-val-border rounded-xl p-3 flex lg:flex-col gap-1.5 overflow-x-auto lg:overflow-visible">
+                            ${renderNavBtn("dashboard", "📊 대시보드", "fa-chart-pie")}
+                            ${renderNavBtn("roster", "👥 로스터", "fa-users")}
+                            ${renderNavBtn("market", "🔎 선수 시장", "fa-store")}
+                            ${renderNavBtn("training", "🎯 훈련 센터", "fa-crosshair")}
+                            ${renderNavBtn("youth", "🌱 유스 아카데미", "fa-seedling")}
+                            ${renderNavBtn("finance", "💰 구단 경영", "fa-coins")}
+                            ${renderNavBtn("league", "🏆 리그 순위", "fa-trophy")}
+                            ${renderNavBtn("stats", "📈 선수 기록", "fa-chart-line")}
+                            ${renderNavBtn("match_report", "⚔️ 경기 리포트", "fa-file-lines")}
+                        </div>
+                    </aside>
+                    <main class="flex-grow min-w-0 flex flex-col gap-6">
+                        ${renderTopStatsBar()}
+                        <div class="transition-all duration-300">
+                            ${renderPageContent()}
+                        </div>
+                    </main>
+                </div>
+            `;
+        }
+
+        function renderNavBtn(pageId, label, iconClass) {
+            const isActive = currentPage === pageId;
+            const baseClass = "px-3.5 py-2.5 rounded-lg text-sm font-bold text-left transition-all flex items-center gap-2.5 whitespace-nowrap";
+            const activeClass = isActive ? "bg-val-red text-white shadow-md glow-red" : "text-val-muted hover:bg-val-border hover:text-white";
+            return `<button class="${baseClass} ${activeClass}" onclick="navigate('${pageId}')"><i class="fa-solid ${iconClass} w-4"></i> ${label}</button>`;
+        }
+
+        function navigate(pageId) {
+            currentPage = pageId;
+            renderApp();
+        }
+
+        function renderTopStatsBar() {
+            return `
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                    <div class="bg-val-panel border border-val-border rounded-xl p-3.5 flex justify-between items-center">
+                        <div>
+                            <div class="text-xs text-val-muted font-bold">보유 자금</div>
+                            <div class="text-xl font-black text-green-400 mt-0.5">${formatMoney(state.cash)}</div>
+                        </div>
+                        <i class="fa-solid fa-wallet text-val-border text-2xl"></i>
+                    </div>
+                    <div class="bg-val-panel border border-val-border rounded-xl p-3.5 flex justify-between items-center">
+                        <div>
+                            <div class="text-xs text-val-muted font-bold">팀 종합 전투력</div>
+                            <div class="text-xl font-black text-white mt-0.5">${calculateTeamPower()}</div>
+                        </div>
+                        <i class="fa-solid fa-bolt text-val-border text-2xl"></i>
+                    </div>
+                    <div class="bg-val-panel border border-val-border rounded-xl p-3.5 flex justify-between items-center">
+                        <div>
+                            <div class="text-xs text-val-muted font-bold">팬덤 / 평판</div>
+                            <div class="text-xl font-black text-yellow-400 mt-0.5">${state.fan}k <span class="text-sm font-normal text-val-muted">/ Pt.${state.reputation}</span></div>
+                        </div>
+                        <i class="fa-solid fa-heart text-val-border text-2xl"></i>
+                    </div>
+                    <div class="bg-val-panel border border-val-border rounded-xl p-3.5 flex justify-between items-center">
+                        <div>
+                            <div class="text-xs text-val-muted font-bold">시즌 / 소속</div>
+                            <div class="text-sm font-black ${state.tier === 1 ? 'text-val-red' : 'text-val-accent'} mt-0.5 flex items-center gap-1.5">
+                                ${state.year}년 · <span class="truncate max-w-[100px]">${state.myTeamName}</span>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-shield text-val-border text-2xl"></i>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderDashboardView() {
+            const logsHTML = state.logs.slice(-8).reverse().map(log => 
+                `<div class="py-2 border-b border-val-border/60 last:border-0 text-sm text-gray-300 font-medium">▸ ${log}</div>`
+            ).join("");
+
+            const currentLeagueTeams = state.tier === 1 ? state.t1Teams : state.t2Teams;
+            const myTeamObj = currentLeagueTeams.find(t => t.name === state.myTeamName) || currentLeagueTeams[0];
+            const phase = getPhaseName(state.week);
+
+            const isInternational = phase.type === 'masters1' || phase.type === 'masters2' || phase.type === 'champions';
+            const isOffseason = phase.type === 'offseason';
+            const isQualified = checkTop4Qualification();
+            
+            let actionBtnLabel = `⚔️ 다음 매치 진행 (BO3)`;
+            if (isInternational) {
+                actionBtnLabel = isQualified ? `🌍 ${phase.name} 참가 (상위 4강)` : `☕ ${phase.name} 진출 실패 (휴식 및 시뮬레이션)`;
+            }
+            if (isOffseason) actionBtnLabel = `🔄 오프시즌 마무리 및 ${state.year + 1}년 진입`;
+
+            return `
+                <div class="grid lg:grid-cols-3 gap-6">
+                    <div class="lg:col-span-2 bg-val-panel border border-val-border rounded-xl p-5 flex flex-col gap-4">
+                        <div class="flex justify-between items-center border-b border-val-border pb-3">
+                            <div>
+                                <h2 class="text-xl font-bold text-white flex items-center gap-2">
+                                    ${renderTeamLogo(myTeamObj, "w-8 h-8 text-sm")} ${state.myTeamName} 작전실 (${state.year})
+                                </h2>
+                                <p class="text-xs text-val-muted mt-0.5">
+                                    리그 성적: <span class="text-green-400 font-bold">${myTeamObj.w}승</span> <span class="text-val-red font-bold">${myTeamObj.l}패</span>
+                                    ${isInternational ? `<span class="ml-2 px-2 py-0.5 rounded text-[11px] font-bold ${isQualified ? 'bg-green-600/30 text-green-400 border border-green-500/40' : 'bg-red-600/30 text-val-red border border-red-500/40'}">${isQualified ? '국제대회 진출 성공 (TOP 4)' : '국제대회 진출 실패 (순위권 밖)'}</span>` : ''}
+                                </p>
+                            </div>
+                            <span class="text-xs font-bold px-3 py-1 rounded bg-val-red/20 text-val-red border border-val-red/40">
+                                ${phase.name}
+                            </span>
+                        </div>
+
+                        <div class="bg-val-card p-4 rounded-xl border border-val-border flex flex-col gap-2">
+                            <div class="text-sm font-bold text-val-gold flex items-center gap-2">
+                                <i class="fa-solid fa-calendar-days text-val-accent"></i> 현재 스테이지 안내 (${state.year}년 ${state.week}주차)
+                            </div>
+                            <p class="text-xs text-val-muted leading-relaxed">
+                                ${phase.desc}
+                            </p>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-3 bg-val-dark p-3.5 rounded-lg border border-val-border/50 text-center">
+                            <div>
+                                <div class="text-xs text-val-muted mb-0.5">선수단 사기</div>
+                                <div class="text-lg font-bold ${state.morale > 70 ? 'text-green-400' : 'text-val-red'}">${state.morale}%</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-val-muted mb-0.5">팀 경기 폼</div>
+                                <div class="text-lg font-bold ${state.form > 70 ? 'text-green-400' : 'text-val-red'}">${state.form}%</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-val-muted mb-0.5">코치진 레벨</div>
+                                <div class="text-lg font-bold text-val-accent">Lv.${state.coach}</div>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-3 mt-auto pt-2">
+                            <button class="flex-1 bg-val-red hover:bg-val-redHover text-white font-bold py-3.5 rounded-lg transition shadow-lg glow-red flex items-center justify-center gap-2" onclick="playMatch()">
+                                <i class="fa-solid fa-gamepad"></i> ${actionBtnLabel}
+                            </button>
+                            <button class="bg-val-card hover:bg-val-border text-gray-300 font-bold px-5 py-3.5 rounded-lg transition border border-val-border" onclick="advanceWeek()">
+                                ⏭ 주차 넘기기
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bg-val-panel border border-val-border rounded-xl p-5 flex flex-col gap-3">
+                        <h3 class="text-base font-bold text-white border-b border-val-border pb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-newspaper text-val-red"></i> 구단 최근 피드
+                        </h3>
+                        <div class="bg-val-dark rounded-lg p-3 flex-grow overflow-y-auto max-h-[320px] border border-val-border/40">
+                            ${logsHTML}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderRosterView() {
+            const starters = getStartingPlayers();
+            const bench = state.players.find(p => p.isStarter === false);
+            const playerRows = state.players.map((p, index) => {
+                const rConf = getRoleConfig(p.role);
+                const kd = p.stats.deaths > 0 ? (p.stats.kills / p.stats.deaths).toFixed(2) : p.stats.kills;
+                const avgAcs = p.stats.matches > 0 ? Math.round(p.stats.acsSum / p.stats.matches) : 0;
+                const status = p.isStarter === false ? '식스맨' : '선발';
+                const statusClass = p.isStarter === false ? 'text-yellow-300 border-yellow-500/40 bg-yellow-500/10' : 'text-green-300 border-green-500/40 bg-green-500/10';
+
+                return `
+                <div class="bg-val-dark p-4 rounded-xl border ${p.isStarter === false ? 'border-yellow-500/30' : 'border-val-border'} flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-11 h-11 rounded-lg bg-val-card border border-val-border flex items-center justify-center text-xl font-bold">
+                            ${p.role === 'Duelist' ? '⚔️' : p.role === 'Controller' ? '☁️' : p.role === 'Initiator' ? '👁️' : '🛡️'}
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2 flex-wrap">
+                                <span class="font-black text-lg text-white">${p.name}</span>
+                                <span class="text-xs px-2 py-0.5 rounded font-bold bg-val-panel border border-val-border ${rConf.color}">${p.role}</span>
+                                <span class="text-xs px-2 py-0.5 rounded font-bold border ${statusClass}">${status}</span>
+                            </div>
+                            <div class="text-xs text-val-muted mt-0.5">선호 요원: <span class="text-gray-300">${p.agent}</span> · OVR <span class="text-white font-bold">${p.ovr}</span></div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between md:justify-end gap-4">
+                        <div class="text-center hidden sm:block"><div class="text-xs text-val-muted">K/D</div><div class="font-semibold text-gray-300">${kd}</div></div>
+                        <div class="text-center hidden sm:block"><div class="text-xs text-val-muted">ACS</div><div class="font-semibold text-gray-300">${avgAcs}</div></div>
+                        <div class="text-center hidden sm:block"><div class="text-xs text-val-muted">연봉</div><div class="font-semibold text-gray-300">${formatMoney(p.salary)}</div></div>
+                        <button class="bg-val-card hover:bg-val-accent hover:text-black text-val-muted px-3 py-1.5 rounded-lg text-xs font-bold border border-val-border transition" onclick="toggleSixthMan(${index})">
+                            ${p.isStarter === false ? '선발로' : '식스맨으로'}
+                        </button>
+                        <button class="bg-val-card hover:bg-val-red hover:text-white text-val-muted px-3 py-1.5 rounded-lg text-xs font-bold border border-val-border transition" onclick="releasePlayer(${index})">방출</button>
+                    </div>
+                </div>`;
+            }).join('');
+
+            return `
+                <div class="bg-val-panel border border-val-border rounded-xl p-5">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center border-b border-val-border pb-3 mb-4 gap-2">
+                        <div>
+                            <h2 class="text-lg font-bold text-white">${state.year} 로스터 (${state.players.length} / 6명)</h2>
+                            <p class="text-xs text-val-muted">선발 5명 + 식스맨 1명까지 보유할 수 있어. 경기에는 선발 5명만 출전하고, 식스맨은 언제든 선발과 교체할 수 있어.</p>
+                        </div>
+                        <div class="text-xs font-bold ${starters.length === 5 ? 'text-green-400' : 'text-red-400'}">선발 ${starters.length}/5 ${bench ? '· 식스맨 1/1' : '· 식스맨 없음'}</div>
+                    </div>
+                    <div class="flex flex-col gap-3">${playerRows}</div>
+                </div>`;
+        }
+
+        function renderMarketView() {
+            const isFull = state.players.length >= 6;
+            const marketRows = state.freeAgents.map((p, index) => {
+                const rConf = getRoleConfig(p.role);
+                const fee = Math.round(p.salary * 0.4);
+                const canAfford = state.cash >= fee;
+
+                return `
+                <div class="bg-val-dark p-4 rounded-xl border border-val-border flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div class="flex items-center gap-3">
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <span class="font-bold text-lg text-white">${p.name}</span>
+                                <span class="text-xs px-2 py-0.5 rounded font-bold bg-val-panel border border-val-border ${rConf.color}">${p.role}</span>
+                            </div>
+                            <div class="text-xs text-val-muted mt-0.5">선호 요원: <span class="text-gray-300">${p.agent}</span></div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between md:justify-end gap-6">
+                        <div class="text-center">
+                            <div class="text-xs text-val-muted">OVR</div>
+                            <div class="font-black text-lg text-white">${p.ovr}</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-xs text-val-muted">계약금 / 연봉</div>
+                            <div class="font-bold text-sm text-gray-200">${formatMoney(fee)} <span class="text-xs font-normal text-val-muted">/ ${formatMoney(p.salary)}</span></div>
+                        </div>
+                        <button class="${isFull || !canAfford ? 'bg-gray-800 text-gray-500 cursor-not-allowed' : 'bg-val-red hover:bg-val-redHover text-white shadow-md'} px-4 py-2 rounded-lg text-xs font-bold transition" 
+                                onclick="signPlayer(${index})" ${isFull || !canAfford ? 'disabled' : ''}>
+                            영입
+                        </button>
+                    </div>
+                </div>
+                `;
+            }).join("");
+
+            return `
+                <div class="bg-val-panel border border-val-border rounded-xl p-5">
+                    <div class="border-b border-val-border pb-3 mb-4">
+                        <h2 class="text-lg font-bold text-white">${state.year} FA 이적 시장</h2>
+                        <p class="text-xs text-val-muted mt-1">선발 5명 + 식스맨 1명까지 최대 6명을 보유할 수 있습니다. 계약금은 연봉의 40%입니다.</p>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        ${marketRows.length > 0 ? marketRows : '<div class="text-center py-8 text-val-muted text-sm">현재 FA 시장에 선수가 없습니다.</div>'}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderTrainingView() {
+            const isTrained = state.trainingDone;
+            const btnStyle = isTrained 
+                ? "bg-gray-800 text-gray-500 border-gray-700 cursor-not-allowed" 
+                : "bg-val-dark hover:bg-val-border text-white border-val-border hover:border-val-red";
+
+            return `
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-val-panel border border-val-border rounded-xl p-5 flex flex-col">
+                        <div class="border-b border-val-border pb-3 mb-4 flex justify-between items-center">
+                            <h2 class="text-lg font-bold text-white">팀 전술 & 피지컬 훈련</h2>
+                            <span class="text-xs font-bold ${isTrained ? 'text-val-red' : 'text-green-400'}">
+                                ${isTrained ? '이번 주 훈련 완료' : '훈련 진행 가능'}
+                            </span>
+                        </div>
+                        <p class="text-xs text-val-muted mb-4">매주 1회 팀 전력을 향상시킬 세션을 진행할 수 있습니다.</p>
+
+                        <div class="flex flex-col gap-3 mt-auto">
+                            <button class="p-4 rounded-xl border text-left transition flex items-center justify-between ${btnStyle}" onclick="doTrain('aim')" ${isTrained ? 'disabled' : ''}>
+                                <div>
+                                    <div class="font-bold text-sm">🎯 에임 및 격발 훈련</div>
+                                    <div class="text-xs text-green-400 mt-0.5">선수단 폼 +4 상승</div>
+                                </div>
+                                <i class="fa-solid fa-crosshair text-xl text-val-muted"></i>
+                            </button>
+                            <button class="p-4 rounded-xl border text-left transition flex items-center justify-between ${btnStyle}" onclick="doTrain('tactic')" ${isTrained ? 'disabled' : ''}>
+                                <div>
+                                    <div class="font-bold text-sm">🧠 맵 전술 & 리테이크 워크숍</div>
+                                    <div class="text-xs text-green-400 mt-0.5">폼 +2 및 코칭 레벨 +2 상승</div>
+                                </div>
+                                <i class="fa-solid fa-brain text-xl text-val-muted"></i>
+                            </button>
+                            <button class="p-4 rounded-xl border text-left transition flex items-center justify-between ${btnStyle}" onclick="doTrain('team')" ${isTrained ? 'disabled' : ''}>
+                                <div>
+                                    <div class="font-bold text-sm">🤝 팀 케미스트리 워크숍</div>
+                                    <div class="text-xs text-green-400 mt-0.5">선수단 사기 +6 상승</div>
+                                </div>
+                                <i class="fa-solid fa-people-group text-xl text-val-muted"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bg-val-panel border border-val-border rounded-xl p-5 flex flex-col">
+                        <div class="border-b border-val-border pb-3 mb-4">
+                            <h2 class="text-lg font-bold text-white">스태프 & 분석 시스템</h2>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-3 mb-4">
+                            <div class="bg-val-dark p-3.5 rounded-lg border border-val-border text-center">
+                                <div class="text-xs text-val-muted">코치진 능력</div>
+                                <div class="text-2xl font-black text-val-accent mt-1">Lv.${state.coach}</div>
+                            </div>
+                            <div class="bg-val-dark p-3.5 rounded-lg border border-val-border text-center">
+                                <div class="text-xs text-val-muted">데이터 분석력</div>
+                                <div class="text-2xl font-black text-val-accent mt-1">Lv.${state.analyst}</div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-3 mt-auto">
+                            <button class="bg-val-card hover:bg-val-border border border-val-border p-3.5 rounded-xl font-bold text-sm text-left flex justify-between items-center transition" onclick="upgradeStaff('coach')">
+                                <span>👨‍🏫 전력 코치 연수 세션</span>
+                                <span class="text-green-400 font-bold">$55,000</span>
+                            </button>
+                            <button class="bg-val-card hover:bg-val-border border border-val-border p-3.5 rounded-xl font-bold text-sm text-left flex justify-between items-center transition" onclick="upgradeStaff('analyst')">
+                                <span>💻 경기 분석 AI 소프트웨어 도입</span>
+                                <span class="text-green-400 font-bold">$40,000</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderFinanceView() {
+            const weeklyWages = Math.round(state.players.reduce((sum, p) => sum + p.salary, 0) / 52);
+            const fixedCost = state.tier === 1 ? 40000 : 20000;
+            const totalUpkeep = fixedCost + weeklyWages;
+
+            return `
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-val-panel border border-val-border rounded-xl p-5">
+                        <div class="border-b border-val-border pb-3 mb-4">
+                            <h2 class="text-lg font-bold text-white">스폰서 계약 센터</h2>
+                        </div>
+                        <div class="flex flex-col gap-3">
+                            <div class="bg-val-dark p-4 rounded-xl border border-val-border flex justify-between items-center">
+                                <div>
+                                    <div class="font-bold text-white text-sm">지역 게이밍 기어 스폰서</div>
+                                    <div class="text-xs text-val-muted mt-0.5">즉시 자금 유입, 평판 +1</div>
+                                </div>
+                                <button class="bg-green-600/20 hover:bg-green-600/40 text-green-400 border border-green-500/50 px-3.5 py-1.5 rounded-lg text-xs font-bold transition" onclick="signSponsor(1)">
+                                    +$70,000
+                                </button>
+                            </div>
+                            <div class="bg-val-dark p-4 rounded-xl border border-val-border flex justify-between items-center">
+                                <div>
+                                    <div class="font-bold text-white text-sm">글로벌 메인 테크 스폰서</div>
+                                    <div class="text-xs text-val-muted mt-0.5">조건: 평판 50 이상 (현재 ${state.reputation})</div>
+                                </div>
+                                <button class="${state.reputation >= 50 ? 'bg-green-600/20 hover:bg-green-600/40 text-green-400 border-green-500/50' : 'bg-gray-800 text-gray-500 cursor-not-allowed border-gray-700'} border px-3.5 py-1.5 rounded-lg text-xs font-bold transition" 
+                                        onclick="signSponsor(2)" ${state.reputation < 50 ? 'disabled' : ''}>
+                                    +$150,000
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-val-panel border border-val-border rounded-xl p-5 flex flex-col justify-between">
+                        <div>
+                            <div class="border-b border-val-border pb-3 mb-4">
+                                <h2 class="text-lg font-bold text-white">주간 재정 지출 현황</h2>
+                            </div>
+                            <div class="flex justify-between text-sm py-1.5"><span class="text-val-muted">구단 기본 운영비</span><span class="text-white font-semibold">${formatMoney(fixedCost)}</span></div>
+                            <div class="flex justify-between text-sm py-1.5 border-b border-val-border/60 pb-3"><span class="text-val-muted">선수단 주급 총액</span><span class="text-white font-semibold">${formatMoney(weeklyWages)}</span></div>
+                            <div class="flex justify-between font-bold py-2"><span class="text-gray-300">매주 차감 예정액</span><span class="text-val-red">-${formatMoney(totalUpkeep)}</span></div>
+                        </div>
+
+                        <div class="bg-val-dark p-4 rounded-xl border border-val-border/60 mt-4">
+                            <div class="text-xs text-val-muted font-bold">💡 재정 팁</div>
+                            <p class="text-xs text-gray-300 mt-1 leading-relaxed">
+                                자금이 부족하면 선수단 사기가 떨어집니다. 승리 상금과 스폰서 유치로 탄탄한 재정을 유지하세요.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderLeagueView() {
+            const isT1 = state.tier === 1;
+            const currentTeams = isT1 ? state.t1Teams : state.t2Teams;
+            let sortedTeams = [...currentTeams].sort((a, b) => (b.w - a.w) || (b.power - a.power));
+            const phase = getPhaseName(state.week);
+
+            const tableRows = sortedTeams.map((t, idx) => {
+                const isMyTeam = t.name === state.myTeamName;
+                let rowBg = isMyTeam ? "bg-val-red/15 border-l-4 border-val-red" : "border-b border-val-border/50";
+                const isTop4 = idx < 4;
+                
+                return `
+                <tr class="${rowBg} hover:bg-val-border/30 transition text-sm">
+                    <td class="py-3 px-4 font-bold ${isTop4 ? 'text-yellow-400' : 'text-gray-300'}">
+                        ${idx + 1} ${isTop4 ? '<span class="text-[10px] bg-yellow-500/20 text-yellow-400 border border-yellow-500/40 px-1 py-0.5 rounded ml-1">TOP 4</span>' : ''}
+                    </td>
+                    <td class="py-3 px-4 font-bold text-white flex items-center gap-2.5">
+                        ${renderTeamLogo(t, "w-7 h-7 text-xs")} 
+                        <span>${t.name}</span>
+                        ${isMyTeam ? '<span class="text-[10px] bg-val-red text-white font-bold px-1.5 py-0.5 rounded ml-1">MY TEAM</span>' : ''}
+                    </td>
+                    <td class="py-3 px-4 text-center font-semibold text-val-muted">${t.power}</td>
+                    <td class="py-3 px-4 text-center font-bold text-green-400">${t.w}</td>
+                    <td class="py-3 px-4 text-center font-bold text-val-red">${t.l}</td>
+                </tr>
+                `;
+            }).join("");
+
+            return `
+                <div class="bg-val-panel border border-val-border rounded-xl p-5">
+                    <div class="flex justify-between items-center border-b border-val-border pb-3 mb-4">
+                        <div>
+                            <h2 class="text-lg font-bold text-white">${state.year} ${state.regionName} ${isT1 ? '1부 VCT League' : '2부 Challengers'} 순위</h2>
+                            <p class="text-xs text-val-accent mt-0.5">상위 4개 팀만 국제대회(마스터즈/챔피언스)에 진출합니다. (현재 단계: ${phase.name})</p>
+                        </div>
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="text-xs text-val-muted bg-val-dark uppercase border-b border-val-border">
+                                    <th class="py-2.5 px-4">순위</th>
+                                    <th class="py-2.5 px-4">팀명</th>
+                                    <th class="py-2.5 px-4 text-center">전투력</th>
+                                    <th class="py-2.5 px-4 text-center">승</th>
+                                    <th class="py-2.5 px-4 text-center">패</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${tableRows}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            `;
+        }
+
+        function generateYouthProspects(count = 2) {
+            if (!state) return;
+            if (!Array.isArray(state.youth)) state.youth = [];
+            const pool = ["Nova","Rin","Milo","Kite","Vex","Ari","Nox","Lumi","Kiro","Zeno","Mira","Juno","Sena","Rex"];
+            for (let i=0;i<count;i++) { const r=ROLES[Math.floor(Math.random()*5)]; state.youth.push({id:'y_'+Math.random().toString(36).substr(2,9),name:pool[Math.floor(Math.random()*pool.length)]+Math.floor(10+Math.random()*90),role:r.id,agent:r.agents[Math.floor(Math.random()*r.agents.length)],ovr:58+Math.floor(Math.random()*11),potential:78+Math.floor(Math.random()*22),age:16+Math.floor(Math.random()*3),training:0,salary:16000+Math.floor(Math.random()*12000),stats:{matches:0,kills:0,deaths:0,assists:0,acsSum:0,mvpCount:0}}); }
+        }
+        function trainYouth(index) {
+            const y=state?.youth?.[index]; if(!y) return; const cost=7000+state.youthLevel*2500;
+            if(state.cash<cost){showToast("유스 훈련비가 부족합니다!");return;} if(y.ovr>=y.potential){showToast(`${y.name}은(는) 잠재력에 도달했습니다.`);return;}
+            state.cash-=cost; const gain=Math.min(y.potential-y.ovr,1+Math.floor(Math.random()*3)); y.ovr+=gain; y.training++; state.logs.push(`🌱 [유스 훈련] ${y.name} OVR +${gain}`); showToast(`${y.name} 성장! OVR ${y.ovr}`); renderApp();
+        }
+        function upgradeYouthAcademy() {
+            const cost=80000*state.youthLevel; if(state.youthLevel>=5){showToast("유스 아카데미가 최대 레벨입니다.");return;} if(state.cash<cost){showToast("아카데미 강화 비용이 부족합니다!");return;} state.cash-=cost; state.youthLevel++; state.logs.push(`🏫 [유스 아카데미] Lv.${state.youthLevel}`); showToast(`유스 아카데미 Lv.${state.youthLevel}!`); renderApp();
+        }
+        function promoteYouth(index) {
+            const y=state?.youth?.[index]; if(!y)return; if(state.players.length>=6){showToast("1군 로스터가 가득 찼습니다.");return;} if(y.ovr<70){showToast("아직 1군 콜업에는 성장이 더 필요합니다.");return;} state.players.push({...y,id:'p_'+Math.random().toString(36).substr(2,9),isStarter:state.players.length<5,promoted:true}); state.youth.splice(index,1); state.logs.push(`⬆️ [유스 콜업] ${y.name}이(가) 1군에 합류했습니다.`); showToast(`${y.name} 1군 콜업 완료!`); renderApp();
+        }
+        function releaseYouth(index) { const y=state?.youth?.[index]; if(!y)return; state.youth.splice(index,1); state.logs.push(`🚪 [유스 방출] ${y.name}`); showToast(`${y.name} 방출 완료`); renderApp(); }
+        function renderYouthView() {
+            if(!state.youth) state.youth=[];
+            const cards=state.youth.map((y,i)=>{const r=getRoleConfig(y.role);const pct=Math.min(100,Math.round(y.ovr/y.potential*100));return `<div class="bg-val-dark border border-val-border rounded-xl p-4"><div class="flex justify-between"><div><div class="text-lg font-black text-white">${y.name}</div><div class="text-xs ${r.color} font-bold">${r.icon} ${y.role} · ${y.agent} · ${y.age}세</div></div><div class="text-right"><div class="text-2xl font-black text-val-accent">${y.ovr}</div><div class="text-[10px] text-val-muted">OVR / 잠재력 ${y.potential}</div></div></div><div class="h-1.5 bg-val-panel rounded mt-3"><div class="h-full bg-val-accent rounded" style="width:${pct}%"></div></div><div class="grid grid-cols-3 gap-2 mt-4"><button onclick="trainYouth(${i})" class="bg-val-panel hover:bg-val-border text-white font-bold py-2 rounded-lg text-xs">훈련</button><button onclick="promoteYouth(${i})" class="bg-val-red hover:bg-val-redHover text-white font-bold py-2 rounded-lg text-xs">1군 콜업</button><button onclick="releaseYouth(${i})" class="bg-val-panel hover:bg-val-border text-val-muted font-bold py-2 rounded-lg text-xs">방출</button></div></div>`}).join('');
+            return `<div class="flex flex-col gap-5"><div class="bg-val-panel border border-val-border rounded-xl p-5"><div class="flex flex-col md:flex-row md:justify-between md:items-center gap-3"><div><h2 class="text-xl font-black text-white">🌱 유스 아카데미</h2><p class="text-xs text-val-muted mt-1">유망주를 발굴하고 성장시켜 1군의 차세대 선수로 키워보세요.</p></div><div class="flex gap-2"><button onclick="generateYouthProspects(2);renderApp();showToast('새 유망주 2명이 입단했습니다.')" class="bg-val-red text-white font-bold px-4 py-2 rounded-lg text-xs">유망주 스카우트</button><button onclick="upgradeYouthAcademy()" class="bg-val-panel border border-val-border text-white font-bold px-4 py-2 rounded-lg text-xs">아카데미 강화</button></div></div><div class="grid grid-cols-3 gap-3 mt-4"><div class="bg-val-dark rounded-lg p-3"><div class="text-[10px] text-val-muted">유스 인원</div><div class="text-xl font-black text-white">${state.youth.length}</div></div><div class="bg-val-dark rounded-lg p-3"><div class="text-[10px] text-val-muted">아카데미 레벨</div><div class="text-xl font-black text-val-accent">Lv.${state.youthLevel}</div></div><div class="bg-val-dark rounded-lg p-3"><div class="text-[10px] text-val-muted">스카우트/훈련 자금</div><div class="text-xl font-black text-white">${formatMoney(state.cash)}</div></div></div></div><div class="grid md:grid-cols-2 gap-4">${cards||`<div class="md:col-span-2 bg-val-panel border border-val-border rounded-xl p-8 text-center text-val-muted">현재 유스 선수가 없습니다. 유망주를 스카우트하세요.</div>`}</div></div>`;
+        }
+
+        function renderPageContent() {
+            switch (currentPage) {
+                case "dashboard": return renderDashboardView();
+                case "roster": return renderRosterView();
+                case "market": return renderMarketView();
+                case "training": return renderTrainingView();
+                case "youth": return renderYouthView();
+                case "finance": return renderFinanceView();
+                case "league": return renderLeagueView();
+                case "stats": return renderStatsView();
+                case "match_report": return renderMatchReportView();
+                default: return renderDashboardView();
+            }
+        }
+
+        function renderStatsView() {
+            if (!state || !state.players) return '';
+
+            const sortedPlayers = [...state.players].sort((a, b) => {
+                const avgAcsA = a.stats.matches > 0 ? a.stats.acsSum / a.stats.matches : 0;
+                const avgAcsB = b.stats.matches > 0 ? b.stats.acsSum / b.stats.matches : 0;
+                return avgAcsB - avgAcsA;
+            });
+
+            const statRows = sortedPlayers.map((p, idx) => {
+                const rConf = getRoleConfig(p.role);
+                const matches = p.stats.matches;
+                const avgAcs = matches > 0 ? Math.round(p.stats.acsSum / matches) : 0;
+                const kd = p.stats.deaths > 0 ? (p.stats.kills / p.stats.deaths).toFixed(2) : p.stats.kills;
+
+                return `
+                    <tr class="border-b border-val-border/40 hover:bg-val-border/30 transition text-sm">
+                        <td class="py-3 px-4 font-bold ${idx === 0 ? 'text-yellow-400' : 'text-gray-300'}">${idx + 1}</td>
+                        <td class="py-3 px-4 font-bold text-white flex items-center gap-2">
+                            <span>${p.name}</span>
+                            <span class="text-[10px] px-2 py-0.5 rounded font-bold bg-val-panel border border-val-border ${rConf.color}">${p.role}</span>
+                        </td>
+                        <td class="py-3 px-4 text-center font-bold text-val-gold">${p.agent}</td>
+                        <td class="py-3 px-4 text-center font-bold text-white">${matches}</td>
+                        <td class="py-3 px-4 text-center font-black text-val-accent">${avgAcs}</td>
+                        <td class="py-3 px-4 text-center font-bold text-gray-200">${p.stats.kills} / ${p.stats.deaths} / ${p.stats.assists}</td>
+                        <td class="py-3 px-4 text-center font-bold ${kd >= 1.2 ? 'text-green-400' : kd < 0.9 ? 'text-val-red' : 'text-white'}">${kd}</td>
+                        <td class="py-3 px-4 text-center font-bold text-yellow-400">${p.stats.mvpCount > 0 ? '⭐ ' + p.stats.mvpCount : '-'}</td>
+                    </tr>
+                `;
+            }).join("");
+
+            return `
+                <div class="bg-val-panel border border-val-border rounded-xl p-5">
+                    <div class="flex justify-between items-center border-b border-val-border pb-3 mb-4">
+                        <div>
+                            <h2 class="text-lg font-bold text-white">${state.year} 시즌 누적 선수 통계</h2>
+                            <p class="text-xs text-val-muted">현재 로스터 선수의 경기별 누적 기록입니다.</p>
+                        </div>
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="text-xs text-val-muted bg-val-dark uppercase border-b border-val-border">
+                                    <th class="py-2.5 px-4">순위</th>
+                                    <th class="py-2.5 px-4">선수명</th>
+                                    <th class="py-2.5 px-4 text-center">선호 요원</th>
+                                    <th class="py-2.5 px-4 text-center">출전 수</th>
+                                    <th class="py-2.5 px-4 text-center">평균 ACS</th>
+                                    <th class="py-2.5 px-4 text-center">총 K / D / A</th>
+                                    <th class="py-2.5 px-4 text-center">K/D</th>
+                                    <th class="py-2.5 px-4 text-center">MVP</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${statRows.length > 0 ? statRows : '<tr><td colspan="8" class="text-center py-6 text-val-muted text-sm">출전 기록이 있는 선수가 없습니다.</td></tr>'}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderMatchReportView() {
+            const report = state.lastMatchReport;
+
+            if (!report) {
+                return `
+                    <div class="bg-val-panel border border-val-border rounded-xl p-8 text-center">
+                        <i class="fa-solid fa-clipboard-question text-4xl text-val-border mb-3"></i>
+                        <h3 class="text-base font-bold text-white">최근 경기 리포트가 없습니다.</h3>
+                        <p class="text-xs text-val-muted mt-1">경기를 진행하면 맵별 스코어와 선수 상세 스탯을 확인할 수 있습니다.</p>
+                    </div>
+                `;
+            }
+
+            const mapBoxes = report.maps.map(m => `
+                <div class="bg-val-dark p-3.5 rounded-lg border border-val-border flex justify-between items-center">
+                    <div>
+                        <div class="text-xs text-val-muted font-bold">MAP ${m.mapIndex}</div>
+                        <div class="text-base font-bold text-white">${m.mapName}</div>
+                    </div>
+                    <div class="text-lg font-black ${m.myScore > m.oppScore ? 'text-green-400' : 'text-val-red'}">
+                        ${m.myScore} - ${m.oppScore}
+                    </div>
+                </div>
+            `).join("");
+
+            const playerStatRows = report.playerStats.map(p => `
+                <tr class="border-b border-val-border/40 text-sm">
+                    <td class="py-2.5 px-3 font-bold text-white flex items-center gap-1.5">
+                        ${p.isMvp ? '⭐' : ''} ${p.name}
+                    </td>
+                    <td class="py-2.5 px-3 text-val-muted text-xs">${p.agent}</td>
+                    <td class="py-2.5 px-3 text-center font-bold text-val-accent">${p.acs}</td>
+                    <td class="py-2.5 px-3 text-center font-semibold text-gray-200">${p.kills} / ${p.deaths} / ${p.assists}</td>
+                    <td class="py-2.5 px-3 text-center font-bold ${p.kd >= 1.2 ? 'text-green-400' : 'text-white'}">${p.kd}</td>
+                </tr>
+            `).join("");
+
+            return `
+                <div class="bg-val-panel border border-val-border rounded-xl p-5 flex flex-col gap-6">
+                    <div class="bg-val-dark p-5 rounded-xl border border-val-border flex flex-col md:flex-row items-center justify-between gap-4">
+                        <div class="text-center md:text-left flex items-center gap-3">
+                            ${renderTeamLogo({name: state.myTeamName, color: state.myTeamColor}, "w-10 h-10 text-sm")}
+                            <div>
+                                <span class="text-xs font-bold text-val-muted">BO3 MATCH REPORT</span>
+                                <h2 class="text-xl font-black text-white mt-0.5">
+                                    ${state.myTeamName} vs ${report.oppName}
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="text-3xl font-black ${report.isWin ? 'text-green-400' : 'text-val-red'} bg-val-card px-6 py-2 rounded-xl border border-val-border">
+                            ${report.myMapsWon} : ${report.oppMapsWon} (${report.isWin ? 'WIN' : 'LOSS'})
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-sm font-bold text-white mb-2">🗺 맵별 점수 스코어보드</h3>
+                        <div class="grid md:grid-cols-3 gap-3">
+                            ${mapBoxes}
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-sm font-bold text-white mb-2">📊 내 팀 선수 경기 성적 (Match Telemetry)</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse bg-val-dark rounded-xl overflow-hidden">
+                                <thead>
+                                    <tr class="text-xs text-val-muted uppercase border-b border-val-border">
+                                        <th class="py-2.5 px-3">선수</th>
+                                        <th class="py-2.5 px-3">요원</th>
+                                        <th class="py-2.5 px-3 text-center">ACS</th>
+                                        <th class="py-2.5 px-3 text-center">K / D / A</th>
+                                        <th class="py-2.5 px-3 text-center">K/D</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    ${playerStatRows}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function openStartModal(regionKey) {
+            const reg = VCT_DATA[regionKey];
+            const modalHTML = `
+                <div class="flex flex-col gap-5">
+                    <div>
+                        <h2 class="text-xl font-black text-white">${reg.name} 디비전 선택</h2>
+                        <p class="text-xs text-val-muted mt-1">2026-2030 VCT 또는 Challengers 디비전을 선택하세요.</p>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="bg-val-dark border-2 border-val-red p-4 rounded-xl cursor-pointer hover:bg-val-border/40 transition" onclick="selectTierAndShowTeams('${regionKey}', 1)">
+                            <div class="text-xs font-bold text-val-red">TIER 1 DIVISION</div>
+                            <h3 class="text-lg font-black text-white mt-1">1부 VCT League</h3>
+                            <p class="text-xs text-val-muted mt-2">최상위 글로벌 리그 (${reg.t1.length}개 구단 선택 가능)</p>
+                        </div>
+                        <div class="bg-val-dark border-2 border-val-accent p-4 rounded-xl cursor-pointer hover:bg-val-border/40 transition" onclick="selectTierAndShowTeams('${regionKey}', 2)">
+                            <div class="text-xs font-bold text-val-accent">TIER 2 DIVISION</div>
+                            <h3 class="text-lg font-black text-white mt-1">2부 Challengers League</h3>
+                            <p class="text-xs text-val-muted mt-2">도전자의 길 (${reg.t2.length}개 구단 선택 가능)</p>
+                        </div>
+                    </div>
+
+                    <button class="bg-val-border hover:bg-gray-700 text-white font-bold py-2 rounded-lg text-xs" onclick="closeModal()">취소</button>
+                </div>
+            `;
+            openModal(modalHTML);
+        }
+
+        function selectTierAndShowTeams(regionKey, tier) {
+            const reg = VCT_DATA[regionKey];
+            const teams = tier === 1 ? reg.t1 : reg.t2;
+
+            const teamCards = teams.map((team, idx) => {
+                const rosterPreview = team.roster.map(p => `<span class="text-[11px] bg-val-panel px-1.5 py-0.5 rounded border border-val-border">${p.name} (${p.role})</span>`).join(" ");
+                return `
+                <div class="bg-val-dark border border-val-border hover:border-val-red p-4 rounded-xl flex flex-col justify-between gap-3 transition hover:scale-[1.01]">
+                    <div class="flex items-center gap-3">
+                        ${renderTeamLogo(team, "w-10 h-10 text-sm")}
+                        <div>
+                            <div class="font-black text-base text-white">${team.name}</div>
+                            <div class="text-xs text-val-accent font-bold">팀 전력: ${team.power}</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-1">
+                        ${rosterPreview}
+                    </div>
+                    <button class="w-full bg-val-red hover:bg-val-redHover text-white font-bold py-2 rounded-lg text-xs shadow transition mt-1" 
+                            onclick='closeModal(); initGame("${regionKey}", ${tier}, ${JSON.stringify(team)})'>
+                        ${team.name} 감독으로 부임하기
+                    </button>
+                </div>
+                `;
+            }).join("");
+
+            const modalHTML = `
+                <div class="flex flex-col gap-4 max-h-[80vh]">
+                    <div>
+                        <h2 class="text-xl font-black text-white">${reg.name} (${tier === 1 ? '1부 VCT' : '2부 Challengers'}) 구단 선택</h2>
+                        <p class="text-xs text-val-muted mt-1">감독으로 부임할 구단을 선택하십시오.</p>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-3 overflow-y-auto pr-1 max-h-[55vh]">
+                        ${teamCards}
+                    </div>
+
+                    <button class="bg-val-border hover:bg-gray-700 text-white font-bold py-2 rounded-lg text-xs mt-2" onclick="openStartModal('${regionKey}')">뒤로 가기</button>
+                </div>
+            `;
+            openModal(modalHTML);
+        }
+
+        function playMatch() {
+            if (getStartingPlayers().length < 5) {
+                showToast("선발 5명이 필요합니다. 로스터에서 식스맨을 교체해 주세요.");
+                navigate('market');
+                return;
+            }
+            if (state.week > 20) {
+                showToast("모든 시즌 일정이 종료되었습니다.");
+                return;
+            }
+
+            const phase = getPhaseName(state.week);
+            if (phase.type === 'offseason') {
+                showToast("오프시즌 기간입니다. 차기 시즌으로 진입해주세요.");
+                return;
+            }
+
+            const isInternational = phase.type === 'masters1' || phase.type === 'masters2' || phase.type === 'champions';
+            const isQualified = checkTop4Qualification();
+
+            if (isInternational && !isQualified) {
+                showToast("상위 4위 안에 들지 못해 국제대회 진출이 좌절되었습니다. 이번 주는 시뮬레이션으로 넘어갑니다.");
+                state.logs.push(`⚠️ [${state.year} ${phase.name}] 상위 4위 진입 실패로 인해 국제대회에 참가하지 못하고 휴식을 가졌습니다.`);
+                advanceWeek(true);
+                return;
+            }
+
+            const currentTeams = state.tier === 1 ? state.t1Teams : state.t2Teams;
+            const myTeamRef = currentTeams.find(t => t.name === state.myTeamName);
+            const opponents = currentTeams.filter(t => t.name !== state.myTeamName);
+            const opp = opponents[Math.floor(Math.random() * opponents.length)];
+
+            if (!isInternational) {
+                simulateCpuMatches(opp.name);
+            }
+
+            let myMapsWon = 0;
+            let oppMapsWon = 0;
+            let playedMaps = [];
+            const shuffledMaps = [...MAP_POOL].sort(() => Math.random() - 0.5);
+
+            for (let i = 0; i < 3; i++) {
+                if (myMapsWon === 2 || oppMapsWon === 2) break;
+
+                const myPower = calculateTeamPower();
+                const oppPower = isInternational ? (opp.power + 4 + (state.year - 2026) * 1) : opp.power;
+
+                const powerDiff = myPower - oppPower;
+                const winProbability = 1 / (1 + Math.pow(10, -powerDiff / 25));
+                const randomRoll = Math.random();
+
+                let myRounds = 0;
+                let oppRounds = 0;
+
+                if (randomRoll < winProbability) {
+                    myRounds = 13;
+                    oppRounds = Math.max(3, Math.floor(13 - (winProbability * 10) - (Math.random() * 5)));
+                    if (oppRounds >= 13) oppRounds = 12;
+                    myMapsWon++;
+                } else {
+                    oppRounds = 13;
+                    myRounds = Math.max(3, Math.floor(13 - ((1 - winProbability) * 10) - (Math.random() * 5)));
+                    if (myRounds >= 13) myRounds = 12;
+                    oppMapsWon++;
+                }
+
+                playedMaps.push({
+                    mapIndex: i + 1,
+                    mapName: shuffledMaps[i],
+                    myScore: myRounds,
+                    oppScore: oppRounds
+                });
+            }
+
+            const isWin = myMapsWon > oppMapsWon;
+
+            let matchPlayerStats = [];
+            let highestAcs = -1;
+            let mvpIndex = 0;
+
+            getStartingPlayers().forEach((p, idx) => {
+                const baseKills = Math.floor(12 + (p.ovr - 75) * 0.6 + (Math.random() * 8 - 4));
+                const deaths = Math.max(5, Math.floor(13 + (78 - p.ovr) * 0.3 + (Math.random() * 6 - 3)));
+                const assists = Math.floor(3 + Math.random() * 7);
+                const acs = Math.floor(baseKills * 12 + assists * 6 + (Math.random() * 20 - 10));
+
+                if (acs > highestAcs) {
+                    highestAcs = acs;
+                    mvpIndex = idx;
+                }
+
+                matchPlayerStats.push({
+                    name: p.name,
+                    agent: p.agent,
+                    kills: baseKills,
+                    deaths: deaths,
+                    assists: assists,
+                    acs: acs,
+                    kd: deaths > 0 ? (baseKills / deaths).toFixed(2) : baseKills,
+                    isMvp: false
+                });
+
+                p.stats.matches++;
+                p.stats.kills += baseKills;
+                p.stats.deaths += deaths;
+                p.stats.assists += assists;
+                p.stats.acsSum += acs;
+            });
+
+            matchPlayerStats[mvpIndex].isMvp = true;
+            getStartingPlayers()[mvpIndex].stats.mvpCount++;
+
+            if (!isInternational) {
+                if (isWin) {
+                    myTeamRef.w++;
+                    opp.l++;
+                } else {
+                    myTeamRef.l++;
+                    opp.w++;
+                }
+            }
+
+            if (isWin) {
+                state.form = Math.min(100, state.form + 3);
+                state.morale = Math.min(100, state.morale + 4);
+                state.fan = Math.min(100, state.fan + 3);
+                state.reputation = Math.min(100, state.reputation + 2);
+                state.logs.push(`🟩 [${state.year} ${phase.name}] 승리 (2-${oppMapsWon}) — ${opp.name} 구단을 상대로 승리했습니다!`);
+                showToast(`${phase.name} 경기 승리! 🎉`);
+            } else {
+                state.form = Math.max(0, state.form - 2);
+                state.morale = Math.max(0, state.morale - 2);
+                state.logs.push(`🟥 [${state.year} ${phase.name}] 패배 (${myMapsWon}-2) — ${opp.name}에게 아쉽게 패배했습니다.`);
+                showToast(`${phase.name} 경기 패배...`);
+            }
+
+            let prize = isWin ? (state.tier === 1 ? 35000 : 18000) : (state.tier === 1 ? 14000 : 7000);
+            if (phase.type === 'masters1' || phase.type === 'masters2') prize *= 2.0;
+            if (phase.type === 'champions') prize *= 4.0;
+            state.cash += prize;
+
+            state.lastMatchReport = {
+                oppName: opp.name,
+                myMapsWon: myMapsWon,
+                oppMapsWon: oppMapsWon,
+                isWin: isWin,
+                maps: playedMaps,
+                playerStats: matchPlayerStats
+            };
+
+            advanceWeek(true);
+        }
+
+        function advanceWeek(fromMatch = false) {
+            if (state.week >= 20 && !fromMatch) {
+                if (state.year >= 2030) {
+                    openModal(`
+                        <div class="text-center flex flex-col gap-4">
+                            <div class="text-5xl">🏆</div>
+                            <h2 class="text-2xl font-black text-white">2030년 챔피언십 대장정 완료</h2>
+                            <p class="text-sm text-val-muted">2026년부터 2030년까지 5년간의 감독 커리어가 명예롭게 마무리되었습니다!</p>
+                            <button class="bg-val-red text-white font-bold py-2.5 rounded-xl mt-2" onclick="location.reload()">새 게임 시작하기</button>
+                        </div>
+                    `);
+                    return;
+                } else {
+                    state.year++;
+                    state.week = 1;
+                    state.trainingDone = false;
+                    state.t1Teams.forEach(t => { t.w = 0; t.l = 0; t.power += 1; });
+                    state.t2Teams.forEach(t => { t.w = 0; t.l = 0; t.power += 1; });
+                    generateYouthProspects(2);
+                    state.logs.push(`📢 [${state.year} 시즌 개막] 새로운 한 해가 시작되었습니다! 팀 전력이 상향되었습니다.`);
+                    showToast(`${state.year}년 새 시즌이 개막했습니다!`);
+                    renderApp();
+                    return;
+                }
+            }
+
+            if (!fromMatch) {
+                const curPhase = getPhaseName(state.week);
+                if (curPhase.type === 'offseason') {
+                    state.week = 20;
+                } else if (curPhase.type !== 'masters1' && curPhase.type !== 'masters2' && curPhase.type !== 'champions') {
+                    simulateCpuMatches(null);
+                }
+            }
+
+            state.week++;
+            state.trainingDone = false;
+            if (Array.isArray(state.youth)) state.youth.forEach(y => { if (y.ovr < y.potential && Math.random() < 0.18 + state.youthLevel * 0.04) y.ovr = Math.min(y.potential, y.ovr + 1); });
+
+            const weeklyWages = Math.round(state.players.reduce((sum, p) => sum + p.salary, 0) / 52);
+            const fixedCost = state.tier === 1 ? 40000 : 20000;
+            state.cash -= (fixedCost + weeklyWages);
+
+            if (state.cash < 0) {
+                state.morale = Math.max(0, state.morale - 6);
+                state.logs.push("⚠ 경고: 구단 자금 부족으로 인해 선수단 사기가 크게 하락했습니다.");
+            }
+
+            const newPhase = getPhaseName(state.week);
+            if (state.week === 10) {
+                const isQualified = checkTop4Qualification();
+                state.logs.push(`🌍 [${state.year} Masters 1] 개막! (상위 4팀 진출 여부: ${isQualified ? '성공' : '실패'})`);
+                openModal(`
+                    <div class="text-center flex flex-col gap-4">
+                        <div class="text-4xl">🌍</div>
+                        <h2 class="text-2xl font-black text-val-accent">VALORANT Masters 1 개막!</h2>
+                        <p class="text-sm text-val-muted">현재 리그 순위 기준 <b>상위 4개 팀</b>만 참가할 수 있는 첫 번째 마스터즈입니다!<br>내 팀 진출 상태: <span class="${isQualified ? 'text-green-400 font-bold' : 'text-val-red font-bold'}">${isQualified ? '진출 성공 (TOP 4)' : '진출 실패'}</span></p>
+                        <button class="bg-val-red text-white font-bold py-2 rounded-lg" onclick="closeModal()">확인</button>
+                    </div>
+                `);
+            } else if (state.week === 18) {
+                const isQualified = checkTop4Qualification();
+                state.logs.push(`🌍 [${state.year} Masters 2] 개막! (상위 4팀 진출 여부: ${isQualified ? '성공' : '실패'})`);
+                openModal(`
+                    <div class="text-center flex flex-col gap-4">
+                        <div class="text-4xl">🌍</div>
+                        <h2 class="text-2xl font-black text-val-accent">VALORANT Masters 2 개막!</h2>
+                        <p class="text-sm text-val-muted">스테이지 1 종료 후 상위 4개 팀만 참가하는 두 번째 마스터즈 무대입니다!<br>내 팀 진출 상태: <span class="${isQualified ? 'text-green-400 font-bold' : 'text-val-red font-bold'}">${isQualified ? '진출 성공 (TOP 4)' : '진출 실패'}</span></p>
+                        <button class="bg-val-red text-white font-bold py-2 rounded-lg" onclick="closeModal()">확인</button>
+                    </div>
+                `);
+            } else if (state.week === 19) {
+                const isQualified = checkTop4Qualification();
+                state.logs.push(`🏆 [${state.year} Champions] 최종 월드 챔피언십 개막! (상위 4팀 진출 여부: ${isQualified ? '성공' : '실패'})`);
+                openModal(`
+                    <div class="text-center flex flex-col gap-4">
+                        <div class="text-5xl">👑</div>
+                        <h2 class="text-2xl font-black text-yellow-400">VALORANT Champions 개막!</h2>
+                        <p class="text-sm text-val-muted">스테이지 2까지의 성적 기준 상위 4개 팀만 참가하는 최종 왕중왕전 무대입니다!<br>내 팀 진출 상태: <span class="${isQualified ? 'text-green-400 font-bold' : 'text-val-red font-bold'}">${isQualified ? '진출 성공 (TOP 4)' : '진출 실패'}</span></p>
+                        <button class="bg-val-red text-white font-bold py-2 rounded-lg" onclick="closeModal()">확인</button>
+                    </div>
+                `);
+            } else if (state.week === 20) {
+                state.logs.push(`🔄 [${state.year} 오프시즌] 이적시장 및 로스터 재정비 기간이 시작되었습니다.`);
+                let namePool = [...INITIAL_NAMES].sort(() => Math.random() - 0.5);
+                state.freeAgents = [];
+                for (let i = 0; i < 12; i++) {
+                    const roleObj = ROLES[Math.floor(Math.random() * 5)];
+                    state.freeAgents.push({
+                        id: 'fa_' + Math.random().toString(36).substr(2, 9),
+                        name: namePool[i] || `FA_Agent_${i+1}`,
+                        role: roleObj.id,
+                        agent: roleObj.agents[Math.floor(Math.random() * roleObj.agents.length)],
+                        ovr: 75 + Math.floor(Math.random() * 16) + Math.floor((state.year - 2026) * 0.5),
+                        salary: 35000 + Math.floor(Math.random() * 25000),
+                        stats: { matches: 0, kills: 0, deaths: 0, assists: 0, acsSum: 0, mvpCount: 0 }
+                    });
+                }
+                openModal(`
+                    <div class="text-center flex flex-col gap-4">
+                        <div class="text-4xl">🔄</div>
+                        <h2 class="text-2xl font-black text-white">${state.year} 오프시즌 돌입</h2>
+                        <p class="text-sm text-val-muted">정규 시즌과 국제대회가 모두 종료되었습니다. FA 시장에서 새로운 선수를 영입하고 다음 연도로 도약하세요!</p>
+                        <button class="bg-val-red text-white font-bold py-2 rounded-lg" onclick="closeModal()">확인</button>
+                    </div>
+                `);
+            } else if (!fromMatch) {
+                state.logs.push(`⏳ ${state.year}년 ${state.week}주차 (${newPhase.name})가 시작되었습니다.`);
+            }
+
+            renderApp();
+        }
+
+        function signPlayer(index) {
+            if (!state || !Array.isArray(state.players) || !Array.isArray(state.freeAgents)) return;
+            if (state.players.length >= 6) {
+                showToast("로스터가 가득 찼습니다. 먼저 선수를 방출하세요.");
+                return;
+            }
+            if (index < 0 || index >= state.freeAgents.length) {
+                showToast("해당 선수를 찾을 수 없습니다.");
+                return;
+            }
+            const p = state.freeAgents[index];
+            if (!p) return;
+            p.isStarter = state.players.length < 5;
+            const fee = Math.round((p.salary || 0) * 0.4);
+
+            if (state.cash < fee) {
+                showToast("계약금이 부족합니다!");
+                return;
+            }
+
+            state.cash -= fee;
+            state.players.push(p);
+            state.freeAgents.splice(index, 1);
+            state.logs.push(`[영입] ${p.name} (${p.role}, OVR ${p.ovr}) 영입 완료.`);
+            showToast(`${p.name} 영입 성공!`);
+            renderApp();
+        }
+
+        function toggleSixthMan(index) {
+            if (!state || !Array.isArray(state.players)) return;
+            const target = state.players[index];
+            if (!target) return;
+
+            const benchIndex = state.players.findIndex(p => p.isStarter === false);
+            if (target.isStarter === false) {
+                // 식스맨을 선발로 올리고, 현재 선발 중 가장 마지막 선수를 식스맨으로 내립니다.
+                const starterIndex = state.players.findIndex((p, i) => p.isStarter !== false && i !== index);
+                if (starterIndex < 0) return;
+                state.players[starterIndex].isStarter = false;
+                target.isStarter = true;
+                showToast(`${target.name} 선발 출전 · ${state.players[starterIndex].name} 식스맨`);
+            } else {
+                if (benchIndex < 0) {
+                    if (state.players.length >= 6) {
+                        showToast('식스맨 자리가 이미 없습니다.');
+                        return;
+                    }
+                    target.isStarter = true;
+                    showToast('현재 식스맨이 없습니다. FA에서 6번째 선수를 영입하세요.');
+                    return;
+                }
+                const bench = state.players[benchIndex];
+                target.isStarter = false;
+                bench.isStarter = true;
+                showToast(`${target.name} 식스맨 · ${bench.name} 선발 출전`);
+            }
+            renderApp();
+        }
+
+        function releasePlayer(index) {
+            // 교체 영입을 위해 4명까지는 일시적으로 허용합니다.
+            // 5명 로스터에서 방출 -> 새 선수 영입 순서로 정상적인 교체가 가능합니다.
+            if (!state || !Array.isArray(state.players)) return;
+            if (index < 0 || index >= state.players.length) return;
+            if (state.players.length <= 5) {
+                showToast("최소 5명은 유지해야 합니다.");
+                return;
+            }
+
+            const p = state.players[index];
+            state.players.splice(index, 1);
+
+            // 방출 선수는 FA 시장으로 이동시켜 다시 영입할 수 있게 합니다.
+            if (!Array.isArray(state.freeAgents)) state.freeAgents = [];
+            state.freeAgents.unshift(p);
+
+            // 잔여 계약 보상금 15%
+            state.cash += Math.round((p.salary || 0) * 0.15);
+            state.logs.push(`[방출] ${p.name} 선수와의 계약을 해지했습니다. FA 시장으로 이동했습니다.`);
+            showToast(`${p.name} 방출 완료. FA 시장에서 다시 영입할 수 있습니다.`);
+            renderApp();
+        }
+
+        function doTrain(type) {
+            if (state.trainingDone) {
+                showToast("이번 주 훈련은 이미 마쳤습니다.");
+                return;
+            }
+            state.trainingDone = true;
+
+            if (type === 'aim') state.form = Math.min(100, state.form + 4);
+            else if (type === 'tactic') { state.form = Math.min(100, state.form + 2); state.coach = Math.min(100, state.coach + 2); }
+            else if (type === 'team') state.morale = Math.min(100, state.morale + 6);
+
+            state.logs.push("이번 주 팀 주간 훈련을 성공적으로 마쳤습니다.");
+            showToast("훈련 완료!");
+            renderApp();
+        }
+
+        function upgradeStaff(type) {
+            if (type === 'coach') {
+                if (state.cash >= 55000) {
+                    state.cash -= 55000;
+                    state.coach = Math.min(100, state.coach + 10);
+                    state.logs.push("코치진 연수를 지원하여 코칭 능력이 상승했습니다.");
+                    showToast("코치 능력 상승!");
+                    renderApp();
+                } else showToast("자금이 부족합니다!");
+            } else if (type === 'analyst') {
+                if (state.cash >= 40000) {
+                    state.cash -= 40000;
+                    state.analyst = Math.min(100, state.analyst + 10);
+                    state.logs.push("분석 시스템을 도입하여 데이터 분석력이 상승했습니다.");
+                    showToast("분석력 상승!");
+                    renderApp();
+                } else showToast("자금이 부족합니다!");
+            }
+        }
+
+        function signSponsor(type) {
+            const amount = type === 1 ? 70000 : 150000;
+            state.cash += amount;
+            state.reputation = Math.min(100, state.reputation + (type === 2 ? 3 : 1));
+            state.logs.push(`[스폰서] ${type === 2 ? '글로벌 테크' : '지역 게이밍'} 스폰서 계약 완료 (+${formatMoney(amount)})`);
+            showToast("스폰서 계약 완료!");
+            renderApp();
+        }
+
+        window.onload = () => {
+            try {
+                renderApp();
+            } catch (e) {
+                console.error(e);
+                document.getElementById('app').innerHTML = `
+                    <div class="bg-val-panel border border-val-red text-white p-6 rounded-xl">
+                        <h2 class="text-xl font-bold mb-2">실행 오류 발생</h2>
+                        <p class="text-xs text-val-muted">${e.message}</p>
+                    </div>
+                `;
+            }
+        };
+    </script>
+</body>
+</html>
