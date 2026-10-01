@@ -56,6 +56,140 @@
 .fa-solid::before{display:inline-block;}
 .fa-chart-pie::before{content:"📊"}.fa-users::before{content:"👥"}.fa-store::before{content:"🏪"}.fa-crosshair::before{content:"🎯"}.fa-coins::before{content:"🪙"}.fa-trophy::before{content:"🏆"}.fa-chart-line::before{content:"📈"}.fa-file-lines::before{content:"📄"}.fa-seedling::before{content:"🌱"}.fa-wallet::before{content:"💰"}.fa-bolt::before{content:"⚡"}.fa-heart::before{content:"❤️"}.fa-shield::before{content:"🛡️"}.fa-calendar-days::before{content:"📅"}.fa-gamepad::before{content:"🎮"}.fa-newspaper::before{content:"📰"}.fa-brain::before{content:"🧠"}.fa-people-group::before{content:"👥"}.fa-clipboard-question::before{content:"❓"}
 </style>
+
+<style id="layout-font-scroll-fix">
+/* ===== 안정적인 한글 폰트 렌더링 ===== */
+html, body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #0f1923;
+    color: #fff;
+    font-family: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic",
+                 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+#app {
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+}
+
+/* ===== 누락된 Grid 유틸리티 ===== */
+.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+@media (min-width: 640px) {
+    .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 768px) {
+    .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (min-width: 1024px) {
+    .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+/* ===== 실제로 사용되지만 기존 CSS에 빠져 있던 크기 유틸리티 ===== */
+.w-4 { width: 1rem; }
+.w-11 { width: 2.75rem; }
+.w-16 { width: 4rem; }
+.h-1\.5 { height: .375rem; }
+.h-11 { height: 2.75rem; }
+.h-16 { height: 4rem; }
+
+.text-\[10px\] { font-size: 10px; line-height: 1.25; }
+.text-\[11px\] { font-size: 11px; line-height: 1.25; }
+
+.max-w-xl { max-width: 36rem; }
+.max-w-\[100px\] { max-width: 100px; }
+.max-h-\[320px\] { max-height: 320px; }
+.max-h-\[55vh\] { max-height: 55vh; }
+.max-h-\[80vh\] { max-height: 80vh; }
+
+.overflow-hidden { overflow: hidden; }
+.border-2 { border-width: 2px; border-style: solid; }
+.shadow { box-shadow: 0 1px 3px rgba(0,0,0,.25); }
+.duration-300 { transition-duration: .3s; }
+
+/* ===== 모바일에서 긴 텍스트가 화면 폭을 깨지 않도록 ===== */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+button, input, select, textarea {
+    font-family: inherit;
+}
+button {
+    -webkit-tap-highlight-color: transparent;
+}
+table {
+    max-width: 100%;
+}
+td, th {
+    word-break: keep-all;
+}
+img, svg {
+    max-width: 100%;
+}
+.flex > *, .grid > * {
+    min-width: 0;
+}
+
+/* ===== 모달 내부 스크롤 안정화 ===== */
+#modal-container {
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+}
+#modal-content {
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    flex-shrink: 0;
+}
+
+/* ===== 작은 화면에서 상단 헤더가 폭을 밀어내지 않도록 ===== */
+@media (max-width: 639px) {
+    header .text-xl {
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+    header #header-year-title {
+        font-size: .9rem;
+    }
+    #season-info {
+        max-width: 46vw;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    #app {
+        padding-left: .75rem;
+        padding-right: .75rem;
+    }
+}
+
+/* ===== iOS/Android에서 내부 스크롤 영역이 페이지 스크롤을 막지 않게 ===== */
+.overflow-y-auto,
+.overflow-x-auto {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+}
+</style>
+
 </head>
 <body class="min-h-screen flex flex-col antialiased bg-val-dark select-none">
 
@@ -79,7 +213,7 @@
         ℹ️ <span id="toast-msg"></span>
     </div>
 
-    <div id="modal-container" class="fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop hidden animate-fade-in">
+    <div id="modal-container" class="fixed inset-0 z-50 flex items-start sm:items-center justify-center p-4 modal-backdrop hidden animate-fade-in">
         <div id="modal-content" class="bg-val-card border border-val-border rounded-xl max-w-2xl w-full p-6 shadow-2xl relative">
         </div>
     </div>
