@@ -434,6 +434,27 @@ img, svg {
   }
 }
 </style>
+
+<style id="team-color-fallbacks">
+/* Team identity colors used by the game; defined locally so no Tailwind CDN is required. */
+.bg-pink-600{background:#db2777}.bg-pink-700{background:#be185d}
+.bg-zinc-700{background:#3f3f46}.bg-slate-700{background:#334155}.bg-slate-800{background:#1e293b}
+.bg-teal-700{background:#0f766e}.bg-teal-800{background:#115e59}
+.bg-cyan-700{background:#0e7490}.bg-cyan-800{background:#155e75}
+.bg-indigo-600{background:#4f46e5}.bg-indigo-800{background:#3730a3}
+.bg-orange-600{background:#ea580c}.bg-orange-700{background:#c2410c}.bg-orange-800{background:#9a3412}
+.bg-purple-700{background:#7e22ce}.bg-purple-800{background:#6b21a8}
+.bg-violet-800{background:#5b21b6}
+.bg-sky-700{background:#0369a1}
+.bg-red-700{background:#b91c1c}.bg-red-800{background:#991b1b}
+.bg-blue-500{background:#3b82f6}.bg-blue-600{background:#2563eb}.bg-blue-700{background:#1d4ed8}.bg-blue-800{background:#1e40af}
+.bg-emerald-600{background:#059669}
+.bg-green-800{background:#166534}
+.bg-yellow-600{background:#ca8a04}.bg-yellow-700{background:#a16207}
+.bg-gray-700{background:#374151}.bg-neutral-800{background:#262626}
+.text-black{color:#000}
+.border-val-accent\/40{border-color:rgba(0,229,255,.4)}
+</style>
 </head>
 <body class="min-h-screen flex flex-col antialiased bg-val-dark select-none">
 
@@ -2231,7 +2252,7 @@ img, svg {
             const teamCards = teams.map((team, idx) => {
                 const rosterPreview = team.roster.map((p, pidx) => {
                     const isSixth = p.isSixth || pidx >= 5;
-                    const roleKo = { Duelist: "엔트리", Initiator: "이니시에이터", Controller: "컨트롤러", Sentinel: "센티널", Flex: "플렉스" }[p.role] || p.role;
+                    const roleKo = p.role;
                     return `<div class="roster-player ${isSixth ? 'sixth-player' : ''}">
                         <span class="player-name">${p.name}</span>
                         <span class="player-role">${roleKo}</span>
