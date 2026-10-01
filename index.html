@@ -31,6 +31,10 @@
             backdrop-filter: blur(4px);
         }
 
+
+        .team-logo-img-wrap { width: 100%; height: 100%; min-width: 1.75rem; min-height: 1.75rem; max-width: 3rem; max-height: 3rem; border-radius: 6px; background: #fff; display:inline-flex; align-items:center; justify-content:center; overflow:hidden; }
+        .team-logo-img { width: 82%; height: 82%; object-fit: contain; position:relative; z-index:2; }
+        .team-logo-fallback { position:absolute; z-index:1; font-weight:900; font-size:.72em; color:#111; letter-spacing:-.04em; }
         .team-logo-badge {
             display: inline-flex;
             align-items: center;
@@ -462,7 +466,7 @@ img, svg {
                 name: "퍼시픽 (Pacific)",
                 t1: [
                     {
-                        name: "Gen.G", power: 86, color: "bg-amber-600 text-white",
+                        name: "Gen.G", abbr: "GEN", logoDomain: "geng.gg", power: 86, color: "bg-amber-600 text-white",
                         roster: [
                             { name: "Efina", role: "Initiator", agent: "Fade", ovr: 86, salary: 62100 },
                             { name: "t3xture", role: "Duelist", agent: "Jett", ovr: 85, salary: 61000 },
@@ -472,7 +476,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Paper Rex", power: 91, color: "bg-pink-600 text-white",
+                        name: "Paper Rex", abbr: "PRX", logoDomain: "pprx.team", power: 91, color: "bg-pink-600 text-white",
                         roster: [
                             { name: "Jinggg", role: "Duelist", agent: "Raze", ovr: 91, salary: 67600 },
                             { name: "invy", role: "Initiator", agent: "Sova", ovr: 90, salary: 66500 },
@@ -482,7 +486,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "T1", power: 89, color: "bg-red-700 text-white",
+                        name: "T1", abbr: "T1", logoDomain: "t1.gg", power: 89, color: "bg-red-700 text-white",
                         roster: [
                             { name: "stax", role: "Initiator", agent: "Breach", ovr: 89, salary: 65400 },
                             { name: "BuZz", role: "Duelist", agent: "Jett", ovr: 88, salary: 64300 },
@@ -492,7 +496,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "ZETA DIVISION", power: 78, color: "bg-zinc-700 text-white",
+                        name: "ZETA DIVISION", abbr: "ZETA", logoDomain: "zetadivision.com", power: 78, color: "bg-zinc-700 text-white",
                         roster: [
                             { name: "eKo", role: "Sentinel", agent: "Killjoy", ovr: 91, salary: 90050 },
                             { name: "SugarZ3ro", role: "Controller", agent: "Astra", ovr: 89, salary: 88950 },
@@ -502,7 +506,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Global Esports", power: 84, color: "bg-emerald-600 text-white",
+                        name: "Global Esports", abbr: "GE", logoDomain: "globalesports.com", power: 84, color: "bg-emerald-600 text-white",
                         roster: [
                             { name: "Autumn", role: "Flex", agent: "Omen", ovr: 84, salary: 59900 },
                             { name: "UdoTan", role: "Duelist", agent: "Raze", ovr: 83, salary: 58800 },
@@ -512,7 +516,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Rex Regum Qeon", power: 77, color: "bg-orange-600 text-white",
+                        name: "Rex Regum Qeon", abbr: "RRQ", logoDomain: "rrq.com", power: 77, color: "bg-orange-600 text-white",
                         roster: [
                             { name: "crazyguy", role: "Controller", agent: "Omen", ovr: 78, salary: 89500 },
                             { name: "Kushy", role: "Sentinel", agent: "Cypher", ovr: 77, salary: 88400 },
@@ -522,7 +526,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Team Secret", power: 74, color: "bg-cyan-700 text-white",
+                        name: "Team Secret", abbr: "TS", logoDomain: "teamsecret.gg", power: 74, color: "bg-cyan-700 text-white",
                         roster: [
                             { name: "Sylvan", role: "Controller", agent: "Omen", ovr: 75, salary: 88400 },
                             { name: "natz", role: "Sentinel", agent: "Cypher", ovr: 74, salary: 87300 },
@@ -532,7 +536,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "DetonatioN FocusMe", power: 81, color: "bg-blue-500 text-white",
+                        name: "DetonatioN FocusMe", abbr: "DFM", power: 81, color: "bg-blue-500 text-white",
                         roster: [
                             { name: "Meiy", role: "Duelist", agent: "Jett", ovr: 82, salary: 87850 },
                             { name: "Akame", role: "Duelist", agent: "Jett", ovr: 81, salary: 86750 },
@@ -542,7 +546,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "FULL SENSE", power: 73, color: "bg-indigo-600 text-white",
+                        name: "FULL SENSE", abbr: "FS", power: 73, color: "bg-indigo-600 text-white",
                         roster: [
                             { name: "Crws", role: "Controller", agent: "Omen", ovr: 74, salary: 87850 },
                             { name: "Killua", role: "Initiator", agent: "Sova", ovr: 73, salary: 86750 },
@@ -552,7 +556,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "KIWOOM DRX", power: 79, color: "bg-blue-600 text-white",
+                        name: "KIWOOM DRX", abbr: "KRX", logoDomain: "drx.gg", power: 79, color: "bg-blue-600 text-white",
                         roster: [
                             { name: "free1ng", role: "Controller", agent: "Viper", ovr: 79, salary: 87300 },
                             { name: "MaKo", role: "Controller", agent: "Omen", ovr: 78, salary: 86200 },
@@ -562,7 +566,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Nongshim RedForce", power: 87, color: "bg-teal-700 text-white",
+                        name: "Nongshim RedForce", abbr: "NS", logoDomain: "nongshimredforce.com", power: 87, color: "bg-teal-700 text-white",
                         roster: [
                             { name: "Rb", role: "Controller", agent: "Astra", ovr: 87, salary: 63200 },
                             { name: "Dambi", role: "Duelist", agent: "Neon", ovr: 86, salary: 62100 },
@@ -572,7 +576,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "VARREL", power: 82, color: "bg-purple-700 text-white",
+                        name: "VARREL", abbr: "VL", logoDomain: "varrel.jp", power: 82, color: "bg-purple-700 text-white",
                         roster: [
                             { name: "C1ndeR", role: "Controller", agent: "Omen", ovr: 82, salary: 57700 },
                             { name: "Klaus", role: "Flex", agent: "Cypher", ovr: 81, salary: 56600 },
@@ -583,38 +587,38 @@ img, svg {
                     }
                 ],
                 t2: [
-                    { name: "Sharper Esports", power: 80, color: "bg-orange-700 text-white", roster: [{ name: "Kadoom", role: "Duelist", agent: "Jett", ovr: 82, salary: 52000 },{ name: "Apinya", role: "Initiator", agent: "Sova", ovr: 80, salary: 48000 },{ name: "NIZ", role: "Initiator", agent: "KAY/O", ovr: 79, salary: 47000 },{ name: "PTC", role: "Controller", agent: "Omen", ovr: 81, salary: 50000 },{ name: "Laz", role: "Sentinel", agent: "Cypher", ovr: 78, salary: 45000 }] },
-                    { name: "Xipto Esports", power: 75, color: "bg-violet-800 text-white", roster: [{ name: "XipDuel", role: "Duelist", agent: "Raze", ovr: 77, salary: 42000 },{ name: "XipInit", role: "Initiator", agent: "Fade", ovr: 75, salary: 40000 },{ name: "XipCtrl", role: "Controller", agent: "Omen", ovr: 74, salary: 39000 },{ name: "XipSent", role: "Sentinel", agent: "Killjoy", ovr: 73, salary: 38000 },{ name: "XipFlex", role: "Flex", agent: "Gekko", ovr: 76, salary: 41000 }] },
-                    { name: "QT DIG∞", power: 74, color: "bg-indigo-800 text-white", roster: [{ name: "QTD1", role: "Duelist", agent: "Jett", ovr: 76, salary: 40000 },{ name: "QTD2", role: "Initiator", agent: "Sova", ovr: 74, salary: 38000 },{ name: "QTD3", role: "Controller", agent: "Viper", ovr: 73, salary: 37000 },{ name: "QTD4", role: "Sentinel", agent: "Cypher", ovr: 72, salary: 36000 },{ name: "QTD5", role: "Flex", agent: "KAY/O", ovr: 74, salary: 38000 }] },
-                    { name: "ONSIDE GAMING", power: 84, color: "bg-yellow-600 text-white", roster: [
+                    { name: "Sharper Esports", abbr: "SHP", power: 80, color: "bg-orange-700 text-white", roster: [{ name: "Kadoom", role: "Duelist", agent: "Jett", ovr: 82, salary: 52000 },{ name: "Apinya", role: "Initiator", agent: "Sova", ovr: 80, salary: 48000 },{ name: "NIZ", role: "Initiator", agent: "KAY/O", ovr: 79, salary: 47000 },{ name: "PTC", role: "Controller", agent: "Omen", ovr: 81, salary: 50000 },{ name: "Laz", role: "Sentinel", agent: "Cypher", ovr: 78, salary: 45000 }] },
+                    { name: "Xipto Esports", abbr: "XIP", power: 75, color: "bg-violet-800 text-white", roster: [{ name: "XipDuel", role: "Duelist", agent: "Raze", ovr: 77, salary: 42000 },{ name: "XipInit", role: "Initiator", agent: "Fade", ovr: 75, salary: 40000 },{ name: "XipCtrl", role: "Controller", agent: "Omen", ovr: 74, salary: 39000 },{ name: "XipSent", role: "Sentinel", agent: "Killjoy", ovr: 73, salary: 38000 },{ name: "XipFlex", role: "Flex", agent: "Gekko", ovr: 76, salary: 41000 }] },
+                    { name: "QT DIG∞", abbr: "QT", power: 74, color: "bg-indigo-800 text-white", roster: [{ name: "QTD1", role: "Duelist", agent: "Jett", ovr: 76, salary: 40000 },{ name: "QTD2", role: "Initiator", agent: "Sova", ovr: 74, salary: 38000 },{ name: "QTD3", role: "Controller", agent: "Viper", ovr: 73, salary: 37000 },{ name: "QTD4", role: "Sentinel", agent: "Cypher", ovr: 72, salary: 36000 },{ name: "QTD5", role: "Flex", agent: "KAY/O", ovr: 74, salary: 38000 }] },
+                    { name: "ONSIDE GAMING", abbr: "ONG", power: 84, color: "bg-yellow-600 text-white", roster: [
                         { name: "Cloudy", role: "Initiator", agent: "Sova", ovr: 84, salary: 59900 },
                         { name: "Wolverine", role: "Duelist", agent: "Raze", ovr: 84, salary: 59900 },
                         { name: "Awayk", role: "Controller", agent: "Omen", ovr: 83, salary: 58800 },
                         { name: "Ray", role: "Duelist", agent: "Jett", ovr: 86, salary: 62100 },
                         { name: "Xiesta", role: "Sentinel", agent: "Cypher", ovr: 82, salary: 57700 }
                     ] },
-                    { name: "DRX Academy", power: 82, color: "bg-slate-700 text-white", academy: true, roster: [
+                    { name: "DRX Academy", abbr: "DRX.A", power: 82, color: "bg-slate-700 text-white", academy: true, roster: [
                         { name: "apeX", role: "Duelist", agent: "Jett", ovr: 83, salary: 58800 },
                         { name: "Athan", role: "Duelist", agent: "Raze", ovr: 85, salary: 61000 },
                         { name: "NGen", role: "Controller", agent: "Omen", ovr: 84, salary: 59900 },
                         { name: "Kyra", role: "Sentinel", agent: "Cypher", ovr: 80, salary: 55500 },
                         { name: "XoNs", role: "Initiator", agent: "Sova", ovr: 81, salary: 56600 }
                     ] },
-                    { name: "T1 Academy", power: 80, color: "bg-red-800 text-white", academy: true, roster: [
+                    { name: "T1 Academy", abbr: "T1A", power: 80, color: "bg-red-800 text-white", academy: true, roster: [
                         { name: "Impact", role: "Duelist", agent: "Jett", ovr: 83, salary: 58800 },
                         { name: "wezzy", role: "Duelist", agent: "Raze", ovr: 84, salary: 59900 },
                         { name: "DH", role: "Controller", agent: "Omen", ovr: 77, salary: 52200 },
                         { name: "Gnadel", role: "Sentinel", agent: "Cypher", ovr: 81, salary: 56600 },
                         { name: "DarK", role: "Initiator", agent: "Sova", ovr: 80, salary: 55500 }
                     ] },
-                    { name: "Dplus Esports", power: 79, color: "bg-sky-700 text-white", roster: [
+                    { name: "Dplus Esports", abbr: "DK", power: 79, color: "bg-sky-700 text-white", roster: [
                         { name: "CabezA", role: "Duelist", agent: "Raze", ovr: 83, salary: 58800 },
                         { name: "JaXe", role: "Initiator", agent: "Sova", ovr: 79, salary: 54400 },
                         { name: "shu", role: "Controller", agent: "Omen", ovr: 78, salary: 53300 },
                         { name: "Kally", role: "Initiator", agent: "Sova", ovr: 81, salary: 56600 },
                         { name: "Ramgi", role: "Sentinel", agent: "Cypher", ovr: 78, salary: 53300 }
                     ] },
-                    { name: "Gen.G Global Academy", power: 78, color: "bg-yellow-700 text-white", academy: true, roster: [
+                    { name: "Gen.G Global Academy", abbr: "GGA", power: 78, color: "bg-yellow-700 text-white", academy: true, roster: [
                         { name: "Raxcal", role: "Duelist", agent: "Jett", ovr: 84, salary: 59900 },
                         { name: "Kleine", role: "Initiator", agent: "Sova", ovr: 76, salary: 51100 },
                         { name: "KiTae", role: "Controller", agent: "Omen", ovr: 78, salary: 53300 },
@@ -622,14 +626,14 @@ img, svg {
                         { name: "Sovereign", role: "Sentinel", agent: "Cypher", ovr: 78, salary: 53300 },
                         { name: "RgoN", role: "Initiator", agent: "Sova", ovr: 77, salary: 52200 }
                     ] },
-                    { name: "ARETE", power: 77, color: "bg-orange-700 text-white", roster: [
+                    { name: "ARETE", abbr: "ARETE", power: 77, color: "bg-orange-700 text-white", roster: [
                         { name: "RedLight", role: "Duelist", agent: "Jett", ovr: 81, salary: 56600 },
                         { name: "Rico", role: "Initiator", agent: "Sova", ovr: 78, salary: 53300 },
                         { name: "JaebiN", role: "Controller", agent: "Omen", ovr: 77, salary: 52200 },
                         { name: "ANNYEON", role: "Sentinel", agent: "Cypher", ovr: 76, salary: 51100 },
                         { name: "XIV", role: "Duelist", agent: "Raze", ovr: 80, salary: 55500 }
                     ] },
-                    { name: "X-CAST", power: 75, color: "bg-purple-700 text-white", roster: [
+                    { name: "X-CAST", abbr: "XCT", power: 75, color: "bg-purple-700 text-white", roster: [
                         { name: "Efina", role: "Initiator", agent: "Fade", ovr: 82, salary: 57700 },
                         { name: "INPA", role: "Duelist", agent: "Jett", ovr: 77, salary: 52200 },
                         { name: "rsd", role: "Controller", agent: "Omen", ovr: 76, salary: 51100 },
@@ -637,7 +641,7 @@ img, svg {
                         { name: "Beom", role: "Initiator", agent: "Sova", ovr: 76, salary: 51100 },
                         { name: "YJ", role: "Flex", agent: "KAY/O", ovr: 74, salary: 48900 }
                     ] },
-                    { name: "So:sweet", power: 73, color: "bg-pink-700 text-white", roster: [
+                    { name: "So:sweet", abbr: "SOS", power: 73, color: "bg-pink-700 text-white", roster: [
                         { name: "Xizen", role: "Duelist", agent: "Jett", ovr: 76, salary: 51100 },
                         { name: "Zoltraak", role: "Initiator", agent: "Sova", ovr: 75, salary: 50000 },
                         { name: "Rody", role: "Controller", agent: "Omen", ovr: 74, salary: 48900 },
@@ -651,7 +655,7 @@ img, svg {
                 name: "아메리카스 (Americas)",
                 t1: [
                     {
-                        name: "NRG", power: 89, color: "bg-amber-600 text-white",
+                        name: "NRG", abbr: "NRG", logoDomain: "nrg.gg", power: 89, color: "bg-amber-600 text-white",
                         roster: [
                             { name: "brawk", role: "Duelist", agent: "Jett", ovr: 92, salary: 93350 },
                             { name: "mada", role: "Duelist", agent: "Raze", ovr: 90, salary: 92250 },
@@ -661,7 +665,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "100 Thieves", power: 87, color: "bg-pink-600 text-white",
+                        name: "100 Thieves", abbr: "100T", logoDomain: "100thieves.com", power: 87, color: "bg-pink-600 text-white",
                         roster: [
                             { name: "Asuna", role: "Duelist", agent: "Raze", ovr: 90, salary: 92800 },
                             { name: "bang", role: "Controller", agent: "Omen", ovr: 88, salary: 91700 },
@@ -671,7 +675,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "LEVIATÁN", power: 85, color: "bg-red-700 text-white",
+                        name: "LEVIATÁN", abbr: "LEV", power: 85, color: "bg-red-700 text-white",
                         roster: [
                             { name: "kiNgg", role: "Initiator", agent: "Sova", ovr: 88, salary: 92800 },
                             { name: "blowz", role: "Initiator", agent: "Sova", ovr: 86, salary: 91700 },
@@ -681,7 +685,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "LOUD", power: 86, color: "bg-zinc-700 text-white",
+                        name: "LOUD", abbr: "LOUD", power: 86, color: "bg-zinc-700 text-white",
                         roster: [
                             { name: "Darker", role: "Duelist", agent: "Raze", ovr: 89, salary: 91700 },
                             { name: "DaviH", role: "Initiator", agent: "Sova", ovr: 87, salary: 90600 },
@@ -691,7 +695,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "MIBR", power: 80, color: "bg-emerald-600 text-white",
+                        name: "MIBR", abbr: "MIBR", power: 80, color: "bg-emerald-600 text-white",
                         roster: [
                             { name: "tex", role: "Initiator", agent: "Sova", ovr: 83, salary: 91150 },
                             { name: "zekken", role: "Duelist", agent: "Raze", ovr: 81, salary: 90050 },
@@ -701,7 +705,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "G2 Esports", power: 90, color: "bg-orange-600 text-white",
+                        name: "G2 Esports", abbr: "G2", logoDomain: "g2esports.com", power: 90, color: "bg-orange-600 text-white",
                         roster: [
                             { name: "BABYBAY", role: "Duelist", agent: "Raze", ovr: 93, salary: 90600 },
                             { name: "valyn", role: "Controller", agent: "Omen", ovr: 91, salary: 89500 },
@@ -711,7 +715,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Sentinels", power: 82, color: "bg-cyan-700 text-white",
+                        name: "Sentinels", abbr: "SEN", logoDomain: "sentinels.gg", power: 82, color: "bg-cyan-700 text-white",
                         roster: [
                             { name: "Marved", role: "Controller", agent: "Omen", ovr: 85, salary: 90050 },
                             { name: "johnqt", role: "Controller", agent: "Omen", ovr: 83, salary: 88950 },
@@ -721,7 +725,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Evil Geniuses", power: 76, color: "bg-blue-500 text-white",
+                        name: "Evil Geniuses", abbr: "EG", power: 76, color: "bg-blue-500 text-white",
                         roster: [
                             { name: "supamen", role: "Controller", agent: "Omen", ovr: 79, salary: 87850 },
                             { name: "Paincakes", role: "Initiator", agent: "Sova", ovr: 77, salary: 86750 },
@@ -731,7 +735,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "ENVY", power: 74, color: "bg-indigo-600 text-white",
+                        name: "ENVY", abbr: "ENVY", power: 74, color: "bg-indigo-600 text-white",
                         roster: [
                             { name: "Rossy", role: "Initiator", agent: "Sova", ovr: 77, salary: 87850 },
                             { name: "keznit", role: "Duelist", agent: "Raze", ovr: 75, salary: 86750 },
@@ -741,7 +745,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Cloud9", power: 79, color: "bg-blue-600 text-white",
+                        name: "Cloud9", abbr: "C9", logoDomain: "cloud9.gg", power: 79, color: "bg-blue-600 text-white",
                         roster: [
                             { name: "Zellsis", role: "Initiator", agent: "KAY/O", ovr: 82, salary: 87850 },
                             { name: "FireBallOps", role: "Initiator", agent: "Sova", ovr: 80, salary: 86750 },
@@ -751,7 +755,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "FURIA", power: 73, color: "bg-teal-700 text-white",
+                        name: "FURIA", abbr: "FUR", logoDomain: "furia.gg", power: 73, color: "bg-teal-700 text-white",
                         roster: [
                             { name: "C0M", role: "Initiator", agent: "Sova", ovr: 76, salary: 87300 },
                             { name: "eeiu", role: "Initiator", agent: "Sova", ovr: 74, salary: 86200 },
@@ -761,7 +765,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "KRÜ Esports", power: 72, color: "bg-purple-700 text-white",
+                        name: "KRÜ Esports", abbr: "KRU", power: 72, color: "bg-purple-700 text-white",
                         roster: [
                             { name: "saadhak", role: "Controller", agent: "Omen", ovr: 75, salary: 86750 },
                             { name: "mwzera", role: "Duelist", agent: "Raze", ovr: 73, salary: 85650 },
@@ -772,12 +776,12 @@ img, svg {
                     }
                 ],
                 t2: [
-                    { name: "Shopify Rebellion Black", power: 82, color: "bg-purple-700 text-white", roster: [{ name: "SRB1", role: "Duelist", agent: "Jett", ovr: 82, salary: 50000 },{ name: "SRB2", role: "Initiator", agent: "Sova", ovr: 80, salary: 47000 },{ name: "SRB3", role: "Controller", agent: "Omen", ovr: 79, salary: 46000 },{ name: "SRB4", role: "Sentinel", agent: "Cypher", ovr: 78, salary: 45000 },{ name: "SRB5", role: "Flex", agent: "KAY/O", ovr: 80, salary: 47000 }] },
-                    { name: "BESTIA", power: 81, color: "bg-slate-800 text-white", roster: [{ name: "Tacolilla", role: "Duelist", agent: "Jett", ovr: 83, salary: 52000 },{ name: "Melser", role: "Controller", agent: "Omen", ovr: 81, salary: 49000 },{ name: "david", role: "Initiator", agent: "Sova", ovr: 79, salary: 46000 },{ name: "chubi", role: "Flex", agent: "KAY/O", ovr: 78, salary: 45000 },{ name: "Loss", role: "Sentinel", agent: "Cypher", ovr: 78, salary: 45000 }] },
-                    { name: "2GAME Esports", power: 79, color: "bg-green-800 text-white", roster: [{ name: "frz", role: "Duelist", agent: "Raze", ovr: 81, salary: 49000 },{ name: "qck", role: "Initiator", agent: "Sova", ovr: 79, salary: 46000 },{ name: "gobera", role: "Controller", agent: "Omen", ovr: 77, salary: 44000 },{ name: "xenom", role: "Sentinel", agent: "Cypher", ovr: 76, salary: 43000 },{ name: "Brinks", role: "Flex", agent: "KAY/O", ovr: 78, salary: 45000 }] },
-                    { name: "Fluxo W7M", power: 76, color: "bg-yellow-700 text-black", roster: [{ name: "tuyz", role: "Controller", agent: "Omen", ovr: 78, salary: 44000 },{ name: "Zanatsu", role: "Duelist", agent: "Jett", ovr: 77, salary: 43000 },{ name: "mazin", role: "Initiator", agent: "Sova", ovr: 76, salary: 42000 },{ name: "jzz", role: "Sentinel", agent: "Cypher", ovr: 74, salary: 40000 },{ name: "Palla", role: "Flex", agent: "KAY/O", ovr: 75, salary: 41000 }] },
+                    { name: "Shopify Rebellion Black", abbr: "SRB", power: 82, color: "bg-purple-700 text-white", roster: [{ name: "SRB1", role: "Duelist", agent: "Jett", ovr: 82, salary: 50000 },{ name: "SRB2", role: "Initiator", agent: "Sova", ovr: 80, salary: 47000 },{ name: "SRB3", role: "Controller", agent: "Omen", ovr: 79, salary: 46000 },{ name: "SRB4", role: "Sentinel", agent: "Cypher", ovr: 78, salary: 45000 },{ name: "SRB5", role: "Flex", agent: "KAY/O", ovr: 80, salary: 47000 }] },
+                    { name: "BESTIA", abbr: "BES", power: 81, color: "bg-slate-800 text-white", roster: [{ name: "Tacolilla", role: "Duelist", agent: "Jett", ovr: 83, salary: 52000 },{ name: "Melser", role: "Controller", agent: "Omen", ovr: 81, salary: 49000 },{ name: "david", role: "Initiator", agent: "Sova", ovr: 79, salary: 46000 },{ name: "chubi", role: "Flex", agent: "KAY/O", ovr: 78, salary: 45000 },{ name: "Loss", role: "Sentinel", agent: "Cypher", ovr: 78, salary: 45000 }] },
+                    { name: "2GAME Esports", abbr: "2G", power: 79, color: "bg-green-800 text-white", roster: [{ name: "frz", role: "Duelist", agent: "Raze", ovr: 81, salary: 49000 },{ name: "qck", role: "Initiator", agent: "Sova", ovr: 79, salary: 46000 },{ name: "gobera", role: "Controller", agent: "Omen", ovr: 77, salary: 44000 },{ name: "xenom", role: "Sentinel", agent: "Cypher", ovr: 76, salary: 43000 },{ name: "Brinks", role: "Flex", agent: "KAY/O", ovr: 78, salary: 45000 }] },
+                    { name: "Fluxo W7M", abbr: "FW7M", power: 76, color: "bg-yellow-700 text-black", roster: [{ name: "tuyz", role: "Controller", agent: "Omen", ovr: 78, salary: 44000 },{ name: "Zanatsu", role: "Duelist", agent: "Jett", ovr: 77, salary: 43000 },{ name: "mazin", role: "Initiator", agent: "Sova", ovr: 76, salary: 42000 },{ name: "jzz", role: "Sentinel", agent: "Cypher", ovr: 74, salary: 40000 },{ name: "Palla", role: "Flex", agent: "KAY/O", ovr: 75, salary: 41000 }] },
                     { 
-                        name: "M80", power: 84, color: "bg-neutral-800 text-val-accent border border-val-accent/40",
+                        name: "M80", abbr: "M80", power: 84, color: "bg-neutral-800 text-val-accent border border-val-accent/40",
                         roster: [
                             { name: "zander", role: "Controller", agent: "Omen", ovr: 76, salary: 55000 },
                             { name: "koalanoob", role: "Duelist", agent: "Jett", ovr: 75, salary: 53000 },
@@ -786,14 +790,14 @@ img, svg {
                             { name: "bcJ", role: "Initiator", agent: "Sova", ovr: 72, salary: 46000 }
                         ]
                     },
-                    { name: "Evil Geniuses Academy", power: 77, color: "bg-slate-700 text-white", academy: true, roster: [
+                    { name: "Evil Geniuses Academy", abbr: "EGA", power: 77, color: "bg-slate-700 text-white", academy: true, roster: [
                         { name: "Academy_Player_1", role: "Duelist", agent: "Jett", ovr: 78, salary: 36000 },
                         { name: "Academy_Player_2", role: "Initiator", agent: "Sova", ovr: 77, salary: 35000 },
                         { name: "Academy_Player_3", role: "Controller", agent: "Omen", ovr: 76, salary: 34000 },
                         { name: "Academy_Player_4", role: "Sentinel", agent: "Cypher", ovr: 75, salary: 33000 },
                         { name: "Academy_Player_5", role: "Flex", agent: "Omen", ovr: 75, salary: 33000 }
                     ] },
-                    { name: "NRG Academy", power: 76, color: "bg-slate-700 text-white", academy: true, roster: [
+                    { name: "NRG Academy", abbr: "NRGA", power: 76, color: "bg-slate-700 text-white", academy: true, roster: [
                         { name: "Academy_Player_1", role: "Duelist", agent: "Jett", ovr: 77, salary: 36000 },
                         { name: "Academy_Player_2", role: "Initiator", agent: "Sova", ovr: 76, salary: 35000 },
                         { name: "Academy_Player_3", role: "Controller", agent: "Omen", ovr: 75, salary: 34000 },
@@ -806,7 +810,7 @@ img, svg {
                 name: "EMEA (유럽·중동)",
                 t1: [
                     {
-                        name: "Karmine Corp", power: 88, color: "bg-amber-600 text-white",
+                        name: "Karmine Corp", abbr: "KC", logoDomain: "karminecorp.fr", power: 88, color: "bg-amber-600 text-white",
                         roster: [
                             { name: "SUYGETSU", role: "Sentinel", agent: "Killjoy", ovr: 91, salary: 91700 },
                             { name: "Avez", role: "Initiator", agent: "Sova", ovr: 89, salary: 90600 },
@@ -816,7 +820,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Team Liquid", power: 87, color: "bg-pink-600 text-white",
+                        name: "Team Liquid", abbr: "TL", logoDomain: "teamliquid.com", power: 87, color: "bg-pink-600 text-white",
                         roster: [
                             { name: "nAts", role: "Sentinel", agent: "Viper", ovr: 90, salary: 91150 },
                             { name: "purp0", role: "Duelist", agent: "Raze", ovr: 88, salary: 90050 },
@@ -826,7 +830,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "FUT Esports", power: 85, color: "bg-red-700 text-white",
+                        name: "FUT Esports", abbr: "FUT", power: 85, color: "bg-red-700 text-white",
                         roster: [
                             { name: "sociablEE", role: "Duelist", agent: "Raze", ovr: 88, salary: 90600 },
                             { name: "yetujey", role: "Initiator", agent: "Sova", ovr: 86, salary: 89500 },
@@ -836,7 +840,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Team Vitality", power: 80, color: "bg-zinc-700 text-white",
+                        name: "Team Vitality", abbr: "VIT", logoDomain: "teamvitality.com", power: 80, color: "bg-zinc-700 text-white",
                         roster: [
                             { name: "Chronicle", role: "Flex", agent: "Omen", ovr: 83, salary: 90600 },
                             { name: "Derke", role: "Duelist", agent: "Jett", ovr: 81, salary: 89500 },
@@ -846,7 +850,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Team Heretics", power: 83, color: "bg-emerald-600 text-white",
+                        name: "Team Heretics", abbr: "TH", power: 83, color: "bg-emerald-600 text-white",
                         roster: [
                             { name: "Boo", role: "Controller", agent: "Omen", ovr: 86, salary: 90050 },
                             { name: "RieNs", role: "Initiator", agent: "Sova", ovr: 84, salary: 88950 },
@@ -856,7 +860,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "BBL Esports", power: 84, color: "bg-orange-600 text-white",
+                        name: "BBL Esports", abbr: "BBL", power: 84, color: "bg-orange-600 text-white",
                         roster: [
                             { name: "Rosé", role: "Duelist", agent: "Jett", ovr: 87, salary: 88950 },
                             { name: "Crewen", role: "Initiator", agent: "Sova", ovr: 85, salary: 87850 },
@@ -866,7 +870,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Natus Vincere", power: 78, color: "bg-cyan-700 text-white",
+                        name: "Natus Vincere", abbr: "NAVI", logoDomain: "navi.gg", power: 78, color: "bg-cyan-700 text-white",
                         roster: [
                             { name: "ExiT", role: "Duelist", agent: "Raze", ovr: 81, salary: 87850 },
                             { name: "CyvOph", role: "Initiator", agent: "Sova", ovr: 79, salary: 86750 },
@@ -876,7 +880,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "FNATIC", power: 82, color: "bg-blue-500 text-white",
+                        name: "FNATIC", abbr: "FNC", logoDomain: "fnatic.com", power: 82, color: "bg-blue-500 text-white",
                         roster: [
                             { name: "crashies", role: "Initiator", agent: "Sova", ovr: 85, salary: 87850 },
                             { name: "Boaster", role: "Controller", agent: "Omen", ovr: 83, salary: 86750 },
@@ -886,7 +890,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "GIANTX", power: 77, color: "bg-indigo-600 text-white",
+                        name: "GIANTX", abbr: "GX", power: 77, color: "bg-indigo-600 text-white",
                         roster: [
                             { name: "Jesse", role: "Duelist", agent: "Jett", ovr: 80, salary: 86750 },
                             { name: "neT", role: "Sentinel", agent: "Killjoy", ovr: 78, salary: 85650 },
@@ -896,7 +900,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Gentle Mates", power: 74, color: "bg-blue-600 text-white",
+                        name: "Gentle Mates", abbr: "M8", power: 74, color: "bg-blue-600 text-white",
                         roster: [
                             { name: "starxo", role: "Initiator", agent: "KAY/O", ovr: 77, salary: 86750 },
                             { name: "H1ber", role: "Duelist", agent: "Jett", ovr: 75, salary: 85650 },
@@ -906,7 +910,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "PCIFIC Esports", power: 79, color: "bg-teal-700 text-white",
+                        name: "PCIFIC Esports", abbr: "PCF", power: 79, color: "bg-teal-700 text-white",
                         roster: [
                             { name: "al0rante", role: "Duelist", agent: "Jett", ovr: 82, salary: 85100 },
                             { name: "qpert", role: "Initiator", agent: "Sova", ovr: 80, salary: 84000 },
@@ -916,7 +920,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Eternal Fire", power: 80, color: "bg-purple-700 text-white",
+                        name: "Eternal Fire", abbr: "EF", power: 80, color: "bg-purple-700 text-white",
                         roster: [
                             { name: "nekky", role: "Duelist", agent: "Jett", ovr: 83, salary: 85650 },
                             { name: "audaz", role: "Initiator", agent: "Sova", ovr: 81, salary: 84550 },
@@ -927,12 +931,12 @@ img, svg {
                     }
                 ],
                 t2: [
-                    { name: "Enterprise Esports", power: 82, color: "bg-blue-800 text-white", roster: [{ name: "paTiTek", role: "Flex", agent: "Omen", ovr: 83, salary: 50000 },{ name: "MAGNUM", role: "Sentinel", agent: "Killjoy", ovr: 82, salary: 48000 },{ name: "iluri", role: "Initiator", agent: "Sova", ovr: 80, salary: 45000 },{ name: "Lime", role: "Duelist", agent: "Jett", ovr: 79, salary: 44000 },{ name: "kozzy", role: "Controller", agent: "Viper", ovr: 79, salary: 44000 }] },
-                    { name: "REBORN", power: 81, color: "bg-red-800 text-white", roster: [{ name: "reazy", role: "Duelist", agent: "Jett", ovr: 82, salary: 48000 },{ name: "Kachoww", role: "Initiator", agent: "Sova", ovr: 81, salary: 46000 },{ name: "hezacoil", role: "Controller", agent: "Omen", ovr: 80, salary: 45000 },{ name: "batujnax", role: "Sentinel", agent: "Cypher", ovr: 78, salary: 43000 },{ name: "DeadInk", role: "Flex", agent: "KAY/O", ovr: 79, salary: 44000 }] },
-                    { name: "Joblife", power: 80, color: "bg-orange-700 text-white", roster: [{ name: "runneR", role: "Duelist", agent: "Raze", ovr: 81, salary: 47000 },{ name: "kamyk", role: "Initiator", agent: "Sova", ovr: 80, salary: 45000 },{ name: "UNFAKE", role: "Controller", agent: "Omen", ovr: 79, salary: 44000 },{ name: "doma", role: "Sentinel", agent: "Cypher", ovr: 78, salary: 43000 },{ name: "chiwa", role: "Flex", agent: "KAY/O", ovr: 77, salary: 42000 }] },
-                    { name: "FOKUS", power: 77, color: "bg-gray-700 text-white", roster: [{ name: "MOLSI", role: "Duelist", agent: "Jett", ovr: 79, salary: 44000 },{ name: "YaBoiLewis", role: "Initiator", agent: "Sova", ovr: 77, salary: 42000 },{ name: "Serial", role: "Controller", agent: "Omen", ovr: 76, salary: 41000 },{ name: "Pa1ze", role: "Sentinel", agent: "Cypher", ovr: 75, salary: 40000 },{ name: "shinnok", role: "Flex", agent: "KAY/O", ovr: 76, salary: 41000 }] },
+                    { name: "Enterprise Esports", abbr: "ENT", power: 82, color: "bg-blue-800 text-white", roster: [{ name: "paTiTek", role: "Flex", agent: "Omen", ovr: 83, salary: 50000 },{ name: "MAGNUM", role: "Sentinel", agent: "Killjoy", ovr: 82, salary: 48000 },{ name: "iluri", role: "Initiator", agent: "Sova", ovr: 80, salary: 45000 },{ name: "Lime", role: "Duelist", agent: "Jett", ovr: 79, salary: 44000 },{ name: "kozzy", role: "Controller", agent: "Viper", ovr: 79, salary: 44000 }] },
+                    { name: "REBORN", abbr: "REB", power: 81, color: "bg-red-800 text-white", roster: [{ name: "reazy", role: "Duelist", agent: "Jett", ovr: 82, salary: 48000 },{ name: "Kachoww", role: "Initiator", agent: "Sova", ovr: 81, salary: 46000 },{ name: "hezacoil", role: "Controller", agent: "Omen", ovr: 80, salary: 45000 },{ name: "batujnax", role: "Sentinel", agent: "Cypher", ovr: 78, salary: 43000 },{ name: "DeadInk", role: "Flex", agent: "KAY/O", ovr: 79, salary: 44000 }] },
+                    { name: "Joblife", abbr: "JBL", power: 80, color: "bg-orange-700 text-white", roster: [{ name: "runneR", role: "Duelist", agent: "Raze", ovr: 81, salary: 47000 },{ name: "kamyk", role: "Initiator", agent: "Sova", ovr: 80, salary: 45000 },{ name: "UNFAKE", role: "Controller", agent: "Omen", ovr: 79, salary: 44000 },{ name: "doma", role: "Sentinel", agent: "Cypher", ovr: 78, salary: 43000 },{ name: "chiwa", role: "Flex", agent: "KAY/O", ovr: 77, salary: 42000 }] },
+                    { name: "FOKUS", abbr: "FKS", power: 77, color: "bg-gray-700 text-white", roster: [{ name: "MOLSI", role: "Duelist", agent: "Jett", ovr: 79, salary: 44000 },{ name: "YaBoiLewis", role: "Initiator", agent: "Sova", ovr: 77, salary: 42000 },{ name: "Serial", role: "Controller", agent: "Omen", ovr: 76, salary: 41000 },{ name: "Pa1ze", role: "Sentinel", agent: "Cypher", ovr: 75, salary: 40000 },{ name: "shinnok", role: "Flex", agent: "KAY/O", ovr: 76, salary: 41000 }] },
                     { 
-                        name: "Eternal Fire", power: 84, color: "bg-orange-800 text-white",
+                        name: "Eternal Fire", abbr: "EF", power: 84, color: "bg-orange-800 text-white",
                         roster: [
                             { name: "Cacan", role: "Duelist", agent: "Jett", ovr: 84, salary: 50000 },
                             { name: "russ", role: "Initiator", agent: "Sova", ovr: 83, salary: 47000 },
@@ -942,7 +946,7 @@ img, svg {
                         ]
                     },
                     { 
-                        name: "PCIFIC Esports", power: 83, color: "bg-teal-800 text-white",
+                        name: "PCIFIC Esports", abbr: "PCF", power: 83, color: "bg-teal-800 text-white",
                         roster: [
                             { name: "pcif1", role: "Duelist", agent: "Jett", ovr: 83, salary: 48000 },
                             { name: "pcif2", role: "Initiator", agent: "Sova", ovr: 82, salary: 45000 },
@@ -951,28 +955,28 @@ img, svg {
                             { name: "pcif5", role: "Flex", agent: "Sova", ovr: 79, salary: 39000 }
                         ]
                     },
-                    { name: "Team Liquid Academy", power: 77, color: "bg-slate-700 text-white", academy: true, roster: [
+                    { name: "Team Liquid Academy", abbr: "TLA", power: 77, color: "bg-slate-700 text-white", academy: true, roster: [
                         { name: "Academy_Player_1", role: "Duelist", agent: "Jett", ovr: 78, salary: 36000 },
                         { name: "Academy_Player_2", role: "Initiator", agent: "Sova", ovr: 77, salary: 35000 },
                         { name: "Academy_Player_3", role: "Controller", agent: "Omen", ovr: 76, salary: 34000 },
                         { name: "Academy_Player_4", role: "Sentinel", agent: "Cypher", ovr: 75, salary: 33000 },
                         { name: "Academy_Player_5", role: "Flex", agent: "Omen", ovr: 75, salary: 33000 }
                     ] },
-                    { name: "NAVI Junior", power: 76, color: "bg-slate-700 text-white", academy: true, roster: [
+                    { name: "NAVI Junior", abbr: "NAVI.J", power: 76, color: "bg-slate-700 text-white", academy: true, roster: [
                         { name: "Academy_Player_1", role: "Duelist", agent: "Jett", ovr: 77, salary: 36000 },
                         { name: "Academy_Player_2", role: "Initiator", agent: "Sova", ovr: 76, salary: 35000 },
                         { name: "Academy_Player_3", role: "Controller", agent: "Omen", ovr: 75, salary: 34000 },
                         { name: "Academy_Player_4", role: "Sentinel", agent: "Cypher", ovr: 74, salary: 33000 },
                         { name: "Academy_Player_5", role: "Flex", agent: "Omen", ovr: 74, salary: 33000 }
                     ] },
-                    { name: "FUT Academy", power: 75, color: "bg-slate-700 text-white", academy: true, roster: [
+                    { name: "FUT Academy", abbr: "FUT.A", power: 75, color: "bg-slate-700 text-white", academy: true, roster: [
                         { name: "Academy_Player_1", role: "Duelist", agent: "Jett", ovr: 76, salary: 36000 },
                         { name: "Academy_Player_2", role: "Initiator", agent: "Sova", ovr: 75, salary: 35000 },
                         { name: "Academy_Player_3", role: "Controller", agent: "Omen", ovr: 74, salary: 34000 },
                         { name: "Academy_Player_4", role: "Sentinel", agent: "Cypher", ovr: 73, salary: 33000 },
                         { name: "Academy_Player_5", role: "Flex", agent: "Omen", ovr: 73, salary: 33000 }
                     ] },
-                    { name: "Eternal Fire Passion", power: 74, color: "bg-slate-700 text-white", academy: true, roster: [
+                    { name: "Eternal Fire Passion", abbr: "EFP", power: 74, color: "bg-slate-700 text-white", academy: true, roster: [
                         { name: "Academy_Player_1", role: "Duelist", agent: "Jett", ovr: 75, salary: 36000 },
                         { name: "Academy_Player_2", role: "Initiator", agent: "Sova", ovr: 74, salary: 35000 },
                         { name: "Academy_Player_3", role: "Controller", agent: "Omen", ovr: 73, salary: 34000 },
@@ -985,7 +989,7 @@ img, svg {
                 name: "차이나 (China)",
                 t1: [
                     {
-                        name: "Nova Esports", power: 70, color: "bg-amber-600 text-white",
+                        name: "Nova Esports", abbr: "NOVA", power: 70, color: "bg-amber-600 text-white",
                         roster: [
                             { name: "Septem7", role: "Duelist", agent: "Jett", ovr: 73, salary: 92250 },
                             { name: "f4ngeer", role: "Duelist", agent: "Raze", ovr: 71, salary: 91150 },
@@ -995,7 +999,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Xi Lai Gaming", power: 82, color: "bg-pink-600 text-white",
+                        name: "Xi Lai Gaming", abbr: "XLG", power: 82, color: "bg-pink-600 text-white",
                         roster: [
                             { name: "NoMan", role: "Duelist", agent: "Jett", ovr: 85, salary: 91700 },
                             { name: "Rarga", role: "Initiator", agent: "Sova", ovr: 83, salary: 90600 },
@@ -1005,7 +1009,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Bilibili Gaming", power: 87, color: "bg-red-700 text-white",
+                        name: "Bilibili Gaming", abbr: "BLG", logoDomain: "blg.com", power: 87, color: "bg-red-700 text-white",
                         roster: [
                             { name: "Knight", role: "Duelist", agent: "Jett", ovr: 90, salary: 90600 },
                             { name: "whzy", role: "Initiator", agent: "Sova", ovr: 88, salary: 89500 },
@@ -1015,7 +1019,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "TYLOO", power: 80, color: "bg-zinc-700 text-white",
+                        name: "TYLOO", abbr: "TYL", power: 80, color: "bg-zinc-700 text-white",
                         roster: [
                             { name: "sword9", role: "Duelist", agent: "Jett", ovr: 83, salary: 90050 },
                             { name: "splash", role: "Initiator", agent: "Sova", ovr: 81, salary: 88950 },
@@ -1025,7 +1029,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "EDward Gaming", power: 83, color: "bg-emerald-600 text-white",
+                        name: "EDward Gaming", abbr: "EDG", logoDomain: "edg.com", power: 83, color: "bg-emerald-600 text-white",
                         roster: [
                             { name: "nobody", role: "Duelist", agent: "Jett", ovr: 86, salary: 93900 },
                             { name: "ZmjjKK", role: "Duelist", agent: "Jett", ovr: 84, salary: 92800 },
@@ -1035,7 +1039,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "All Gamers", power: 78, color: "bg-orange-600 text-white",
+                        name: "All Gamers", abbr: "AG", power: 78, color: "bg-orange-600 text-white",
                         roster: [
                             { name: "Septem7", role: "Duelist", agent: "Jett", ovr: 81, salary: 89500 },
                             { name: "f4ngeer", role: "Duelist", agent: "Raze", ovr: 79, salary: 88400 },
@@ -1045,7 +1049,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "FunPlus Phoenix", power: 77, color: "bg-cyan-700 text-white",
+                        name: "FunPlus Phoenix", abbr: "FPX", logoDomain: "fpx.com", power: 77, color: "bg-cyan-700 text-white",
                         roster: [
                             { name: "AAAAY", role: "Duelist", agent: "Raze", ovr: 80, salary: 88950 },
                             { name: "kovaQ", role: "Initiator", agent: "Sova", ovr: 78, salary: 87850 },
@@ -1055,7 +1059,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Wolves Esports", power: 69, color: "bg-blue-500 text-white",
+                        name: "Wolves Esports", abbr: "WOL", logoDomain: "wolfsports.com", power: 69, color: "bg-blue-500 text-white",
                         roster: [
                             { name: "Spring", role: "Duelist", agent: "Jett", ovr: 72, salary: 88400 },
                             { name: "yosemite", role: "Initiator", agent: "Sova", ovr: 70, salary: 87300 },
@@ -1065,7 +1069,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Dragon Ranger Gaming", power: 85, color: "bg-indigo-600 text-white",
+                        name: "Dragon Ranger Gaming", abbr: "DRG", power: 85, color: "bg-indigo-600 text-white",
                         roster: [
                             { name: "Life", role: "Duelist", agent: "Jett", ovr: 88, salary: 87850 },
                             { name: "vo0kashu", role: "Duelist", agent: "Raze", ovr: 86, salary: 86750 },
@@ -1075,7 +1079,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "JD Gaming", power: 72, color: "bg-blue-600 text-white",
+                        name: "JD Gaming", abbr: "JDG", logoDomain: "jdg.com", power: 72, color: "bg-blue-600 text-white",
                         roster: [
                             { name: "jkuro", role: "Duelist", agent: "Jett", ovr: 75, salary: 87300 },
                             { name: "Yuicaw", role: "Initiator", agent: "Sova", ovr: 73, salary: 86200 },
@@ -1085,7 +1089,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Trace Esports", power: 75, color: "bg-teal-700 text-white",
+                        name: "Trace Esports", abbr: "TE", power: 75, color: "bg-teal-700 text-white",
                         roster: [
                             { name: "LuoK1ng", role: "Duelist", agent: "Jett", ovr: 78, salary: 86200 },
                             { name: "deLb", role: "Initiator", agent: "Sova", ovr: 76, salary: 85100 },
@@ -1095,7 +1099,7 @@ img, svg {
                         ]
                     },
                     {
-                        name: "Titan Esports Club", power: 71, color: "bg-purple-700 text-white",
+                        name: "Titan Esports Club", abbr: "TEC", power: 71, color: "bg-purple-700 text-white",
                         roster: [
                             { name: "Haodong", role: "Controller", agent: "Omen", ovr: 74, salary: 85650 },
                             { name: "Spitfires", role: "Initiator", agent: "Sova", ovr: 72, salary: 84550 },
@@ -1106,11 +1110,11 @@ img, svg {
                     }
                 ],
                 t2: [
-                    { name: "JD Gaming", power: 84, color: "bg-blue-700 text-white", roster: [{ name: "JDG1", role: "Duelist", agent: "Jett", ovr: 85, salary: 52000 },{ name: "JDG2", role: "Initiator", agent: "Sova", ovr: 83, salary: 49000 },{ name: "JDG3", role: "Controller", agent: "Omen", ovr: 82, salary: 47000 },{ name: "JDG4", role: "Sentinel", agent: "Cypher", ovr: 81, salary: 46000 },{ name: "JDG5", role: "Flex", agent: "KAY/O", ovr: 82, salary: 47000 }] },
-                    { name: "KeepBest Gaming", power: 76, color: "bg-teal-800 text-white", roster: [{ name: "KBG1", role: "Duelist", agent: "Jett", ovr: 78, salary: 41000 },{ name: "KBG2", role: "Initiator", agent: "Sova", ovr: 76, salary: 39000 },{ name: "KBG3", role: "Controller", agent: "Omen", ovr: 75, salary: 38000 },{ name: "KBG4", role: "Sentinel", agent: "Cypher", ovr: 73, salary: 36000 },{ name: "KBG5", role: "Flex", agent: "KAY/O", ovr: 75, salary: 38000 }] },
-                    { name: "A Team", power: 77, color: "bg-cyan-800 text-white", roster: [{ name: "AT1", role: "Duelist", agent: "Raze", ovr: 79, salary: 42000 },{ name: "AT2", role: "Initiator", agent: "Sova", ovr: 77, salary: 40000 },{ name: "AT3", role: "Controller", agent: "Omen", ovr: 76, salary: 39000 },{ name: "AT4", role: "Sentinel", agent: "Cypher", ovr: 74, salary: 37000 },{ name: "AT5", role: "Flex", agent: "KAY/O", ovr: 75, salary: 38000 }] },
+                    { name: "JD Gaming", abbr: "JDG", power: 84, color: "bg-blue-700 text-white", roster: [{ name: "JDG1", role: "Duelist", agent: "Jett", ovr: 85, salary: 52000 },{ name: "JDG2", role: "Initiator", agent: "Sova", ovr: 83, salary: 49000 },{ name: "JDG3", role: "Controller", agent: "Omen", ovr: 82, salary: 47000 },{ name: "JDG4", role: "Sentinel", agent: "Cypher", ovr: 81, salary: 46000 },{ name: "JDG5", role: "Flex", agent: "KAY/O", ovr: 82, salary: 47000 }] },
+                    { name: "KeepBest Gaming", abbr: "KBG", power: 76, color: "bg-teal-800 text-white", roster: [{ name: "KBG1", role: "Duelist", agent: "Jett", ovr: 78, salary: 41000 },{ name: "KBG2", role: "Initiator", agent: "Sova", ovr: 76, salary: 39000 },{ name: "KBG3", role: "Controller", agent: "Omen", ovr: 75, salary: 38000 },{ name: "KBG4", role: "Sentinel", agent: "Cypher", ovr: 73, salary: 36000 },{ name: "KBG5", role: "Flex", agent: "KAY/O", ovr: 75, salary: 38000 }] },
+                    { name: "A Team", abbr: "AT", power: 77, color: "bg-cyan-800 text-white", roster: [{ name: "AT1", role: "Duelist", agent: "Raze", ovr: 79, salary: 42000 },{ name: "AT2", role: "Initiator", agent: "Sova", ovr: 77, salary: 40000 },{ name: "AT3", role: "Controller", agent: "Omen", ovr: 76, salary: 39000 },{ name: "AT4", role: "Sentinel", agent: "Cypher", ovr: 74, salary: 37000 },{ name: "AT5", role: "Flex", agent: "KAY/O", ovr: 75, salary: 38000 }] },
                     { 
-                        name: "All Gamers", power: 82, color: "bg-purple-800 text-white",
+                        name: "All Gamers", abbr: "AG", power: 82, color: "bg-purple-800 text-white",
                         roster: [
                             { name: "spitfire", role: "Duelist", agent: "Jett", ovr: 73, salary: 45000 },
                             { name: "delb", role: "Initiator", agent: "Sova", ovr: 71, salary: 42000 },
@@ -1119,14 +1123,14 @@ img, svg {
                             { name: "sword", role: "Duelist", agent: "Raze", ovr: 68, salary: 37000 }
                         ]
                     },
-                    { name: "VCT CN Academy", power: 74, color: "bg-slate-700 text-white", academy: true, roster: [
+                    { name: "VCT CN Academy", abbr: "VCT.A", power: 74, color: "bg-slate-700 text-white", academy: true, roster: [
                         { name: "Academy_Player_1", role: "Duelist", agent: "Jett", ovr: 75, salary: 36000 },
                         { name: "Academy_Player_2", role: "Initiator", agent: "Sova", ovr: 74, salary: 35000 },
                         { name: "Academy_Player_3", role: "Controller", agent: "Omen", ovr: 73, salary: 34000 },
                         { name: "Academy_Player_4", role: "Sentinel", agent: "Cypher", ovr: 72, salary: 33000 },
                         { name: "Academy_Player_5", role: "Flex", agent: "Omen", ovr: 72, salary: 33000 }
                     ] },
-                    { name: "VCT CN Youth", power: 73, color: "bg-slate-700 text-white", academy: true, roster: [
+                    { name: "VCT CN Youth", abbr: "VCT.Y", power: 73, color: "bg-slate-700 text-white", academy: true, roster: [
                         { name: "Academy_Player_1", role: "Duelist", agent: "Jett", ovr: 74, salary: 36000 },
                         { name: "Academy_Player_2", role: "Initiator", agent: "Sova", ovr: 73, salary: 35000 },
                         { name: "Academy_Player_3", role: "Controller", agent: "Omen", ovr: 72, salary: 34000 },
@@ -1137,19 +1141,18 @@ img, svg {
             }
         };
 
-        function renderTeamLogo(teamObj, sizeClass = "w-7 h-7 text-xs") {
-            let name = typeof teamObj === 'string' ? teamObj : (teamObj?.name || "TEAM");
-            let badgeColor = (typeof teamObj === 'object' && teamObj?.color) ? teamObj.color : "bg-val-red text-white";
-            
-            let words = name.replace(/[^a-zA-Z0-9\s]/g, '').trim().split(/\s+/);
-            let initials = "";
-            if (words.length >= 2) {
-                initials = (words[0][0] + words[1][0]).toUpperCase();
-            } else {
-                initials = name.substring(0, 3).toUpperCase();
-            }
+        const TEAM_ABBR = {"Gen.G":"GEN","Paper Rex":"PRX","T1":"T1","ZETA DIVISION":"ZETA","Global Esports":"GE","Rex Regum Qeon":"RRQ","Team Secret":"TS","DetonatioN FocusMe":"DFM","FULL SENSE":"FS","KIWOOM DRX":"KRX","Nongshim RedForce":"NS","VARREL":"VL","Sharper Esports":"SHP","Xipto Esports":"XIP","QT DIG∞":"QT","ONSIDE GAMING":"ONG","DRX Academy":"DRX.A","T1 Academy":"T1A","Dplus Esports":"DK","Gen.G Global Academy":"GGA","ARETE":"ARETE","X-CAST":"XCT","So:sweet":"SOS","NRG":"NRG","100 Thieves":"100T","LEVIATÁN":"LEV","LOUD":"LOUD","MIBR":"MIBR","G2 Esports":"G2","Sentinels":"SEN","Evil Geniuses":"EG","ENVY":"ENVY","Cloud9":"C9","FURIA":"FUR","KRÜ Esports":"KRU","Shopify Rebellion Black":"SRB","BESTIA":"BES","2GAME Esports":"2G","Fluxo W7M":"FW7M","M80":"M80","Evil Geniuses Academy":"EGA","NRG Academy":"NRGA","Karmine Corp":"KC","Team Liquid":"TL","FUT Esports":"FUT","Team Vitality":"VIT","Team Heretics":"TH","BBL Esports":"BBL","Natus Vincere":"NAVI","FNATIC":"FNC","GIANTX":"GX","Gentle Mates":"M8","PCIFIC Esports":"PCF","Eternal Fire":"EF","Enterprise Esports":"ENT","REBORN":"REB","Joblife":"JBL","FOKUS":"FKS","Team Liquid Academy":"TLA","NAVI Junior":"NAVI.J","FUT Academy":"FUT.A","Eternal Fire Passion":"EFP","Nova Esports":"NOVA","Xi Lai Gaming":"XLG","Bilibili Gaming":"BLG","TYLOO":"TYL","EDward Gaming":"EDG","All Gamers":"AG","FunPlus Phoenix":"FPX","Wolves Esports":"WOL","Dragon Ranger Gaming":"DRG","JD Gaming":"JDG","Trace Esports":"TE","Titan Esports Club":"TEC","KeepBest Gaming":"KBG","A Team":"AT","VCT CN Academy":"VCT.A","VCT CN Youth":"VCT.Y"};
 
-            return `<div class="${sizeClass} ${badgeColor} team-logo-badge shadow flex-shrink-0" title="${name}">${initials}</div>`;
+        function renderTeamLogo(teamObj, sizeClass = "w-7 h-7 text-xs") {
+            const obj = typeof teamObj === 'string' ? {name: teamObj} : (teamObj || {name:"TEAM"});
+            const name = obj.name || "TEAM";
+            const badgeColor = obj.color || "bg-val-red text-white";
+            const abbr = obj.abbr || TEAM_ABBR[name] || name.substring(0,3).toUpperCase();
+            const domain = obj.logoDomain || null;
+            const fallback = `<div class="${sizeClass} ${badgeColor} team-logo-badge shadow flex-shrink-0" title="${name}">${abbr}</div>`;
+            if (!domain) return fallback;
+            const url = `https://logo.clearbit.com/${domain}?size=128`;
+            return `<div class="${sizeClass} team-logo-img-wrap shadow flex-shrink-0" title="${name}"><span class="team-logo-fallback">${abbr}</span><img src="${url}" alt="${name} logo" class="team-logo-img" onerror="this.remove()"></div>`;
         }
 
         const MAP_POOL = ["Ascent", "Bind", "Haven", "Split", "Icebox", "Breeze", "Lotus", "Sunset", "Abyss"];
