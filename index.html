@@ -305,6 +305,16 @@ img, svg {
     min-height: 42px !important;
     border-radius: 10px !important;
     font-size: 13px !important;
+    background: #26364a !important;
+    color: #d9f8ff !important;
+    border: 1px solid #00b8d4 !important;
+    box-shadow: 0 2px 8px rgba(0,184,212,.12) !important;
+    transition: background .2s, border-color .2s, transform .15s !important;
+}
+#modal-content .team-back-btn:hover,
+#modal-content .team-back-btn:active {
+    background: #30465e !important;
+    border-color: #00e5ff !important;
 }
 
 /* 아주 작은 폰 */
@@ -331,27 +341,74 @@ img, svg {
 </style>
 
 <style id="mobile-nav-font-fix">
-/* ===== 모바일 메뉴 글자 세로 깨짐 방지 ===== */
+/* ===== 모바일 네비게이션: 세로로 찌그러지지 않는 가로 탭 ===== */
 .whitespace-nowrap { white-space: nowrap !important; }
+.nav-label {
+  display: block;
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  writing-mode: horizontal-tb !important;
+  line-height: 1.2;
+  text-align: center;
+}
 @media (max-width: 1023px) {
   aside { width: 100% !important; min-width: 0 !important; }
   aside > div {
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
+    align-items: stretch !important;
+    gap: 8px !important;
     overflow-x: auto !important;
+    overflow-y: hidden !important;
     width: 100% !important;
+    padding: 10px !important;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
   }
   aside > div::-webkit-scrollbar { display: none; }
   aside > div > button {
-    flex: 0 0 auto !important;
-    width: auto !important;
-    min-width: max-content !important;
+    flex: 0 0 92px !important;
+    width: 92px !important;
+    min-width: 92px !important;
+    max-width: 92px !important;
+    height: 68px !important;
+    min-height: 68px !important;
+    max-height: 68px !important;
+    padding: 7px 5px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 4px !important;
+    text-align: center !important;
     white-space: nowrap !important;
     writing-mode: horizontal-tb !important;
     word-break: keep-all !important;
+    overflow: hidden !important;
+    border-radius: 11px !important;
+  }
+  aside > div > button .fa-solid {
+    width: auto !important;
+    min-width: 0 !important;
+    font-size: 20px !important;
+    line-height: 1 !important;
+    flex: 0 0 auto !important;
+  }
+  aside > div > button .nav-label {
+    width: 100% !important;
+    font-size: 12px !important;
+    font-weight: 800 !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+}
+@media (max-width: 380px) {
+  aside > div > button {
+    flex-basis: 84px !important;
+    width: 84px !important;
+    min-width: 84px !important;
+    max-width: 84px !important;
   }
 }
 </style>
@@ -1325,7 +1382,7 @@ img, svg {
             const isActive = currentPage === pageId;
             const baseClass = "px-3.5 py-2.5 rounded-lg text-sm font-bold text-left transition-all flex items-center gap-2.5 whitespace-nowrap";
             const activeClass = isActive ? "bg-val-red text-white shadow-md glow-red" : "text-val-muted hover:bg-val-border hover:text-white";
-            return `<button class="${baseClass} ${activeClass}" onclick="navigate('${pageId}')"><i class="fa-solid ${iconClass} w-4"></i> ${label}</button>`;
+            return `<button class="${baseClass} ${activeClass}" onclick="navigate('${pageId}')"><i class="fa-solid ${iconClass} w-4"></i><span class="nav-label">${label}</span></button>`;
         }
 
         function navigate(pageId) {
